@@ -2,18 +2,22 @@
 #define TRUTHTABLE_H
 
 #include <QStandardItemModel>
+#include <map>
+#include <vector>
 
 class TruthTable : public QStandardItemModel
 {
     Q_OBJECT
 private:
-    int rows;
-    int cols;
+    std::map<int, std::vector<int>> mdata;
+
+    void updateData();
+
 public:
     TruthTable(QObject *parent = nullptr);
-    int getRows() const;
-    int getCols() const;
-    void addVariable();
+    bool addVariable();
+    bool removeVariable();
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 };
 
 #endif // TRUTHTABLE_H

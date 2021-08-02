@@ -48,14 +48,17 @@ public:
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *truthTableKVDiagramLayout;
     QSpacerItem *horizontalSpacer_2;
+    QFrame *truthTableFrame;
+    QHBoxLayout *horizontalLayout_5;
     QTableView *truthTable;
-    QVBoxLayout *addColButtonLayout;
+    QFrame *frame;
+    QVBoxLayout *verticalLayout_5;
     QPushButton *addColButton;
+    QPushButton *removeColButton;
     QSpacerItem *verticalSpacer;
     QSpacerItem *horizontalSpacer;
     QTableView *kvDiagram;
     QSpacerItem *horizontalSpacer_3;
-    QLabel *resultSolver;
     QWidget *learning;
     QStatusBar *statusbar;
 
@@ -64,7 +67,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1066, 504);
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
@@ -170,56 +173,98 @@ public:
         verticalLayout_2 = new QVBoxLayout(solver);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         truthTableKVDiagramLayout = new QHBoxLayout();
+        truthTableKVDiagramLayout->setSpacing(6);
         truthTableKVDiagramLayout->setObjectName(QString::fromUtf8("truthTableKVDiagramLayout"));
-        horizontalSpacer_2 = new QSpacerItem(10, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(13, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
 
         truthTableKVDiagramLayout->addItem(horizontalSpacer_2);
 
-        truthTable = new QTableView(solver);
+        truthTableFrame = new QFrame(solver);
+        truthTableFrame->setObjectName(QString::fromUtf8("truthTableFrame"));
+        truthTableFrame->setMaximumSize(QSize(520, 300));
+        truthTableFrame->setFrameShape(QFrame::StyledPanel);
+        truthTableFrame->setFrameShadow(QFrame::Raised);
+        horizontalLayout_5 = new QHBoxLayout(truthTableFrame);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        truthTable = new QTableView(truthTableFrame);
         truthTable->setObjectName(QString::fromUtf8("truthTable"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Minimum);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(truthTable->sizePolicy().hasHeightForWidth());
         truthTable->setSizePolicy(sizePolicy3);
-        truthTable->setMinimumSize(QSize(0, 0));
+        truthTable->setMinimumSize(QSize(0, 150));
+        truthTable->setMaximumSize(QSize(10000, 10000));
+        truthTable->setSizeIncrement(QSize(0, 0));
+        truthTable->setBaseSize(QSize(0, 400));
+        truthTable->verticalHeader()->setDefaultSectionSize(31);
 
-        truthTableKVDiagramLayout->addWidget(truthTable);
+        horizontalLayout_5->addWidget(truthTable);
 
-        addColButtonLayout = new QVBoxLayout();
-        addColButtonLayout->setObjectName(QString::fromUtf8("addColButtonLayout"));
-        addColButton = new QPushButton(solver);
+        frame = new QFrame(truthTableFrame);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy4);
+        frame->setMinimumSize(QSize(30, 0));
+        frame->setMaximumSize(QSize(50, 1000));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        verticalLayout_5 = new QVBoxLayout(frame);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, -1, 0, -1);
+        addColButton = new QPushButton(frame);
         addColButton->setObjectName(QString::fromUtf8("addColButton"));
+        sizePolicy2.setHeightForWidth(addColButton->sizePolicy().hasHeightForWidth());
+        addColButton->setSizePolicy(sizePolicy2);
+        addColButton->setMaximumSize(QSize(40, 16777215));
+        addColButton->setLayoutDirection(Qt::LeftToRight);
 
-        addColButtonLayout->addWidget(addColButton);
+        verticalLayout_5->addWidget(addColButton);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        removeColButton = new QPushButton(frame);
+        removeColButton->setObjectName(QString::fromUtf8("removeColButton"));
+        sizePolicy2.setHeightForWidth(removeColButton->sizePolicy().hasHeightForWidth());
+        removeColButton->setSizePolicy(sizePolicy2);
+        removeColButton->setMinimumSize(QSize(0, 0));
+        removeColButton->setMaximumSize(QSize(40, 16777215));
+        removeColButton->setLayoutDirection(Qt::LeftToRight);
 
-        addColButtonLayout->addItem(verticalSpacer);
+        verticalLayout_5->addWidget(removeColButton);
+
+        verticalSpacer = new QSpacerItem(20, 1000, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer);
 
 
-        truthTableKVDiagramLayout->addLayout(addColButtonLayout);
+        horizontalLayout_5->addWidget(frame);
 
-        horizontalSpacer = new QSpacerItem(10, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        truthTableKVDiagramLayout->addWidget(truthTableFrame);
+
+        horizontalSpacer = new QSpacerItem(20, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
 
         truthTableKVDiagramLayout->addItem(horizontalSpacer);
 
         kvDiagram = new QTableView(solver);
         kvDiagram->setObjectName(QString::fromUtf8("kvDiagram"));
+        QSizePolicy sizePolicy5(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(kvDiagram->sizePolicy().hasHeightForWidth());
+        kvDiagram->setSizePolicy(sizePolicy5);
+        kvDiagram->setMaximumSize(QSize(500, 1000));
 
         truthTableKVDiagramLayout->addWidget(kvDiagram);
 
-        horizontalSpacer_3 = new QSpacerItem(10, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_3 = new QSpacerItem(13, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
 
         truthTableKVDiagramLayout->addItem(horizontalSpacer_3);
 
 
         verticalLayout_2->addLayout(truthTableKVDiagramLayout);
-
-        resultSolver = new QLabel(solver);
-        resultSolver->setObjectName(QString::fromUtf8("resultSolver"));
-
-        verticalLayout_2->addWidget(resultSolver);
 
         stackedWidget->addWidget(solver);
         learning = new QWidget();
@@ -248,7 +293,7 @@ public:
 #endif // QT_CONFIG(whatsthis)
         fh_logo->setText(QString());
         addColButton->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
-        resultSolver->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        removeColButton->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
     } // retranslateUi
 
 };
