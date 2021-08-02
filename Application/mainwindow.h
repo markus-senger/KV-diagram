@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "truthtable.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_addColButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    TruthTable *truthTableData;
 };
 #endif // MAINWINDOW_H

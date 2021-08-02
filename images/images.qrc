@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/images">
-        <file>Fhooe-logo.png</file>
+        <file>fhooe_logo.png</file>
+        <file>button_1.png</file>
     </qresource>
 </RCC>
