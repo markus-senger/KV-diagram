@@ -331,6 +331,27 @@
                  <height>400</height>
                 </size>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QHeaderView::section {
+ 	background-color: #A40018 ;
+	color: white;
+}
+
+QTableCornerButton::section { 
+	background-color: #A40018;
+}
+
+QTableView {
+	selection-background-color: #A40018;
+	selection-color: white;
+}</string>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
+               </property>
                <attribute name="verticalHeaderDefaultSectionSize">
                 <number>31</number>
                </attribute>

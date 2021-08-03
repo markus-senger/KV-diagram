@@ -197,6 +197,21 @@ public:
         truthTable->setMaximumSize(QSize(10000, 10000));
         truthTable->setSizeIncrement(QSize(0, 0));
         truthTable->setBaseSize(QSize(0, 400));
+        truthTable->setStyleSheet(QString::fromUtf8("QHeaderView::section {\n"
+" 	background-color: #A40018 ;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QTableCornerButton::section { \n"
+"	background-color: #A40018;\n"
+"}\n"
+"\n"
+"QTableView {\n"
+"	selection-background-color: #A40018;\n"
+"	selection-color: white;\n"
+"}"));
+        truthTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        truthTable->setSelectionMode(QAbstractItemView::NoSelection);
         truthTable->verticalHeader()->setDefaultSectionSize(31);
 
         horizontalLayout_5->addWidget(truthTable);

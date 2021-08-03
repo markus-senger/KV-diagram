@@ -19,9 +19,12 @@ public:
 private slots:
     void on_addColButton_clicked();
     void on_removeColButton_clicked();
+    void valueChanged();
 
 private:
     Ui::MainWindow *ui;
     TruthTable *truthTableData;
+
+    void addComboBox(int index);
 };
 #endif // MAINWINDOW_H

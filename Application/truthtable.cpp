@@ -5,8 +5,8 @@
 TruthTable::TruthTable(QObject *parent)
     : QStandardItemModel(parent)
 {
-    setColumnCount(4);
-    setRowCount(8);
+    setColumnCount(TRUTH_TABLE_INIT_COL_NUM + 1);
+    setRowCount(TRUTH_TABLE_INIT_ROW_NUM);
     setHorizontalHeaderItem(0, new QStandardItem(QString("A")));
     setHorizontalHeaderItem(1, new QStandardItem(QString("B")));
     setHorizontalHeaderItem(2, new QStandardItem(QString("C")));
@@ -35,6 +35,22 @@ bool TruthTable::removeVariable()
         return true;
     }
     return false;
+}
+
+void TruthTable::addResult(int result) {
+    mresults.push_back(result);
+}
+
+void TruthTable::clearResults() {
+    mresults.clear();
+}
+
+int TruthTable::getCurRowNum() const {
+    return rowCount();
+}
+
+int TruthTable::getCurColNum() const {
+    return columnCount();
 }
 
 QVariant TruthTable::data(const QModelIndex &index, int role) const
