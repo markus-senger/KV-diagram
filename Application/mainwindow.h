@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "truthtable.h"
+#include "kvdiagram.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,7 +25,10 @@ private slots:
 private:
     Ui::MainWindow *ui;
     TruthTable *truthTableData;
+    KVDiagram *kvDiagram;
 
     void addComboBox(int index);
+    void resizeTruthTable();
+    void resizeKVDiagram();
 };
 #endif // MAINWINDOW_H

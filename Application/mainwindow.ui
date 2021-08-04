@@ -16,6 +16,12 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>0</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>SBF</string>
   </property>
@@ -274,22 +280,28 @@
              <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Preferred</enum>
+             <enum>QSizePolicy::Expanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>13</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <widget class="QFrame" name="truthTableFrame">
-            <property name="maximumSize">
+           <widget class="QFrame" name="frame_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
              <size>
-              <width>520</width>
-              <height>300</height>
+              <width>1000</width>
+              <height>0</height>
              </size>
             </property>
             <property name="frameShape">
@@ -298,41 +310,78 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <widget class="QTableView" name="truthTable">
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Maximum</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="truthTableFrame">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>150</height>
-                </size>
-               </property>
                <property name="maximumSize">
                 <size>
-                 <width>10000</width>
-                 <height>10000</height>
+                 <width>520</width>
+                 <height>294</height>
                 </size>
                </property>
-               <property name="sizeIncrement">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <property name="baseSize">
-                <size>
-                 <width>0</width>
-                 <height>400</height>
-                </size>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
                </property>
-               <property name="styleSheet">
-                <string notr="true">QHeaderView::section {
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QTableView" name="truthTable">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>10000</width>
+                    <height>10000</height>
+                   </size>
+                  </property>
+                  <property name="sizeIncrement">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="baseSize">
+                   <size>
+                    <width>0</width>
+                    <height>400</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QHeaderView::section {
  	background-color: #A40018 ;
 	color: white;
 }
@@ -345,153 +394,184 @@ QTableView {
 	selection-background-color: #A40018;
 	selection-color: white;
 }</string>
-               </property>
-               <property name="editTriggers">
-                <set>QAbstractItemView::NoEditTriggers</set>
-               </property>
-               <property name="selectionMode">
-                <enum>QAbstractItemView::NoSelection</enum>
-               </property>
-               <attribute name="verticalHeaderDefaultSectionSize">
-                <number>31</number>
-               </attribute>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="frame">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>30</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>1000</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_5">
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QPushButton" name="addColButton">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
                   </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>40</width>
-                    <height>16777215</height>
-                   </size>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
                   </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::NoSelection</enum>
                   </property>
-                  <property name="text">
-                   <string>+</string>
-                  </property>
+                  <attribute name="verticalHeaderDefaultSectionSize">
+                   <number>31</number>
+                  </attribute>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="removeColButton">
+                 <widget class="QFrame" name="frame">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>30</width>
                     <height>0</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>40</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>-</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Expanding</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
+                    <width>50</width>
                     <height>1000</height>
                    </size>
                   </property>
-                 </spacer>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="addColButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>40</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="text">
+                      <string>+</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="removeColButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>40</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="text">
+                      <string>-</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Expanding</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>1000</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
                 </item>
                </layout>
               </widget>
              </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Maximum</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QTableView" name="kvDiagram">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>122</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>300</width>
+                 <height>122</height>
+                </size>
+               </property>
+               <attribute name="horizontalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Maximum</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>50</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Preferred</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QTableView" name="kvDiagram">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>500</width>
-              <height>1000</height>
-             </size>
-            </property>
            </widget>
           </item>
           <item>
@@ -500,11 +580,11 @@ QTableView {
              <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Preferred</enum>
+             <enum>QSizePolicy::Expanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>13</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>

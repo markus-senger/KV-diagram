@@ -10,12 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     auxiliaryFunctions.cpp \
+    kvdiagram.cpp \
     main.cpp \
     mainwindow.cpp \
     truthtable.cpp
 
 HEADERS += \
     auxiliaryFunctions.h \
+    kvdiagram.h \
     mainwindow.h \
     truthtable.h \
     types.h

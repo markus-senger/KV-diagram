@@ -7,6 +7,7 @@ TruthTable::TruthTable(QObject *parent)
 {
     setColumnCount(TRUTH_TABLE_INIT_COL_NUM + 1);
     setRowCount(TRUTH_TABLE_INIT_ROW_NUM);
+    mvariable = TRUTH_TABLE_3VAR;
     setHorizontalHeaderItem(0, new QStandardItem(QString("A")));
     setHorizontalHeaderItem(1, new QStandardItem(QString("B")));
     setHorizontalHeaderItem(2, new QStandardItem(QString("C")));
@@ -17,6 +18,7 @@ TruthTable::TruthTable(QObject *parent)
 bool TruthTable::addVariable()
 {
     if(columnCount() < MAX_VARIABLES+1) {
+        mvariable++;
         insertColumn(columnCount()-1);
         setHorizontalHeaderItem(columnCount()-2, new QStandardItem(QString(static_cast<char>(65+columnCount()-2))));
         setRowCount(pow(2, columnCount()-1));
@@ -29,6 +31,7 @@ bool TruthTable::addVariable()
 bool TruthTable::removeVariable()
 {
     if(columnCount()-1 > MIN_VARIABLES) {
+        mvariable--;
         removeRows(pow(2, columnCount()-2), rowCount()-pow(2, columnCount()-2));
         removeColumn(columnCount()-2);
         updateData();
@@ -51,6 +54,10 @@ int TruthTable::getCurRowNum() const {
 
 int TruthTable::getCurColNum() const {
     return columnCount();
+}
+
+int TruthTable::getCurVariableNum() const {
+    return mvariable;
 }
 
 QVariant TruthTable::data(const QModelIndex &index, int role) const

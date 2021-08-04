@@ -11,6 +11,7 @@ class TruthTable : public QStandardItemModel
 private:
     std::map<int, std::vector<int>> mdata;
     std::vector<int> mresults;
+    int mvariable;
 
     void updateData();
 
@@ -22,6 +23,7 @@ public:
     void clearResults();
     int getCurRowNum() const;
     int getCurColNum() const;
+    int getCurVariableNum() const;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 };
 

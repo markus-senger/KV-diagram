@@ -48,6 +48,9 @@ public:
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *truthTableKVDiagramLayout;
     QSpacerItem *horizontalSpacer_2;
+    QFrame *frame_2;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_4;
     QFrame *truthTableFrame;
     QHBoxLayout *horizontalLayout_5;
     QTableView *truthTable;
@@ -58,6 +61,7 @@ public:
     QSpacerItem *verticalSpacer;
     QSpacerItem *horizontalSpacer;
     QTableView *kvDiagram;
+    QSpacerItem *horizontalSpacer_5;
     QSpacerItem *horizontalSpacer_3;
     QWidget *learning;
     QStatusBar *statusbar;
@@ -72,6 +76,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(1000, 0));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/images/fhooe_logo.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -175,24 +180,36 @@ public:
         truthTableKVDiagramLayout = new QHBoxLayout();
         truthTableKVDiagramLayout->setSpacing(6);
         truthTableKVDiagramLayout->setObjectName(QString::fromUtf8("truthTableKVDiagramLayout"));
-        horizontalSpacer_2 = new QSpacerItem(13, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         truthTableKVDiagramLayout->addItem(horizontalSpacer_2);
 
-        truthTableFrame = new QFrame(solver);
+        frame_2 = new QFrame(solver);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        sizePolicy.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
+        frame_2->setSizePolicy(sizePolicy);
+        frame_2->setMinimumSize(QSize(1000, 0));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        horizontalLayout_2 = new QHBoxLayout(frame_2);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalSpacer_4 = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_4);
+
+        truthTableFrame = new QFrame(frame_2);
         truthTableFrame->setObjectName(QString::fromUtf8("truthTableFrame"));
-        truthTableFrame->setMaximumSize(QSize(520, 300));
+        sizePolicy.setHeightForWidth(truthTableFrame->sizePolicy().hasHeightForWidth());
+        truthTableFrame->setSizePolicy(sizePolicy);
+        truthTableFrame->setMaximumSize(QSize(520, 294));
         truthTableFrame->setFrameShape(QFrame::StyledPanel);
         truthTableFrame->setFrameShadow(QFrame::Raised);
         horizontalLayout_5 = new QHBoxLayout(truthTableFrame);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         truthTable = new QTableView(truthTableFrame);
         truthTable->setObjectName(QString::fromUtf8("truthTable"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Minimum);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(truthTable->sizePolicy().hasHeightForWidth());
-        truthTable->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(truthTable->sizePolicy().hasHeightForWidth());
+        truthTable->setSizePolicy(sizePolicy);
         truthTable->setMinimumSize(QSize(0, 150));
         truthTable->setMaximumSize(QSize(10000, 10000));
         truthTable->setSizeIncrement(QSize(0, 0));
@@ -218,11 +235,11 @@ public:
 
         frame = new QFrame(truthTableFrame);
         frame->setObjectName(QString::fromUtf8("frame"));
-        QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy3);
         frame->setMinimumSize(QSize(30, 0));
         frame->setMaximumSize(QSize(50, 1000));
         frame->setFrameShape(QFrame::StyledPanel);
@@ -257,24 +274,31 @@ public:
         horizontalLayout_5->addWidget(frame);
 
 
-        truthTableKVDiagramLayout->addWidget(truthTableFrame);
+        horizontalLayout_2->addWidget(truthTableFrame);
 
-        horizontalSpacer = new QSpacerItem(20, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
 
-        truthTableKVDiagramLayout->addItem(horizontalSpacer);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
-        kvDiagram = new QTableView(solver);
+        kvDiagram = new QTableView(frame_2);
         kvDiagram->setObjectName(QString::fromUtf8("kvDiagram"));
-        QSizePolicy sizePolicy5(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(kvDiagram->sizePolicy().hasHeightForWidth());
-        kvDiagram->setSizePolicy(sizePolicy5);
-        kvDiagram->setMaximumSize(QSize(500, 1000));
+        sizePolicy2.setHeightForWidth(kvDiagram->sizePolicy().hasHeightForWidth());
+        kvDiagram->setSizePolicy(sizePolicy2);
+        kvDiagram->setMaximumSize(QSize(300, 122));
+        kvDiagram->setBaseSize(QSize(300, 122));
+        kvDiagram->horizontalHeader()->setVisible(false);
+        kvDiagram->verticalHeader()->setVisible(false);
 
-        truthTableKVDiagramLayout->addWidget(kvDiagram);
+        horizontalLayout_2->addWidget(kvDiagram);
 
-        horizontalSpacer_3 = new QSpacerItem(13, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_5);
+
+
+        truthTableKVDiagramLayout->addWidget(frame_2);
+
+        horizontalSpacer_3 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         truthTableKVDiagramLayout->addItem(horizontalSpacer_3);
 
