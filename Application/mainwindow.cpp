@@ -32,27 +32,27 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_addColButton_clicked()
 {
-    int oldRowNum = truthTableData->getCurRowNum();
     if(truthTableData->addVariable()) {
-        //ui->truthTableFrame->setMaximumSize(ui->truthTableFrame->maximumSize().width()*TRUTH_TABLE_WIDTH_SCALE, ui->truthTableFrame->maximumSize().height()*TRUTH_TABLE_HEIGHT_SCALE);
         resizeTruthTable();
-        for(int i = oldRowNum; i < truthTableData->getCurRowNum(); i++) {
+        for(int i = 0; i < truthTableData->getCurRowNum(); i++) {
             addComboBox(i);
         }
-        valueChanged();
         kvDiagram->addVariable();
         resizeKVDiagram();
+        valueChanged();
     }
 }
-
 
 void MainWindow::on_removeColButton_clicked()
 {
     if(truthTableData->removeVariable()) {
-        //ui->truthTableFrame->setMaximumSize(ui->truthTableFrame->maximumSize().width()/TRUTH_TABLE_WIDTH_SCALE, ui->truthTableFrame->maximumSize().height()/TRUTH_TABLE_HEIGHT_SCALE);
         resizeTruthTable();
+        for(int i = 0; i < truthTableData->getCurRowNum(); i++) {
+            addComboBox(i);
+        }
         kvDiagram->removeVariable();
         resizeKVDiagram();
+        valueChanged();
     }
 }
 
@@ -63,6 +63,7 @@ void MainWindow::valueChanged()
         QComboBox* tmp = (QComboBox*) ui->truthTable->indexWidget(truthTableData->index(i, truthTableData->getCurColNum()-1));
         truthTableData->addResult(tmp->currentIndex());
     }
+    updateValueKVDiagram();
 }
 
 void MainWindow::addComboBox(int index)
@@ -103,5 +104,10 @@ void MainWindow::resizeKVDiagram()
     else if(truthTableData->getCurVariableNum() == TRUTH_TABLE_4VAR) {
         ui->kvDiagram->setMaximumSize(KV_DIAGRAM_4VAR_WIDTH, KV_DIAGRAM_4VAR_HEIGHT);
     }
+}
+
+void MainWindow::updateValueKVDiagram()
+{
+    kvDiagram->updateValues(truthTableData->getResults());
 }
 

@@ -30,5 +30,6 @@ private:
     void addComboBox(int index);
     void resizeTruthTable();
     void resizeKVDiagram();
+    void updateValueKVDiagram();
 };
 #endif // MAINWINDOW_H

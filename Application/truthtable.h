@@ -24,6 +24,7 @@ public:
     int getCurRowNum() const;
     int getCurColNum() const;
     int getCurVariableNum() const;
+    std::vector<int> getResults() const;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 };
 

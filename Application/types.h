@@ -8,10 +8,10 @@ static const QString        COLOR_RED                   = "#A40018";
 static const int            MAX_VARIABLES               = 4;
 static const int            MIN_VARIABLES               = 2;
 
+static const int            OPTION_FALSE                = 0;
 static const int            OPTION_TRUE                 = 1;
-static const int            OPTION_FALSE                = 2;
-static const int            OPTION_DONT_CARE            = 3;
-static const QStringList    KV_DIAGRAM_OPTIONS          = {"True", "False", "X"};
+static const int            OPTION_DONT_CARE            = 2;
+static const QStringList    KV_DIAGRAM_OPTIONS          = {"False", "True", "X"};
 
 
 //truth table

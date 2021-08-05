@@ -40,24 +40,34 @@ bool TruthTable::removeVariable()
     return false;
 }
 
-void TruthTable::addResult(int result) {
+void TruthTable::addResult(int result)
+{
     mresults.push_back(result);
 }
 
-void TruthTable::clearResults() {
+void TruthTable::clearResults()
+{
     mresults.clear();
 }
 
-int TruthTable::getCurRowNum() const {
+int TruthTable::getCurRowNum() const
+{
     return rowCount();
 }
 
-int TruthTable::getCurColNum() const {
+int TruthTable::getCurColNum() const
+{
     return columnCount();
 }
 
-int TruthTable::getCurVariableNum() const {
+int TruthTable::getCurVariableNum() const
+{
     return mvariable;
+}
+
+std::vector<int> TruthTable::getResults() const
+{
+    return mresults;
 }
 
 QVariant TruthTable::data(const QModelIndex &index, int role) const

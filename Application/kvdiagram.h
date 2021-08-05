@@ -10,10 +10,12 @@ public:
     KVDiagram(QObject *parent = nullptr);
     void addVariable();
     void removeVariable();
+    void updateValues(std::vector<int> results);
 
 private:
     void setBorder();
     void setBorderText();
+    void writeValues(std::vector<int> results, int maxI, int maxJ);
 };
 
 #endif // KVDIAGRAM_H
