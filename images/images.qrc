@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/images">
         <file>fhooe_logo.png</file>
-        <file>button_1.png</file>
+        <file>Lernapp_Button.png</file>
+        <file>Lernapp_Button_checked.png</file>
     </qresource>
 </RCC>

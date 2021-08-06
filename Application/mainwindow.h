@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsDropShadowEffect>
 #include "truthtable.h"
 #include "kvdiagram.h"
 
@@ -31,5 +32,7 @@ private:
     void resizeTruthTable();
     void resizeKVDiagram();
     void updateValueKVDiagram();
+    QGraphicsDropShadowEffect* createShadow();
+
 };
 #endif // MAINWINDOW_H

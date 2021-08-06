@@ -5,6 +5,7 @@
 
 //generally
 static const QString        COLOR_RED                   = "#A40018";
+static const QString        SHADOW_COLOR                = "#bab8b8";
 static const int            MAX_VARIABLES               = 4;
 static const int            MIN_VARIABLES               = 2;
 

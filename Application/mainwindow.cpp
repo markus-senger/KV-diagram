@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->solverFrame->setGraphicsEffect(createShadow());
+
     truthTableData = new TruthTable(this);
     kvDiagram = new KVDiagram(this);
 
@@ -109,5 +112,16 @@ void MainWindow::resizeKVDiagram()
 void MainWindow::updateValueKVDiagram()
 {
     kvDiagram->updateValues(truthTableData->getResults());
+}
+
+QGraphicsDropShadowEffect* MainWindow::createShadow()
+{
+    QGraphicsDropShadowEffect *effect = new QGraphicsDropShadowEffect(this);
+    effect->setBlurRadius(5);
+    effect->setXOffset(5);
+    effect->setYOffset(5);
+    effect->setColor(SHADOW_COLOR);
+
+    return effect;
 }
 

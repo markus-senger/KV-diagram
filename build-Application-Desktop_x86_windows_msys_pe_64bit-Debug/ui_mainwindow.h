@@ -46,11 +46,18 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *solver;
     QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *truthTableKVDiagramLayout;
+    QHBoxLayout *solverLayout;
     QSpacerItem *horizontalSpacer_2;
-    QFrame *frame_2;
+    QFrame *solverFrame;
+    QVBoxLayout *verticalLayout_3;
+    QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *horizontalSpacer_6;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer_7;
+    QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer;
     QFrame *truthTableFrame;
     QHBoxLayout *horizontalLayout_5;
     QTableView *truthTable;
@@ -59,9 +66,12 @@ public:
     QPushButton *addColButton;
     QPushButton *removeColButton;
     QSpacerItem *verticalSpacer;
-    QSpacerItem *horizontalSpacer;
-    QTableView *kvDiagram;
     QSpacerItem *horizontalSpacer_5;
+    QTableView *kvDiagram;
+    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer_4;
+    QLabel *label;
+    QSpacerItem *verticalSpacer_2;
     QSpacerItem *horizontalSpacer_3;
     QWidget *learning;
     QStatusBar *statusbar;
@@ -70,13 +80,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1066, 504);
+        MainWindow->resize(1066, 630);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setMinimumSize(QSize(1000, 0));
+        MainWindow->setMinimumSize(QSize(1000, 630));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/images/fhooe_logo.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -177,27 +187,72 @@ public:
         solver->setObjectName(QString::fromUtf8("solver"));
         verticalLayout_2 = new QVBoxLayout(solver);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        truthTableKVDiagramLayout = new QHBoxLayout();
-        truthTableKVDiagramLayout->setSpacing(6);
-        truthTableKVDiagramLayout->setObjectName(QString::fromUtf8("truthTableKVDiagramLayout"));
-        horizontalSpacer_2 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        solverLayout = new QHBoxLayout();
+        solverLayout->setSpacing(6);
+        solverLayout->setObjectName(QString::fromUtf8("solverLayout"));
+        horizontalSpacer_2 = new QSpacerItem(100, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
 
-        truthTableKVDiagramLayout->addItem(horizontalSpacer_2);
+        solverLayout->addItem(horizontalSpacer_2);
 
-        frame_2 = new QFrame(solver);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
-        sizePolicy.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
-        frame_2->setSizePolicy(sizePolicy);
-        frame_2->setMinimumSize(QSize(1000, 0));
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
-        horizontalLayout_2 = new QHBoxLayout(frame_2);
+        solverFrame = new QFrame(solver);
+        solverFrame->setObjectName(QString::fromUtf8("solverFrame"));
+        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(solverFrame->sizePolicy().hasHeightForWidth());
+        solverFrame->setSizePolicy(sizePolicy3);
+        solverFrame->setMinimumSize(QSize(1000, 0));
+        solverFrame->setStyleSheet(QString::fromUtf8("background-color: #e6e6e6;"));
+        solverFrame->setFrameShape(QFrame::StyledPanel);
+        solverFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout_3 = new QVBoxLayout(solverFrame);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_3->addItem(verticalSpacer_3);
+
+        horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer_4 = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_4);
+        horizontalLayout_2->addItem(horizontalSpacer_6);
 
-        truthTableFrame = new QFrame(frame_2);
+        pushButton = new QPushButton(solverFrame);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
+        pushButton->setMinimumSize(QSize(100, 30));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"   border-image: url(:/images/Lernapp_Button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover {\n"
+"	border-image: url(:/images/Lernapp_Button_checked.png)\n"
+"}\n"
+"\n"
+""));
+
+        horizontalLayout_2->addWidget(pushButton);
+
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_7);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_2);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_5);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalSpacer = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer);
+
+        truthTableFrame = new QFrame(solverFrame);
         truthTableFrame->setObjectName(QString::fromUtf8("truthTableFrame"));
         sizePolicy.setHeightForWidth(truthTableFrame->sizePolicy().hasHeightForWidth());
         truthTableFrame->setSizePolicy(sizePolicy);
@@ -226,6 +281,7 @@ public:
 "QTableView {\n"
 "	selection-background-color: #A40018;\n"
 "	selection-color: white;\n"
+"	background-color: white;\n"
 "}"));
         truthTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
         truthTable->setSelectionMode(QAbstractItemView::NoSelection);
@@ -235,11 +291,11 @@ public:
 
         frame = new QFrame(truthTableFrame);
         frame->setObjectName(QString::fromUtf8("frame"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy4);
         frame->setMinimumSize(QSize(30, 0));
         frame->setMaximumSize(QSize(50, 1000));
         frame->setFrameShape(QFrame::StyledPanel);
@@ -252,6 +308,10 @@ public:
         sizePolicy2.setHeightForWidth(addColButton->sizePolicy().hasHeightForWidth());
         addColButton->setSizePolicy(sizePolicy2);
         addColButton->setMaximumSize(QSize(40, 16777215));
+        QFont font2;
+        font2.setPointSize(11);
+        font2.setBold(true);
+        addColButton->setFont(font2);
         addColButton->setLayoutDirection(Qt::LeftToRight);
 
         verticalLayout_5->addWidget(addColButton);
@@ -262,7 +322,9 @@ public:
         removeColButton->setSizePolicy(sizePolicy2);
         removeColButton->setMinimumSize(QSize(0, 0));
         removeColButton->setMaximumSize(QSize(40, 16777215));
+        removeColButton->setFont(font2);
         removeColButton->setLayoutDirection(Qt::LeftToRight);
+        removeColButton->setStyleSheet(QString::fromUtf8(""));
 
         verticalLayout_5->addWidget(removeColButton);
 
@@ -274,36 +336,66 @@ public:
         horizontalLayout_5->addWidget(frame);
 
 
-        horizontalLayout_2->addWidget(truthTableFrame);
+        horizontalLayout_6->addWidget(truthTableFrame);
 
-        horizontalSpacer = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer);
+        horizontalLayout_6->addItem(horizontalSpacer_5);
 
-        kvDiagram = new QTableView(frame_2);
+        kvDiagram = new QTableView(solverFrame);
         kvDiagram->setObjectName(QString::fromUtf8("kvDiagram"));
         sizePolicy2.setHeightForWidth(kvDiagram->sizePolicy().hasHeightForWidth());
         kvDiagram->setSizePolicy(sizePolicy2);
         kvDiagram->setMaximumSize(QSize(300, 122));
         kvDiagram->setBaseSize(QSize(300, 122));
+        kvDiagram->setStyleSheet(QString::fromUtf8("QTableView {\n"
+"	background-color: white;\n"
+"}"));
         kvDiagram->horizontalHeader()->setVisible(false);
         kvDiagram->verticalHeader()->setVisible(false);
 
-        horizontalLayout_2->addWidget(kvDiagram);
+        horizontalLayout_6->addWidget(kvDiagram);
 
-        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+        horizontalSpacer_4 = new QSpacerItem(50, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_5);
-
-
-        truthTableKVDiagramLayout->addWidget(frame_2);
-
-        horizontalSpacer_3 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        truthTableKVDiagramLayout->addItem(horizontalSpacer_3);
+        horizontalLayout_6->addItem(horizontalSpacer_4);
 
 
-        verticalLayout_2->addLayout(truthTableKVDiagramLayout);
+        verticalLayout_3->addLayout(horizontalLayout_6);
+
+        verticalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_3->addItem(verticalSpacer_4);
+
+        label = new QLabel(solverFrame);
+        label->setObjectName(QString::fromUtf8("label"));
+        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Maximum);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy5);
+        QFont font3;
+        font3.setPointSize(12);
+        font3.setBold(true);
+        label->setFont(font3);
+        label->setStyleSheet(QString::fromUtf8("color:black;"));
+        label->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label);
+
+        verticalSpacer_2 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+
+        verticalLayout_3->addItem(verticalSpacer_2);
+
+
+        solverLayout->addWidget(solverFrame);
+
+        horizontalSpacer_3 = new QSpacerItem(100, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+
+        solverLayout->addItem(horizontalSpacer_3);
+
+
+        verticalLayout_2->addLayout(solverLayout);
 
         stackedWidget->addWidget(solver);
         learning = new QWidget();
@@ -331,8 +423,10 @@ public:
         fh_logo->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/images/fhooe_logo.png\"/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         fh_logo->setText(QString());
+        pushButton->setText(QString());
         addColButton->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         removeColButton->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Ergebnis: ---", nullptr));
     } // retranslateUi
 
 };
