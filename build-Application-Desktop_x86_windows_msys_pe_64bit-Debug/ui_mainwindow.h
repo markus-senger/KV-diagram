@@ -448,7 +448,7 @@ public:
         horizontalFrame->setObjectName(QString::fromUtf8("horizontalFrame"));
         sizePolicy.setHeightForWidth(horizontalFrame->sizePolicy().hasHeightForWidth());
         horizontalFrame->setSizePolicy(sizePolicy);
-        horizontalFrame->setMinimumSize(QSize(0, 80));
+        horizontalFrame->setMinimumSize(QSize(0, 100));
         horizontalLayout_3 = new QHBoxLayout(horizontalFrame);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
