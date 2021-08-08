@@ -268,7 +268,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="solver">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -569,8 +569,21 @@ QTableView {
                        <property name="layoutDirection">
                         <enum>Qt::LeftToRight</enum>
                        </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton
+{
+	width: 50px;
+	height: 40px;
+   	border-image: url(:/images/buttons/add_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/add_button_hover.png)
+}</string>
+                       </property>
                        <property name="text">
-                        <string>+</string>
+                        <string/>
                        </property>
                       </widget>
                      </item>
@@ -605,10 +618,20 @@ QTableView {
                         <enum>Qt::LeftToRight</enum>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true"/>
+                        <string notr="true">QPushButton
+{
+	width: 50px;
+	height: 40px;
+   	border-image: url(:/images/buttons/remove_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/remove_button_hover.png)
+}</string>
                        </property>
                        <property name="text">
-                        <string>-</string>
+                        <string/>
                        </property>
                       </widget>
                      </item>
@@ -787,7 +810,7 @@ QTableView {
         <item>
          <widget class="QFrame" name="horizontalFrame">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -795,7 +818,7 @@ QTableView {
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>50</height>
+            <height>80</height>
            </size>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -817,6 +840,12 @@ QTableView {
            </item>
            <item>
             <widget class="QPushButton" name="learningOverviewBackButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="styleSheet">
               <string notr="true">QPushButton
 {
@@ -843,7 +872,7 @@ QPushButton::hover
              <property name="sizeHint" stdset="0">
               <size>
                <width>40</width>
-               <height>20</height>
+               <height>50</height>
               </size>
              </property>
             </spacer>
@@ -909,7 +938,7 @@ QPushButton::hover
 }</string>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -929,7 +958,7 @@ QPushButton::hover
 }</string>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -949,27 +978,7 @@ QPushButton::hover
 }</string>
               </property>
               <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QPushButton" name="openTask6Button">
-              <property name="styleSheet">
-               <string notr="true">QPushButton
-{
-	width: 205px;
-	height: 50px;
-  	border-image: url(:/images/buttons/task6_button.png)
-}
-
-QPushButton::hover
-{
-	border-image: url(:/images/buttons/task6_button_hover.png)
-}</string>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -989,7 +998,7 @@ QPushButton::hover
 }</string>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -1009,7 +1018,7 @@ QPushButton::hover
 }</string>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -1029,7 +1038,27 @@ QPushButton::hover
 }</string>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="openTask6Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task6_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task6_button_hover.png)
+}</string>
+              </property>
+              <property name="text">
+               <string/>
               </property>
              </widget>
             </item>

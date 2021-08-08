@@ -88,10 +88,10 @@ public:
     QPushButton *openTask1Button;
     QPushButton *openTutorialButton;
     QPushButton *openTask2Button;
-    QPushButton *openTask6Button;
     QPushButton *openTask4Button;
     QPushButton *openTask3Button;
     QPushButton *openTask5Button;
+    QPushButton *openTask6Button;
     QSpacerItem *horizontalSpacer_11;
     QSpacerItem *verticalSpacer_7;
     QStatusBar *statusbar;
@@ -246,11 +246,12 @@ public:
 "{\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
-"   	border-image: url(:/images/Buttons/learning_button.png)\n"
+"   	border-image: url(:/images/buttons/learning_button.png)\n"
 "}\n"
 "\n"
-"QPushButton::hover {\n"
-"	border-image: url(:/images/Buttons/learning_button_hover.png)\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/learning_button_hover.png)\n"
 "}"));
 
         horizontalLayout_2->addWidget(learningButton);
@@ -333,6 +334,17 @@ public:
         font2.setBold(true);
         addColButton->setFont(font2);
         addColButton->setLayoutDirection(Qt::LeftToRight);
+        addColButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 50px;\n"
+"	height: 40px;\n"
+"   	border-image: url(:/images/buttons/add_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/add_button_hover.png)\n"
+"}"));
 
         verticalLayout_5->addWidget(addColButton);
 
@@ -344,7 +356,17 @@ public:
         removeColButton->setMaximumSize(QSize(40, 16777215));
         removeColButton->setFont(font2);
         removeColButton->setLayoutDirection(Qt::LeftToRight);
-        removeColButton->setStyleSheet(QString::fromUtf8(""));
+        removeColButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 50px;\n"
+"	height: 40px;\n"
+"   	border-image: url(:/images/buttons/remove_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/remove_button_hover.png)\n"
+"}"));
 
         verticalLayout_5->addWidget(removeColButton);
 
@@ -424,9 +446,9 @@ public:
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         horizontalFrame = new QFrame(learningOverview);
         horizontalFrame->setObjectName(QString::fromUtf8("horizontalFrame"));
-        sizePolicy1.setHeightForWidth(horizontalFrame->sizePolicy().hasHeightForWidth());
-        horizontalFrame->setSizePolicy(sizePolicy1);
-        horizontalFrame->setMinimumSize(QSize(0, 50));
+        sizePolicy.setHeightForWidth(horizontalFrame->sizePolicy().hasHeightForWidth());
+        horizontalFrame->setSizePolicy(sizePolicy);
+        horizontalFrame->setMinimumSize(QSize(0, 80));
         horizontalLayout_3 = new QHBoxLayout(horizontalFrame);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
@@ -435,6 +457,11 @@ public:
 
         learningOverviewBackButton = new QPushButton(horizontalFrame);
         learningOverviewBackButton->setObjectName(QString::fromUtf8("learningOverviewBackButton"));
+        QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(learningOverviewBackButton->sizePolicy().hasHeightForWidth());
+        learningOverviewBackButton->setSizePolicy(sizePolicy6);
         learningOverviewBackButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "	width: 205px;\n"
@@ -449,7 +476,7 @@ public:
 
         horizontalLayout_3->addWidget(learningOverviewBackButton);
 
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_8 = new QSpacerItem(40, 50, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer_8);
 
@@ -519,22 +546,6 @@ public:
 
         gridLayout->addWidget(openTask2Button, 1, 1, 1, 1);
 
-        openTask6Button = new QPushButton(learningOverview);
-        openTask6Button->setObjectName(QString::fromUtf8("openTask6Button"));
-        openTask6Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	width: 205px;\n"
-"	height: 50px;\n"
-"  	border-image: url(:/images/buttons/task6_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/task6_button_hover.png)\n"
-"}"));
-
-        gridLayout->addWidget(openTask6Button, 2, 2, 1, 1);
-
         openTask4Button = new QPushButton(learningOverview);
         openTask4Button->setObjectName(QString::fromUtf8("openTask4Button"));
         openTask4Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -583,6 +594,22 @@ public:
 
         gridLayout->addWidget(openTask5Button, 2, 1, 1, 1);
 
+        openTask6Button = new QPushButton(learningOverview);
+        openTask6Button->setObjectName(QString::fromUtf8("openTask6Button"));
+        openTask6Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task6_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task6_button_hover.png)\n"
+"}"));
+
+        gridLayout->addWidget(openTask6Button, 2, 2, 1, 1);
+
 
         horizontalLayout_4->addLayout(gridLayout);
 
@@ -624,17 +651,17 @@ public:
 #endif // QT_CONFIG(whatsthis)
         fh_logo->setText(QString());
         learningButton->setText(QString());
-        addColButton->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
-        removeColButton->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
+        addColButton->setText(QString());
+        removeColButton->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "Ergebnis: ---", nullptr));
         learningOverviewBackButton->setText(QString());
-        openTask1Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        openTutorialButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        openTask2Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        openTask6Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        openTask4Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        openTask3Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        openTask5Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTask1Button->setText(QString());
+        openTutorialButton->setText(QString());
+        openTask2Button->setText(QString());
+        openTask4Button->setText(QString());
+        openTask3Button->setText(QString());
+        openTask5Button->setText(QString());
+        openTask6Button->setText(QString());
     } // retranslateUi
 
 };

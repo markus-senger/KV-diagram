@@ -25,5 +25,9 @@
         <file>buttons/task6_button_hover.png</file>
         <file>buttons/tutorial_button.png</file>
         <file>buttons/tutorial_button_hover.png</file>
+        <file>buttons/add_button.png</file>
+        <file>buttons/add_button_hover.png</file>
+        <file>buttons/remove_button.png</file>
+        <file>buttons/remove_button_hover.png</file>
     </qresource>
 </RCC>
