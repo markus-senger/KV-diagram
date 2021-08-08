@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->stackedWidget->setCurrentIndex(0);
 
     ui->solverFrame->setGraphicsEffect(createShadow());
 
@@ -123,5 +124,17 @@ QGraphicsDropShadowEffect* MainWindow::createShadow()
     effect->setColor(SHADOW_COLOR);
 
     return effect;
+}
+
+
+void MainWindow::on_learningButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_learningOverviewBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }
 

@@ -13,6 +13,7 @@
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -53,7 +54,7 @@ public:
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_6;
-    QPushButton *pushButton;
+    QPushButton *learningButton;
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_6;
@@ -73,7 +74,26 @@ public:
     QLabel *label;
     QSpacerItem *verticalSpacer_2;
     QSpacerItem *horizontalSpacer_3;
-    QWidget *learning;
+    QWidget *learningOverview;
+    QVBoxLayout *verticalLayout_4;
+    QFrame *horizontalFrame;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer_9;
+    QPushButton *learningOverviewBackButton;
+    QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *verticalSpacer_6;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_10;
+    QGridLayout *gridLayout;
+    QPushButton *openTask1Button;
+    QPushButton *openTutorialButton;
+    QPushButton *openTask2Button;
+    QPushButton *openTask6Button;
+    QPushButton *openTask4Button;
+    QPushButton *openTask3Button;
+    QPushButton *openTask5Button;
+    QSpacerItem *horizontalSpacer_11;
+    QSpacerItem *verticalSpacer_7;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -207,7 +227,7 @@ public:
         solverFrame->setFrameShadow(QFrame::Raised);
         verticalLayout_3 = new QVBoxLayout(solverFrame);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(20, 15, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_3->addItem(verticalSpacer_3);
 
@@ -217,23 +237,24 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_6);
 
-        pushButton = new QPushButton(solverFrame);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
-        pushButton->setMinimumSize(QSize(100, 30));
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+        learningButton = new QPushButton(solverFrame);
+        learningButton->setObjectName(QString::fromUtf8("learningButton"));
+        sizePolicy.setHeightForWidth(learningButton->sizePolicy().hasHeightForWidth());
+        learningButton->setSizePolicy(sizePolicy);
+        learningButton->setMinimumSize(QSize(0, 0));
+        learningButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"   border-image: url(:/images/Lernapp_Button.png)\n"
+"	\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"   	border-image: url(:/images/learning_button.png)\n"
 "}\n"
 "\n"
 "QPushButton::hover {\n"
 "	border-image: url(:/images/Lernapp_Button_checked.png)\n"
-"}\n"
-"\n"
-""));
+"}"));
 
-        horizontalLayout_2->addWidget(pushButton);
+        horizontalLayout_2->addWidget(learningButton);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -242,7 +263,7 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_2);
 
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_5 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
 
         verticalLayout_3->addItem(verticalSpacer_5);
 
@@ -398,9 +419,112 @@ public:
         verticalLayout_2->addLayout(solverLayout);
 
         stackedWidget->addWidget(solver);
-        learning = new QWidget();
-        learning->setObjectName(QString::fromUtf8("learning"));
-        stackedWidget->addWidget(learning);
+        learningOverview = new QWidget();
+        learningOverview->setObjectName(QString::fromUtf8("learningOverview"));
+        verticalLayout_4 = new QVBoxLayout(learningOverview);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        horizontalFrame = new QFrame(learningOverview);
+        horizontalFrame->setObjectName(QString::fromUtf8("horizontalFrame"));
+        sizePolicy1.setHeightForWidth(horizontalFrame->sizePolicy().hasHeightForWidth());
+        horizontalFrame->setSizePolicy(sizePolicy1);
+        horizontalFrame->setMinimumSize(QSize(0, 50));
+        horizontalLayout_3 = new QHBoxLayout(horizontalFrame);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_9);
+
+        learningOverviewBackButton = new QPushButton(horizontalFrame);
+        learningOverviewBackButton->setObjectName(QString::fromUtf8("learningOverviewBackButton"));
+        learningOverviewBackButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"    width: 200px;\n"
+"    height: 60px;\n"
+"}\n"
+"\n"
+"QPushButton\n"
+"{\n"
+"   border-image: url(:/images/Back_Button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover {\n"
+"	border-image: url(:/images/Back_Button_checked.png)\n"
+"}"));
+
+        horizontalLayout_3->addWidget(learningOverviewBackButton);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_8);
+
+
+        verticalLayout_4->addWidget(horizontalFrame);
+
+        verticalSpacer_6 = new QSpacerItem(20, 80, QSizePolicy::Minimum, QSizePolicy::Preferred);
+
+        verticalLayout_4->addItem(verticalSpacer_6);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_10);
+
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setHorizontalSpacing(100);
+        gridLayout->setVerticalSpacing(70);
+        gridLayout->setContentsMargins(0, -1, -1, -1);
+        openTask1Button = new QPushButton(learningOverview);
+        openTask1Button->setObjectName(QString::fromUtf8("openTask1Button"));
+
+        gridLayout->addWidget(openTask1Button, 1, 0, 1, 1);
+
+        openTutorialButton = new QPushButton(learningOverview);
+        openTutorialButton->setObjectName(QString::fromUtf8("openTutorialButton"));
+
+        gridLayout->addWidget(openTutorialButton, 0, 1, 1, 1);
+
+        openTask2Button = new QPushButton(learningOverview);
+        openTask2Button->setObjectName(QString::fromUtf8("openTask2Button"));
+
+        gridLayout->addWidget(openTask2Button, 1, 1, 1, 1);
+
+        openTask6Button = new QPushButton(learningOverview);
+        openTask6Button->setObjectName(QString::fromUtf8("openTask6Button"));
+
+        gridLayout->addWidget(openTask6Button, 2, 2, 1, 1);
+
+        openTask4Button = new QPushButton(learningOverview);
+        openTask4Button->setObjectName(QString::fromUtf8("openTask4Button"));
+
+        gridLayout->addWidget(openTask4Button, 2, 0, 1, 1);
+
+        openTask3Button = new QPushButton(learningOverview);
+        openTask3Button->setObjectName(QString::fromUtf8("openTask3Button"));
+
+        gridLayout->addWidget(openTask3Button, 1, 2, 1, 1);
+
+        openTask5Button = new QPushButton(learningOverview);
+        openTask5Button->setObjectName(QString::fromUtf8("openTask5Button"));
+
+        gridLayout->addWidget(openTask5Button, 2, 1, 1, 1);
+
+
+        horizontalLayout_4->addLayout(gridLayout);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_11);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_4);
+
+        verticalSpacer_7 = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_7);
+
+        stackedWidget->addWidget(learningOverview);
 
         verticalLayout->addWidget(stackedWidget);
 
@@ -410,6 +534,9 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
+
+        stackedWidget->setCurrentIndex(0);
+
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -423,10 +550,18 @@ public:
         fh_logo->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/images/fhooe_logo.png\"/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         fh_logo->setText(QString());
-        pushButton->setText(QString());
+        learningButton->setText(QString());
         addColButton->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         removeColButton->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Ergebnis: ---", nullptr));
+        learningOverviewBackButton->setText(QString());
+        openTask1Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTutorialButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTask2Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTask6Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTask4Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTask3Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openTask5Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };

@@ -22,6 +22,9 @@ private slots:
     void on_addColButton_clicked();
     void on_removeColButton_clicked();
     void valueChanged();
+    void on_learningButton_clicked();
+
+    void on_learningOverviewBackButton_clicked();
 
 private:
     Ui::MainWindow *ui;
