@@ -365,14 +365,14 @@
                  <property name="styleSheet">
                   <string notr="true">QPushButton
 {
-	
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/learning_button.png)
+   	border-image: url(:/images/buttons/learning_button.png)
 }
 
-QPushButton::hover {
-	border-image: url(:/images/Lernapp_Button_checked.png)
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/learning_button_hover.png)
 }</string>
                  </property>
                  <property name="text">
@@ -820,17 +820,14 @@ QTableView {
              <property name="styleSheet">
               <string notr="true">QPushButton
 {
-    width: 200px;
-    height: 60px;
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/leaving_learning_button.png)
 }
 
-QPushButton
+QPushButton::hover
 {
-   border-image: url(:/images/Back_Button.png)
-}
-
-QPushButton::hover {
-	border-image: url(:/images/Back_Button_checked.png)
+	border-image: url(:/images/buttons/leaving_learning_button_hover.png)
 }</string>
              </property>
              <property name="text">
@@ -898,6 +895,19 @@ QPushButton::hover {
             </property>
             <item row="1" column="0">
              <widget class="QPushButton" name="openTask1Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task1_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task1_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -905,6 +915,19 @@ QPushButton::hover {
             </item>
             <item row="0" column="1">
              <widget class="QPushButton" name="openTutorialButton">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/tutorial_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/tutorial_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -912,6 +935,19 @@ QPushButton::hover {
             </item>
             <item row="1" column="1">
              <widget class="QPushButton" name="openTask2Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task2_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task2_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -919,6 +955,19 @@ QPushButton::hover {
             </item>
             <item row="2" column="2">
              <widget class="QPushButton" name="openTask6Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task6_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task6_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -926,6 +975,19 @@ QPushButton::hover {
             </item>
             <item row="2" column="0">
              <widget class="QPushButton" name="openTask4Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task4_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task4_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -933,6 +995,19 @@ QPushButton::hover {
             </item>
             <item row="1" column="2">
              <widget class="QPushButton" name="openTask3Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task3_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task3_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -940,6 +1015,19 @@ QPushButton::hover {
             </item>
             <item row="2" column="1">
              <widget class="QPushButton" name="openTask5Button">
+              <property name="styleSheet">
+               <string notr="true">QPushButton
+{
+	width: 205px;
+	height: 50px;
+  	border-image: url(:/images/buttons/task5_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/task5_button_hover.png)
+}</string>
+              </property>
               <property name="text">
                <string>PushButton</string>
               </property>

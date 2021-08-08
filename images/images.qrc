@@ -1,29 +1,29 @@
 <RCC>
     <qresource prefix="/images">
         <file>fhooe_logo.png</file>
-        <file>Buttons/back_button.png</file>
-        <file>Buttons/back_button_hover.png</file>
-        <file>Buttons/back_to_overview_button.png</file>
-        <file>Buttons/back_to_overview_button_hover.png</file>
-        <file>Buttons/further_button.png</file>
-        <file>Buttons/further_button_hover.png</file>
-        <file>Buttons/learning_button.png</file>
-        <file>Buttons/learning_button_hover.png</file>
-        <file>Buttons/leaving_learning_button.png</file>
-        <file>Buttons/leaving_learning_button_hover.png</file>
-        <file>Buttons/task1_button.png</file>
-        <file>Buttons/task1_button_hover.png</file>
-        <file>Buttons/task2_button.png</file>
-        <file>Buttons/task2_button_hover.png</file>
-        <file>Buttons/task3_button.png</file>
-        <file>Buttons/task3_button_hover.png</file>
-        <file>Buttons/task4_button.png</file>
-        <file>Buttons/task4_button_hover.png</file>
-        <file>Buttons/task5_button.png</file>
-        <file>Buttons/task5_button_hover.png</file>
-        <file>Buttons/task6_button.png</file>
-        <file>Buttons/task6_button_hover.png</file>
-        <file>Buttons/tutorial_button.png</file>
-        <file>Buttons/tutorial_button_hover.png</file>
+        <file>buttons/back_button.png</file>
+        <file>buttons/back_button_hover.png</file>
+        <file>buttons/back_to_overview_button.png</file>
+        <file>buttons/back_to_overview_button_hover.png</file>
+        <file>buttons/further_button.png</file>
+        <file>buttons/further_button_hover.png</file>
+        <file>buttons/learning_button.png</file>
+        <file>buttons/learning_button_hover.png</file>
+        <file>buttons/leaving_learning_button.png</file>
+        <file>buttons/leaving_learning_button_hover.png</file>
+        <file>buttons/task1_button.png</file>
+        <file>buttons/task1_button_hover.png</file>
+        <file>buttons/task2_button.png</file>
+        <file>buttons/task2_button_hover.png</file>
+        <file>buttons/task3_button.png</file>
+        <file>buttons/task3_button_hover.png</file>
+        <file>buttons/task4_button.png</file>
+        <file>buttons/task4_button_hover.png</file>
+        <file>buttons/task5_button.png</file>
+        <file>buttons/task5_button_hover.png</file>
+        <file>buttons/task6_button.png</file>
+        <file>buttons/task6_button_hover.png</file>
+        <file>buttons/tutorial_button.png</file>
+        <file>buttons/tutorial_button_hover.png</file>
     </qresource>
 </RCC>

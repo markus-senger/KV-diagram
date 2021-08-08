@@ -244,14 +244,13 @@ public:
         learningButton->setMinimumSize(QSize(0, 0));
         learningButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
-"   	border-image: url(:/images/learning_button.png)\n"
+"   	border-image: url(:/images/Buttons/learning_button.png)\n"
 "}\n"
 "\n"
 "QPushButton::hover {\n"
-"	border-image: url(:/images/Lernapp_Button_checked.png)\n"
+"	border-image: url(:/images/Buttons/learning_button_hover.png)\n"
 "}"));
 
         horizontalLayout_2->addWidget(learningButton);
@@ -438,17 +437,14 @@ public:
         learningOverviewBackButton->setObjectName(QString::fromUtf8("learningOverviewBackButton"));
         learningOverviewBackButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"    width: 200px;\n"
-"    height: 60px;\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/leaving_learning_button.png)\n"
 "}\n"
 "\n"
-"QPushButton\n"
+"QPushButton::hover\n"
 "{\n"
-"   border-image: url(:/images/Back_Button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover {\n"
-"	border-image: url(:/images/Back_Button_checked.png)\n"
+"	border-image: url(:/images/buttons/leaving_learning_button_hover.png)\n"
 "}"));
 
         horizontalLayout_3->addWidget(learningOverviewBackButton);
@@ -477,36 +473,113 @@ public:
         gridLayout->setContentsMargins(0, -1, -1, -1);
         openTask1Button = new QPushButton(learningOverview);
         openTask1Button->setObjectName(QString::fromUtf8("openTask1Button"));
+        openTask1Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task1_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task1_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTask1Button, 1, 0, 1, 1);
 
         openTutorialButton = new QPushButton(learningOverview);
         openTutorialButton->setObjectName(QString::fromUtf8("openTutorialButton"));
+        openTutorialButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/tutorial_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/tutorial_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTutorialButton, 0, 1, 1, 1);
 
         openTask2Button = new QPushButton(learningOverview);
         openTask2Button->setObjectName(QString::fromUtf8("openTask2Button"));
+        openTask2Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task2_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task2_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTask2Button, 1, 1, 1, 1);
 
         openTask6Button = new QPushButton(learningOverview);
         openTask6Button->setObjectName(QString::fromUtf8("openTask6Button"));
+        openTask6Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task6_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task6_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTask6Button, 2, 2, 1, 1);
 
         openTask4Button = new QPushButton(learningOverview);
         openTask4Button->setObjectName(QString::fromUtf8("openTask4Button"));
+        openTask4Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task4_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task4_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTask4Button, 2, 0, 1, 1);
 
         openTask3Button = new QPushButton(learningOverview);
         openTask3Button->setObjectName(QString::fromUtf8("openTask3Button"));
+        openTask3Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task3_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task3_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTask3Button, 1, 2, 1, 1);
 
         openTask5Button = new QPushButton(learningOverview);
         openTask5Button->setObjectName(QString::fromUtf8("openTask5Button"));
+        openTask5Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 205px;\n"
+"	height: 50px;\n"
+"  	border-image: url(:/images/buttons/task5_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/task5_button_hover.png)\n"
+"}"));
 
         gridLayout->addWidget(openTask5Button, 2, 1, 1, 1);
 
@@ -535,7 +608,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
