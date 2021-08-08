@@ -26,7 +26,7 @@
    <string>SBF</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="../images/images.qrc">
     <normaloff>:/images/fhooe_logo.png</normaloff>:/images/fhooe_logo.png</iconset>
   </property>
   <property name="iconSize">
@@ -236,7 +236,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>:/images/fhooe_logo.png</pixmap>
+          <pixmap resource="../images/images.qrc">:/images/fhooe_logo.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -268,7 +268,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="solver">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -698,6 +698,12 @@ QPushButton::hover
 	background-color: white;
 }</string>
                  </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::NoSelection</enum>
+                 </property>
                  <attribute name="horizontalHeaderVisible">
                   <bool>false</bool>
                  </attribute>
@@ -1100,6 +1106,8 @@ QPushButton::hover
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../images/images.qrc"/>
+ </resources>
  <connections/>
 </ui>

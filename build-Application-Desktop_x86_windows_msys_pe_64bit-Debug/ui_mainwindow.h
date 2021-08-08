@@ -393,6 +393,8 @@ public:
         kvDiagram->setStyleSheet(QString::fromUtf8("QTableView {\n"
 "	background-color: white;\n"
 "}"));
+        kvDiagram->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        kvDiagram->setSelectionMode(QAbstractItemView::NoSelection);
         kvDiagram->horizontalHeader()->setVisible(false);
         kvDiagram->verticalHeader()->setVisible(false);
 
@@ -635,7 +637,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
