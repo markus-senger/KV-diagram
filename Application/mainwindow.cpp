@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentIndex(0);
 
     ui->solverFrame->setGraphicsEffect(createShadow());
+    ui->learningOverviewFrame->setGraphicsEffect(createShadow());
 
     truthTableData = new TruthTable(this);
     kvDiagram = new KVDiagram(this);

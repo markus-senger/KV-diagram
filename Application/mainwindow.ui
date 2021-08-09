@@ -895,141 +895,99 @@ color: black;</string>
       <widget class="QWidget" name="learningOverview">
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QFrame" name="horizontalFrame">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>100</height>
-           </size>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <spacer name="horizontalSpacer_9">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Fixed</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="learningOverviewBackButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>13</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton
-{
-	color: white;
-	width: 205px;
-	height: 50px;
-   	border-image: url(:/images/buttons/button.png)
-}
-
-QPushButton::hover
-{
-	border-image: url(:/images/buttons/button_hover.png)
-}</string>
-             </property>
-             <property name="text">
-              <string>Lernapp verlassen</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>50</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_6">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>80</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
           <item>
-           <spacer name="horizontalSpacer_10">
+           <spacer name="horizontalSpacer_14">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>40</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
-            <property name="leftMargin">
-             <number>0</number>
+           <widget class="QFrame" name="learningOverviewFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-            <property name="horizontalSpacing">
-             <number>100</number>
+            <property name="minimumSize">
+             <size>
+              <width>1000</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="verticalSpacing">
-             <number>70</number>
+            <property name="styleSheet">
+             <string notr="true">background-color: #e6e6e6;</string>
             </property>
-            <item row="1" column="0">
-             <widget class="QPushButton" name="openTask1Button">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <spacer name="verticalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>5</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <spacer name="horizontalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="learningOverviewBackButton">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1041,24 +999,81 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Übung 1</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QPushButton" name="openTutorialButton">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+                 </property>
+                 <property name="text">
+                  <string>Lernapp verlassen</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Preferred</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>80</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <spacer name="horizontalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="horizontalSpacing">
+                  <number>100</number>
+                 </property>
+                 <property name="verticalSpacing">
+                  <number>70</number>
+                 </property>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="openTask1Button">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1070,24 +1085,24 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Tutorial</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QPushButton" name="openTask2Button">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+                   </property>
+                   <property name="text">
+                    <string>Übung 1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QPushButton" name="openTutorialButton">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1099,24 +1114,24 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Übung 2</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="openTask4Button">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+                   </property>
+                   <property name="text">
+                    <string>Tutorial</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="openTask2Button">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1128,24 +1143,24 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Übung 4</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QPushButton" name="openTask3Button">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+                   </property>
+                   <property name="text">
+                    <string>Übung 2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="openTask4Button">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1157,24 +1172,24 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Übung 3</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="openTask5Button">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+                   </property>
+                   <property name="text">
+                    <string>Übung 4</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="openTask3Button">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1186,24 +1201,24 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Übung 5</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QPushButton" name="openTask6Button">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton
+                   </property>
+                   <property name="text">
+                    <string>Übung 3</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="openTask5Button">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
 {
 	color: white;
 	width: 205px;
@@ -1215,22 +1230,85 @@ QPushButton::hover
 {
 	border-image: url(:/images/buttons/button_hover.png)
 }</string>
-              </property>
-              <property name="text">
-               <string>Übung 6</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+                   </property>
+                   <property name="text">
+                    <string>Übung 5</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QPushButton" name="openTask6Button">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	color: white;
+	width: 205px;
+	height: 50px;
+   	border-image: url(:/images/buttons/button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/button_hover.png)
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Übung 6</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>100</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_11">
+           <spacer name="horizontalSpacer_15">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>40</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>
@@ -1238,21 +1316,9 @@ QPushButton::hover
           </item>
          </layout>
         </item>
-        <item>
-         <spacer name="verticalSpacer_7">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>100</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="page"/>
      </widget>
     </item>
    </layout>
