@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->kvDiagram->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->kvDiagram->setModel(kvDiagram);
+    ui->kvDiagram->setMaximumSize(KV_DIAGRAM_3VAR_WIDTH, KV_DIAGRAM_3VAR_HEIGHT);
 
     for(int i = 0; i < TRUTH_TABLE_INIT_ROW_NUM; i++) {
         addComboBox(i);

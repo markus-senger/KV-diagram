@@ -268,7 +268,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="solver">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -731,6 +731,9 @@ QPushButton::hover
                  <attribute name="verticalHeaderVisible">
                   <bool>false</bool>
                  </attribute>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>40</number>
+                 </attribute>
                 </widget>
                </item>
                <item>
@@ -822,9 +825,10 @@ margin-right: 30px;</string>
                   <widget class="QLabel" name="label_2">
                    <property name="font">
                     <font>
-                     <pointsize>10</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
+                     <family>Arial</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1575,8 +1579,8 @@ QPushButton::hover
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>741</width>
-                     <height>928</height>
+                     <width>725</width>
+                     <height>944</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_11">

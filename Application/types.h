@@ -41,17 +41,17 @@ static const float          TRUTH_TABLE_HEIGHT_SCALE                = 1.85;
 //kv diagram
 static const int            KV_DIAGRAM_2VAR_COL_NUM                 = 3;
 static const int            KV_DIAGRAM_2VAR_ROW_NUM                 = 3;
-static const int            KV_DIAGRAM_2VAR_WIDTH                   = 180;
-static const int            KV_DIAGRAM_2VAR_HEIGHT                  = 92;
+static const int            KV_DIAGRAM_2VAR_WIDTH                   = 145;
+static const int            KV_DIAGRAM_2VAR_HEIGHT                  = 122;
 
 static const int            KV_DIAGRAM_3VAR_COL_NUM                 = 5;
 static const int            KV_DIAGRAM_3VAR_ROW_NUM                 = 4;
-static const int            KV_DIAGRAM_3VAR_WIDTH                   = 300;
-static const int            KV_DIAGRAM_3VAR_HEIGHT                  = 122;
+static const int            KV_DIAGRAM_3VAR_WIDTH                   = 240;
+static const int            KV_DIAGRAM_3VAR_HEIGHT                  = 162;
 
 static const int            KV_DIAGRAM_4VAR_COL_NUM                 = 6;
 static const int            KV_DIAGRAM_4VAR_ROW_NUM                 = 6;
-static const int            KV_DIAGRAM_4VAR_WIDTH                   = 320;
-static const int            KV_DIAGRAM_4VAR_HEIGHT                  = 182;
+static const int            KV_DIAGRAM_4VAR_WIDTH                   = 292;
+static const int            KV_DIAGRAM_4VAR_HEIGHT                  = 242;
 
 #endif // TYPES_H

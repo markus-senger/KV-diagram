@@ -449,6 +449,7 @@ public:
         kvDiagram->setSelectionMode(QAbstractItemView::NoSelection);
         kvDiagram->horizontalHeader()->setVisible(false);
         kvDiagram->verticalHeader()->setVisible(false);
+        kvDiagram->verticalHeader()->setDefaultSectionSize(40);
 
         horizontalLayout_6->addWidget(kvDiagram);
 
@@ -493,10 +494,7 @@ public:
 
         label_2 = new QLabel(solverFrame);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        QFont font6;
-        font6.setPointSize(10);
-        font6.setBold(false);
-        label_2->setFont(font6);
+        label_2->setFont(font2);
         label_2->setStyleSheet(QString::fromUtf8("border: 2px solid black;\n"
 "color: black;"));
         label_2->setAlignment(Qt::AlignCenter);
@@ -783,10 +781,10 @@ public:
         verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
         label_3 = new QLabel(horizontalFrame_5);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("Arial")});
-        font7.setPointSize(16);
-        label_3->setFont(font7);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Arial")});
+        font6.setPointSize(16);
+        label_3->setFont(font6);
         label_3->setStyleSheet(QString::fromUtf8("color: #a40018;\n"
 "background-color: white ;\n"
 "border-bottom: 3px solid black;\n"
@@ -879,7 +877,7 @@ public:
         scrollArea->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 741, 928));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 725, 944));
         verticalLayout_11 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
         gridFrame = new QFrame(scrollAreaWidgetContents);
@@ -977,7 +975,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
