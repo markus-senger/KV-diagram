@@ -71,7 +71,12 @@ public:
     QTableView *kvDiagram;
     QSpacerItem *horizontalSpacer_4;
     QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_13;
+    QVBoxLayout *verticalLayout_6;
     QLabel *label;
+    QLabel *label_2;
+    QSpacerItem *horizontalSpacer_12;
     QSpacerItem *verticalSpacer_2;
     QSpacerItem *horizontalSpacer_3;
     QWidget *learningOverview;
@@ -227,7 +232,7 @@ public:
         solverFrame->setFrameShadow(QFrame::Raised);
         verticalLayout_3 = new QVBoxLayout(solverFrame);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalSpacer_3 = new QSpacerItem(20, 15, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_3->addItem(verticalSpacer_3);
 
@@ -242,16 +247,21 @@ public:
         sizePolicy.setHeightForWidth(learningButton->sizePolicy().hasHeightForWidth());
         learningButton->setSizePolicy(sizePolicy);
         learningButton->setMinimumSize(QSize(0, 0));
+        QFont font2;
+        font2.setPointSize(15);
+        font2.setBold(true);
+        learningButton->setFont(font2);
         learningButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
+"	color: white;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
-"   	border-image: url(:/images/buttons/learning_button.png)\n"
+"   	border-image: url(:/images/buttons/button.png)\n"
 "}\n"
 "\n"
 "QPushButton::hover\n"
 "{\n"
-"	border-image: url(:/images/buttons/learning_button_hover.png)\n"
+"	border-image: url(:/images/buttons/button_hover.png)\n"
 "}"));
 
         horizontalLayout_2->addWidget(learningButton);
@@ -263,7 +273,7 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_2);
 
-        verticalSpacer_5 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+        verticalSpacer_5 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
 
         verticalLayout_3->addItem(verticalSpacer_5);
 
@@ -290,6 +300,9 @@ public:
         truthTable->setMaximumSize(QSize(10000, 10000));
         truthTable->setSizeIncrement(QSize(0, 0));
         truthTable->setBaseSize(QSize(0, 400));
+        QFont font3;
+        font3.setBold(false);
+        truthTable->setFont(font3);
         truthTable->setStyleSheet(QString::fromUtf8("QHeaderView::section {\n"
 " 	background-color: #A40018 ;\n"
 "	color: white;\n"
@@ -329,10 +342,10 @@ public:
         sizePolicy2.setHeightForWidth(addColButton->sizePolicy().hasHeightForWidth());
         addColButton->setSizePolicy(sizePolicy2);
         addColButton->setMaximumSize(QSize(40, 16777215));
-        QFont font2;
-        font2.setPointSize(11);
-        font2.setBold(true);
-        addColButton->setFont(font2);
+        QFont font4;
+        font4.setPointSize(11);
+        font4.setBold(true);
+        addColButton->setFont(font4);
         addColButton->setLayoutDirection(Qt::LeftToRight);
         addColButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
@@ -354,7 +367,7 @@ public:
         removeColButton->setSizePolicy(sizePolicy2);
         removeColButton->setMinimumSize(QSize(0, 0));
         removeColButton->setMaximumSize(QSize(40, 16777215));
-        removeColButton->setFont(font2);
+        removeColButton->setFont(font4);
         removeColButton->setLayoutDirection(Qt::LeftToRight);
         removeColButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
@@ -407,10 +420,19 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_6);
 
-        verticalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_4 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_3->addItem(verticalSpacer_4);
 
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_13);
+
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setSpacing(0);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         label = new QLabel(solverFrame);
         label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Maximum);
@@ -418,16 +440,42 @@ public:
         sizePolicy5.setVerticalStretch(0);
         sizePolicy5.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy5);
-        QFont font3;
-        font3.setPointSize(12);
-        font3.setBold(true);
-        label->setFont(font3);
-        label->setStyleSheet(QString::fromUtf8("color:black;"));
+        QFont font5;
+        font5.setPointSize(9);
+        font5.setBold(true);
+        label->setFont(font5);
+        label->setStyleSheet(QString::fromUtf8("color: white;\n"
+"background-color: #a40018 ;\n"
+"margin-right: 30px;"));
         label->setAlignment(Qt::AlignCenter);
+        label->setMargin(6);
 
-        verticalLayout_3->addWidget(label);
+        verticalLayout_6->addWidget(label);
 
-        verticalSpacer_2 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+        label_2 = new QLabel(solverFrame);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        QFont font6;
+        font6.setPointSize(10);
+        font6.setBold(false);
+        label_2->setFont(font6);
+        label_2->setStyleSheet(QString::fromUtf8("border: 2px solid black;\n"
+"color: black;"));
+        label_2->setAlignment(Qt::AlignCenter);
+        label_2->setMargin(3);
+
+        verticalLayout_6->addWidget(label_2);
+
+
+        horizontalLayout_7->addLayout(verticalLayout_6);
+
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_12);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_7);
+
+        verticalSpacer_2 = new QSpacerItem(20, 15, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
 
         verticalLayout_3->addItem(verticalSpacer_2);
 
@@ -652,10 +700,11 @@ public:
         fh_logo->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/images/fhooe_logo.png\"/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         fh_logo->setText(QString());
-        learningButton->setText(QString());
+        learningButton->setText(QCoreApplication::translate("MainWindow", "Zur Lernapp", nullptr));
         addColButton->setText(QString());
         removeColButton->setText(QString());
-        label->setText(QCoreApplication::translate("MainWindow", "Ergebnis: ---", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "optimierte Funktion", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "A + B", nullptr));
         learningOverviewBackButton->setText(QString());
         openTask1Button->setText(QString());
         openTutorialButton->setText(QString());

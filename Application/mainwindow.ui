@@ -268,7 +268,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="solver">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -328,7 +328,7 @@
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
-                 <height>15</height>
+                 <height>5</height>
                 </size>
                </property>
               </spacer>
@@ -362,21 +362,30 @@
                    <height>0</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/buttons/learning_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/learning_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
                  </property>
                  <property name="text">
-                  <string/>
+                  <string>zur Lernapp</string>
                  </property>
                 </widget>
                </item>
@@ -409,7 +418,7 @@ QPushButton::hover
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
-                 <height>10</height>
+                 <height>2</height>
                 </size>
                </property>
               </spacer>
@@ -484,6 +493,12 @@ QPushButton::hover
                       <width>0</width>
                       <height>400</height>
                      </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                     </font>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QHeaderView::section {
@@ -741,36 +756,102 @@ QPushButton::hover
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
-                 <height>20</height>
+                 <height>30</height>
                 </size>
                </property>
               </spacer>
              </item>
              <item>
-              <widget class="QLabel" name="label">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color:black;</string>
-               </property>
-               <property name="text">
-                <string>Ergebnis: ---</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <spacer name="horizontalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: white;
+background-color: #a40018 ;
+margin-right: 30px;</string>
+                   </property>
+                   <property name="text">
+                    <string>optimierte Funktion</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>6</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 2px solid black;
+color: black;</string>
+                   </property>
+                   <property name="text">
+                    <string>A + B</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>3</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_12">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
              </item>
              <item>
               <spacer name="verticalSpacer_2">
@@ -783,7 +864,7 @@ QPushButton::hover
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
-                 <height>30</height>
+                 <height>15</height>
                 </size>
                </property>
               </spacer>
@@ -852,21 +933,30 @@ QPushButton::hover
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="font">
+              <font>
+               <family>Arial</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="styleSheet">
               <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/leaving_learning_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/leaving_learning_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
              </property>
              <property name="text">
-              <string/>
+              <string>Lernapp verlassen</string>
              </property>
             </widget>
            </item>
@@ -930,141 +1020,204 @@ QPushButton::hover
             </property>
             <item row="1" column="0">
              <widget class="QPushButton" name="openTask1Button">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/task1_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/task1_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Übung 1</string>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
              <widget class="QPushButton" name="openTutorialButton">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/tutorial_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/tutorial_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Tutorial</string>
               </property>
              </widget>
             </item>
             <item row="1" column="1">
              <widget class="QPushButton" name="openTask2Button">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/task2_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/task2_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Übung 2</string>
               </property>
              </widget>
             </item>
             <item row="2" column="0">
              <widget class="QPushButton" name="openTask4Button">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/task4_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/task4_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Übung 4</string>
               </property>
              </widget>
             </item>
             <item row="1" column="2">
              <widget class="QPushButton" name="openTask3Button">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/task3_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/task3_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Übung 3</string>
               </property>
              </widget>
             </item>
             <item row="2" column="1">
              <widget class="QPushButton" name="openTask5Button">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/task5_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/task5_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Übung 5</string>
               </property>
              </widget>
             </item>
             <item row="2" column="2">
              <widget class="QPushButton" name="openTask6Button">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">QPushButton
 {
+	color: white;
 	width: 205px;
 	height: 50px;
-  	border-image: url(:/images/buttons/task6_button.png)
+   	border-image: url(:/images/buttons/button.png)
 }
 
 QPushButton::hover
 {
-	border-image: url(:/images/buttons/task6_button_hover.png)
+	border-image: url(:/images/buttons/button_hover.png)
 }</string>
               </property>
               <property name="text">
-               <string/>
+               <string>Übung 6</string>
               </property>
              </widget>
             </item>
