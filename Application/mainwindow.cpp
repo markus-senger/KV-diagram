@@ -9,10 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_SOLVER);
 
-    ui->solverFrame->setGraphicsEffect(createShadow());
-    ui->learningOverviewFrame->setGraphicsEffect(createShadow());
+    addShadows();
 
     truthTableData = new TruthTable(this);
     kvDiagram = new KVDiagram(this);
@@ -71,6 +70,13 @@ void MainWindow::valueChanged()
     updateValueKVDiagram();
 }
 
+void MainWindow::addShadows()
+{
+    ui->solverFrame->setGraphicsEffect(createShadow());
+    ui->learningOverviewFrame->setGraphicsEffect(createShadow());
+    ui->tutorial001Frame->setGraphicsEffect(createShadow());
+}
+
 void MainWindow::addComboBox(int index)
 {
     QComboBox* kvOptions = new QComboBox(this);
@@ -127,15 +133,28 @@ QGraphicsDropShadowEffect* MainWindow::createShadow()
     return effect;
 }
 
-
 void MainWindow::on_learningButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_OVERVIEW);
 }
 
-
-void MainWindow::on_learningOverviewBackButton_clicked()
+void MainWindow::on_backToSolverButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_SOLVER);
+}
+
+void MainWindow::on_openTutorialButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_TUTORIAL_001);
+}
+
+void MainWindow::on_backToSolverButton_2_clicked()
+{
+    on_backToSolverButton_clicked();
+}
+
+void MainWindow::on_backToLearningOverviewButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_OVERVIEW);
 }
 

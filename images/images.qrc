@@ -7,5 +7,6 @@
         <file>buttons/remove_button_hover.png</file>
         <file>buttons/button.png</file>
         <file>buttons/button_hover.png</file>
+        <file>dummyImage.jpg</file>
     </qresource>
 </RCC>

@@ -24,13 +24,20 @@ private slots:
     void valueChanged();
     void on_learningButton_clicked();
 
-    void on_learningOverviewBackButton_clicked();
+    void on_backToSolverButton_clicked();
+
+    void on_openTutorialButton_clicked();
+
+    void on_backToSolverButton_2_clicked();
+
+    void on_backToLearningOverviewButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     TruthTable *truthTableData;
     KVDiagram *kvDiagram;
 
+    void addShadows();
     void addComboBox(int index);
     void resizeTruthTable();
     void resizeKVDiagram();
