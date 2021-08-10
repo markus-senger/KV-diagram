@@ -6,7 +6,8 @@
 //generally
 static const int            PAGE_INDEX_SOLVER                       = 0;
 static const int            PAGE_INDEX_LEARNING_OVERVIEW            = 1;
-static const int            PAGE_INDEX_LEARNING_TUTORIAL_001        = 2;
+static const int            PAGE_INDEX_LEARNING_TUTORIAL            = 2;
+static const int            PAGE_INDEX_LEARNING_TASK1               = 3;
 
 static const QString        COLOR_RED                               = "#A40018";
 static const QString        SHADOW_COLOR                            = "#bab8b8";

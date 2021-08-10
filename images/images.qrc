@@ -8,5 +8,12 @@
         <file>buttons/button.png</file>
         <file>buttons/button_hover.png</file>
         <file>dummyImage.jpg</file>
+        <file>buttons/back_button.png</file>
+        <file>buttons/back_button_hover.png</file>
+        <file>buttons/continue_button.png</file>
+        <file>buttons/continue_button_hover.png</file>
+        <file>task1_truthtable1.png</file>
+        <file>buttons/input_help_button.png</file>
+        <file>buttons/input_help_button_hover.png</file>
     </qresource>
 </RCC>

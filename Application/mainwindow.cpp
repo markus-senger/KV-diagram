@@ -75,7 +75,8 @@ void MainWindow::addShadows()
 {
     ui->solverFrame->setGraphicsEffect(createShadow());
     ui->learningOverviewFrame->setGraphicsEffect(createShadow());
-    ui->tutorial001Frame->setGraphicsEffect(createShadow());
+    ui->tutorialFrame->setGraphicsEffect(createShadow());
+    ui->task1Frame->setGraphicsEffect(createShadow());
 }
 
 void MainWindow::addComboBox(int index)
@@ -146,7 +147,7 @@ void MainWindow::on_backToSolverButton_clicked()
 
 void MainWindow::on_openTutorialButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_TUTORIAL_001);
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_TUTORIAL);
 }
 
 void MainWindow::on_backToSolverButton_2_clicked()
@@ -157,5 +158,53 @@ void MainWindow::on_backToSolverButton_2_clicked()
 void MainWindow::on_backToLearningOverviewButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_OVERVIEW);
+}
+
+
+void MainWindow::on_openTask1Button_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_TASK1);
+    ui->task1StackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_backToSolverButton_3_clicked()
+{
+     on_backToSolverButton_clicked();
+}
+
+
+void MainWindow::on_backToLearningOverviewButton_2_clicked()
+{
+    on_backToLearningOverviewButton_clicked();
+}
+
+
+void MainWindow::on_continueButtonTask1Page1_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_backButtonTask1Page2_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_solutionButtonTask1_1_clicked()
+{
+    static bool show = false;
+    if(!show) {
+        ui->solutionLabelTask1_1->setText("(¬A ▪ ¬B ▪ ¬C) + (¬A ▪ B ▪ ¬C) + (A ▪ ¬B ▪ C) + (A ▪ B ▪ C)");
+        ui->solutionLabelTask1_1->setStyleSheet("color: black; border: 2px solid #A40018");
+        show = true;
+        show = true;
+        ui->solutionButtonTask1_1->setText("Lösung ausblenden");
+    }
+    else {
+        ui->solutionLabelTask1_1->setText("");
+        ui->solutionLabelTask1_1->setStyleSheet("border: 0px solid black");
+        show = false;
+        ui->solutionButtonTask1_1->setText("Lösung anzeigen");
+    }
 }
 

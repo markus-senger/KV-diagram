@@ -32,6 +32,18 @@ private slots:
 
     void on_backToLearningOverviewButton_clicked();
 
+    void on_openTask1Button_clicked();
+
+    void on_backToSolverButton_3_clicked();
+
+    void on_backToLearningOverviewButton_2_clicked();
+
+    void on_continueButtonTask1Page1_clicked();
+
+    void on_backButtonTask1Page2_clicked();
+
+    void on_solutionButtonTask1_1_clicked();
+
 private:
     Ui::MainWindow *ui;
     TruthTable *truthTableData;
