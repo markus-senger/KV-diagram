@@ -17,7 +17,6 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
@@ -28,6 +27,7 @@
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "functionequationinput.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -170,20 +170,8 @@ public:
     QSpacerItem *horizontalSpacer_26;
     QFrame *verticalFrame;
     QVBoxLayout *verticalLayout_22;
-    QLabel *label_6;
-    QLineEdit *lineEdit;
-    QSpacerItem *verticalSpacer_20;
-    QGridLayout *gridLayout_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_9;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton;
-    QPushButton *pushButton_8;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton_10;
+    functionEquationInput *widget;
+    QVBoxLayout *verticalLayout_14;
     QFrame *horizontalFrame_4;
     QHBoxLayout *horizontalLayout_20;
     QPushButton *solutionButtonTask1_1;
@@ -960,7 +948,7 @@ public:
         scrollArea->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 763, 944));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 618, 944));
         verticalLayout_11 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
         gridFrame = new QFrame(scrollAreaWidgetContents);
@@ -1232,244 +1220,12 @@ public:
         verticalLayout_22 = new QVBoxLayout(verticalFrame);
         verticalLayout_22->setSpacing(6);
         verticalLayout_22->setObjectName(QString::fromUtf8("verticalLayout_22"));
-        label_6 = new QLabel(verticalFrame);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        sizePolicy1.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
-        label_6->setSizePolicy(sizePolicy1);
-        label_6->setMinimumSize(QSize(0, 20));
-        QFont font9;
-        font9.setPointSize(10);
-        font9.setBold(true);
-        label_6->setFont(font9);
-        label_6->setStyleSheet(QString::fromUtf8("color: black;"));
+        widget = new functionEquationInput(verticalFrame);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        verticalLayout_14 = new QVBoxLayout(widget);
+        verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
 
-        verticalLayout_22->addWidget(label_6);
-
-        lineEdit = new QLineEdit(verticalFrame);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(0, 30));
-        lineEdit->setStyleSheet(QString::fromUtf8("color: black;\n"
-"border: 2px solid black;"));
-
-        verticalLayout_22->addWidget(lineEdit);
-
-        verticalSpacer_20 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout_22->addItem(verticalSpacer_20);
-
-        gridLayout_2 = new QGridLayout();
-        gridLayout_2->setSpacing(12);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        pushButton_3 = new QPushButton(verticalFrame);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        sizePolicy2.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy2);
-        QFont font10;
-        font10.setFamilies({QString::fromUtf8("Arial")});
-        font10.setPointSize(11);
-        font10.setBold(true);
-        pushButton_3->setFont(font10);
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_3, 1, 0, 1, 1);
-
-        pushButton_6 = new QPushButton(verticalFrame);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        sizePolicy2.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
-        pushButton_6->setSizePolicy(sizePolicy2);
-        pushButton_6->setFont(font10);
-        pushButton_6->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_6, 1, 2, 1, 1);
-
-        pushButton_2 = new QPushButton(verticalFrame);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        sizePolicy2.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy2);
-        pushButton_2->setFont(font10);
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_2, 0, 1, 1, 1);
-
-        pushButton_4 = new QPushButton(verticalFrame);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        sizePolicy2.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy2);
-        pushButton_4->setFont(font10);
-        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_4, 1, 1, 1, 1);
-
-        pushButton_9 = new QPushButton(verticalFrame);
-        pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-        sizePolicy2.setHeightForWidth(pushButton_9->sizePolicy().hasHeightForWidth());
-        pushButton_9->setSizePolicy(sizePolicy2);
-        QFont font11;
-        font11.setFamilies({QString::fromUtf8("Arial Black")});
-        font11.setPointSize(11);
-        font11.setBold(true);
-        pushButton_9->setFont(font11);
-        pushButton_9->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_9, 0, 4, 1, 1);
-
-        pushButton_5 = new QPushButton(verticalFrame);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        sizePolicy2.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
-        pushButton_5->setSizePolicy(sizePolicy2);
-        pushButton_5->setFont(font10);
-        pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_5, 0, 2, 1, 1);
-
-        pushButton = new QPushButton(verticalFrame);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        sizePolicy2.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy2);
-        pushButton->setFont(font10);
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton, 0, 0, 1, 1);
-
-        pushButton_8 = new QPushButton(verticalFrame);
-        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-        sizePolicy2.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
-        pushButton_8->setSizePolicy(sizePolicy2);
-        pushButton_8->setFont(font7);
-        pushButton_8->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_8, 1, 3, 1, 1);
-
-        pushButton_7 = new QPushButton(verticalFrame);
-        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-        sizePolicy2.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
-        pushButton_7->setSizePolicy(sizePolicy2);
-        pushButton_7->setFont(font7);
-        pushButton_7->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_7, 0, 3, 1, 1);
-
-        pushButton_10 = new QPushButton(verticalFrame);
-        pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
-        sizePolicy2.setHeightForWidth(pushButton_10->sizePolicy().hasHeightForWidth());
-        pushButton_10->setSizePolicy(sizePolicy2);
-        pushButton_10->setFont(font10);
-        pushButton_10->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	color: white;\n"
-"	width: 40px;\n"
-"	height: 35px;\n"
-"   	border-image: url(:/images/buttons/input_help_button.png)\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	border-image: url(:/images/buttons/input_help_button_hover.png)\n"
-"}"));
-
-        gridLayout_2->addWidget(pushButton_10, 1, 4, 1, 1);
-
-
-        verticalLayout_22->addLayout(gridLayout_2);
+        verticalLayout_22->addWidget(widget);
 
         horizontalFrame_4 = new QFrame(verticalFrame);
         horizontalFrame_4->setObjectName(QString::fromUtf8("horizontalFrame_4"));
@@ -1483,11 +1239,11 @@ public:
         sizePolicy2.setHeightForWidth(solutionButtonTask1_1->sizePolicy().hasHeightForWidth());
         solutionButtonTask1_1->setSizePolicy(sizePolicy2);
         solutionButtonTask1_1->setMinimumSize(QSize(20, 5));
-        QFont font12;
-        font12.setFamilies({QString::fromUtf8("Arial")});
-        font12.setPointSize(10);
-        font12.setBold(false);
-        solutionButtonTask1_1->setFont(font12);
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Arial")});
+        font9.setPointSize(10);
+        font9.setBold(false);
+        solutionButtonTask1_1->setFont(font9);
         solutionButtonTask1_1->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "	color: white;\n"
@@ -1592,7 +1348,7 @@ public:
         scrollArea_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 779, 442));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 618, 419));
         verticalLayout_19 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_19->setObjectName(QString::fromUtf8("verticalLayout_19"));
         gridFrame_3 = new QFrame(scrollAreaWidgetContents_3);
@@ -1775,18 +1531,6 @@ public:
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Sie sehen unten eine Wahrheitstabelle, bilden Sie daraus die Funktionsgleichung in DNF. Eine Optimierung mittels KV-Diagramm ist hier noch nicht erforderlich.</span></p></body></html>", nullptr));
         label_9->setText(QString());
-        label_6->setText(QCoreApplication::translate("MainWindow", "Geben Sie die Funktionsgleichung an (in DNF):", nullptr));
-        lineEdit->setText(QCoreApplication::translate("MainWindow", "\342\226\252", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "\302\254A", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("MainWindow", "\302\254C", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "B", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "\302\254B", nullptr));
-        pushButton_9->setText(QCoreApplication::translate("MainWindow", "(", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "A", nullptr));
-        pushButton_8->setText(QCoreApplication::translate("MainWindow", "\342\210\250", nullptr));
-        pushButton_7->setText(QCoreApplication::translate("MainWindow", "\342\210\247", nullptr));
-        pushButton_10->setText(QCoreApplication::translate("MainWindow", ")", nullptr));
         solutionButtonTask1_1->setText(QCoreApplication::translate("MainWindow", "L\303\266sung anzeigen", nullptr));
         solutionLabelTask1_1->setText(QString());
         continueButtonTask1Page1->setText(QString());

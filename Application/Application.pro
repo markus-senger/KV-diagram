@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     auxiliaryFunctions.cpp \
+    functionequationinput.cpp \
     kvdiagram.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     auxiliaryFunctions.h \
+    functionequationinput.h \
     kvdiagram.h \
     mainwindow.h \
     truthtable.h \
     types.h
 
 FORMS += \
+    functionequationinput.ui \
     mainwindow.ui
 
 # Default rules for deployment.
