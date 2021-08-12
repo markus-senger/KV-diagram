@@ -3,8 +3,6 @@
 
 #include <QMainWindow>
 #include <QGraphicsDropShadowEffect>
-#include "truthtable.h"
-#include "kvdiagram.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,9 +17,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_addColButton_clicked();
-    void on_removeColButton_clicked();
-    void valueChanged();
     void on_learningButton_clicked();
 
     void on_backToSolverButton_clicked();
@@ -38,22 +33,10 @@ private slots:
 
     void on_backToLearningOverviewButton_2_clicked();
 
-    void on_continueButtonTask1Page1_clicked();
-
-    void on_backButtonTask1Page2_clicked();
-
-    void on_solutionButtonTask1_1_clicked();
-
 private:
     Ui::MainWindow *ui;
-    TruthTable *truthTableData;
-    KVDiagram *kvDiagram;
 
     void addShadows();
-    void addComboBox(int index);
-    void resizeTruthTable();
-    void resizeKVDiagram();
-    void updateValueKVDiagram();
     QGraphicsDropShadowEffect* createShadow();
 
 };

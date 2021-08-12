@@ -1,0 +1,29 @@
+#ifndef TASK1PAGE_H
+#define TASK1PAGE_H
+
+#include <QWidget>
+
+namespace Ui {
+class Task1Page;
+}
+
+class Task1Page : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit Task1Page(QWidget *parent = nullptr);
+    ~Task1Page();
+
+private slots:
+    void on_continueButtonTask1Page1_clicked();
+
+    void on_backButtonTask1Page2_clicked();
+
+    void on_solutionButtonTask1_1_clicked();
+
+private:
+    Ui::Task1Page *ui;
+};
+
+#endif // TASK1PAGE_H

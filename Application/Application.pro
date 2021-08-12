@@ -10,23 +10,32 @@ CONFIG += c++11
 
 SOURCES += \
     auxiliaryFunctions.cpp \
-    functionequationinput.cpp \
+    booleanfunctionsimplifier.cpp \
+    equationinputfield.cpp \
     kvdiagram.cpp \
     main.cpp \
     mainwindow.cpp \
-    truthtable.cpp
+    task1page.cpp \
+    truthtable.cpp \
+    tutorialpage.cpp
 
 HEADERS += \
     auxiliaryFunctions.h \
-    functionequationinput.h \
+    booleanfunctionsimplifier.h \
+    equationinputfield.h \
     kvdiagram.h \
     mainwindow.h \
+    task1page.h \
     truthtable.h \
+    tutorialpage.h \
     types.h
 
 FORMS += \
-    functionequationinput.ui \
-    mainwindow.ui
+    booleanfunctionsimplifier.ui \
+    equationinputfield.ui \
+    mainwindow.ui \
+    task1page.ui \
+    tutorialpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
