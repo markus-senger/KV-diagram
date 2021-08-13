@@ -59,7 +59,7 @@ public:
         scrollArea->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 957, 944));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -395, 957, 944));
         verticalLayout_11 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
         gridFrame = new QFrame(scrollAreaWidgetContents);
@@ -75,7 +75,7 @@ public:
         sizePolicy1.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
         label_5->setSizePolicy(sizePolicy1);
         label_5->setMinimumSize(QSize(200, 200));
-        label_5->setStyleSheet(QString::fromUtf8("image: url(:/images/dummyImage.jpg)"));
+        label_5->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_circuit1.png)"));
 
         verticalLayout_12->addWidget(label_5);
 
@@ -125,7 +125,7 @@ public:
         sizePolicy1.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy1);
         label_4->setMinimumSize(QSize(200, 200));
-        label_4->setStyleSheet(QString::fromUtf8("image: url(:/images/dummyImage.jpg)"));
+        label_4->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_circuit1.png)"));
 
         verticalLayout_12->addWidget(label_4);
 

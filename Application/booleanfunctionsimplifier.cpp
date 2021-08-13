@@ -10,8 +10,8 @@ BooleanFunctionSimplifier::BooleanFunctionSimplifier(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    truthTableData = new TruthTable(this);
-    kvDiagram = new KVDiagram(this);
+    truthTableData = new TruthTableSimplifier(this);
+    kvDiagram = new KVDiagramSimplifier(this);
 
     ui->truthTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->truthTable->setModel(truthTableData);

@@ -1,13 +1,13 @@
-#ifndef KVDIAGRAM_H
-#define KVDIAGRAM_H
+#ifndef KVDIAGRAMSIMPLIFIER_H
+#define KVDIAGRAMSIMPLIFIER_H
 
 #include <QStandardItemModel>
 
-class KVDiagram : public QStandardItemModel
+class KVDiagramSimplifier : public QStandardItemModel
 {
      Q_OBJECT
 public:
-    KVDiagram(QObject *parent = nullptr);
+    KVDiagramSimplifier(QObject *parent = nullptr);
     void addVariable();
     void removeVariable();
     void updateValues(std::vector<int> results);
@@ -18,4 +18,4 @@ private:
     void writeValues(std::vector<int> results, int maxI, int maxJ);
 };
 
-#endif // KVDIAGRAM_H
+#endif // KVDIAGRAMSIMPLIFIER_H

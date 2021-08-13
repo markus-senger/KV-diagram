@@ -58,7 +58,7 @@ public:
     QPushButton *learningButton;
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer_5;
-    BooleanFunctionSimplifier *widget_2;
+    BooleanFunctionSimplifier *widgetSimplifier;
     QSpacerItem *verticalSpacer_2;
     QSpacerItem *horizontalSpacer_3;
     QWidget *learningOverview;
@@ -101,8 +101,7 @@ public:
     QPushButton *backToLearningOverviewButton;
     QSpacerItem *verticalSpacer_10;
     QSpacerItem *horizontalSpacer_18;
-    TutorialPage *widget_21;
-    QVBoxLayout *verticalLayout_9;
+    TutorialPage *widgetTutorial;
     QSpacerItem *horizontalSpacer_16;
     QWidget *task1;
     QVBoxLayout *verticalLayout_13;
@@ -119,7 +118,7 @@ public:
     QPushButton *backToLearningOverviewButton_2;
     QSpacerItem *verticalSpacer_16;
     QSpacerItem *horizontalSpacer_21;
-    Task1Page *widget_3;
+    Task1Page *widgetTask1;
     QSpacerItem *horizontalSpacer_20;
     QStatusBar *statusbar;
 
@@ -302,10 +301,10 @@ public:
 
         verticalLayout_3->addItem(verticalSpacer_5);
 
-        widget_2 = new BooleanFunctionSimplifier(solverFrame);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        widgetSimplifier = new BooleanFunctionSimplifier(solverFrame);
+        widgetSimplifier->setObjectName(QString::fromUtf8("widgetSimplifier"));
 
-        verticalLayout_3->addWidget(widget_2);
+        verticalLayout_3->addWidget(widgetSimplifier);
 
         verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
 
@@ -652,17 +651,15 @@ public:
 
         horizontalLayout_10->addWidget(horizontalFrame_5);
 
-        widget_21 = new TutorialPage(tutorialFrame);
-        widget_21->setObjectName(QString::fromUtf8("widget_21"));
+        widgetTutorial = new TutorialPage(tutorialFrame);
+        widgetTutorial->setObjectName(QString::fromUtf8("widgetTutorial"));
         QSizePolicy sizePolicy5(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy5.setHorizontalStretch(0);
         sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(widget_21->sizePolicy().hasHeightForWidth());
-        widget_21->setSizePolicy(sizePolicy5);
-        verticalLayout_9 = new QVBoxLayout(widget_21);
-        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        sizePolicy5.setHeightForWidth(widgetTutorial->sizePolicy().hasHeightForWidth());
+        widgetTutorial->setSizePolicy(sizePolicy5);
 
-        horizontalLayout_10->addWidget(widget_21);
+        horizontalLayout_10->addWidget(widgetTutorial);
 
 
         horizontalLayout_3->addWidget(tutorialFrame);
@@ -774,10 +771,10 @@ public:
 
         horizontalLayout_16->addWidget(horizontalFrame_6);
 
-        widget_3 = new Task1Page(task1Frame);
-        widget_3->setObjectName(QString::fromUtf8("widget_3"));
+        widgetTask1 = new Task1Page(task1Frame);
+        widgetTask1->setObjectName(QString::fromUtf8("widgetTask1"));
 
-        horizontalLayout_16->addWidget(widget_3);
+        horizontalLayout_16->addWidget(widgetTask1);
 
 
         horizontalLayout_11->addWidget(task1Frame);

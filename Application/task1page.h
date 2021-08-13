@@ -22,6 +22,10 @@ private slots:
 
     void on_solutionButtonTask1_1_clicked();
 
+    void on_continueButtonTask1Page2_clicked();
+
+    void on_backButtonTask1Page3_clicked();
+
 private:
     Ui::Task1Page *ui;
 };

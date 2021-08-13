@@ -1,8 +1,8 @@
-#include "kvdiagram.h"
+#include "kvdiagramsimplifier.h"
 #include "types.h"
 #include <QTableWidgetItem>
 
-KVDiagram::KVDiagram(QObject *parent)
+KVDiagramSimplifier::KVDiagramSimplifier(QObject *parent)
     : QStandardItemModel(parent)
 {
     setColumnCount(KV_DIAGRAM_3VAR_COL_NUM);
@@ -10,7 +10,7 @@ KVDiagram::KVDiagram(QObject *parent)
     setBorder();
 }
 
-void KVDiagram::addVariable()
+void KVDiagramSimplifier::addVariable()
 {
     if(rowCount() == KV_DIAGRAM_2VAR_ROW_NUM && columnCount() == KV_DIAGRAM_2VAR_COL_NUM) {
         setColumnCount(KV_DIAGRAM_3VAR_COL_NUM);
@@ -23,7 +23,7 @@ void KVDiagram::addVariable()
     setBorder();
 }
 
-void KVDiagram::removeVariable()
+void KVDiagramSimplifier::removeVariable()
 {
     if(rowCount() == KV_DIAGRAM_3VAR_ROW_NUM && columnCount() == KV_DIAGRAM_3VAR_COL_NUM) {
         setColumnCount(KV_DIAGRAM_2VAR_COL_NUM);
@@ -36,7 +36,7 @@ void KVDiagram::removeVariable()
     setBorder();
 }
 
-void KVDiagram::updateValues(std::vector<int> results)
+void KVDiagramSimplifier::updateValues(std::vector<int> results)
 {
     if(rowCount() == KV_DIAGRAM_2VAR_ROW_NUM && columnCount() == KV_DIAGRAM_2VAR_COL_NUM) {
         writeValues(results, 3, 3);
@@ -49,7 +49,7 @@ void KVDiagram::updateValues(std::vector<int> results)
     }
 }
 
-void KVDiagram::setBorder()
+void KVDiagramSimplifier::setBorder()
 {
     for(int i = 0; i < rowCount(); i++) {
         for(int j = 0; j < columnCount(); j++) {
@@ -68,7 +68,7 @@ void KVDiagram::setBorder()
     setBorderText();
 }
 
-void KVDiagram::setBorderText()
+void KVDiagramSimplifier::setBorderText()
 {
     if(rowCount() == KV_DIAGRAM_2VAR_ROW_NUM && columnCount() == KV_DIAGRAM_2VAR_COL_NUM) {
         item(0,1)->setText("not B");
@@ -108,7 +108,7 @@ void KVDiagram::setBorderText()
     }
 }
 
-void KVDiagram::writeValues(std::vector<int> results, int maxI, int maxJ)
+void KVDiagramSimplifier::writeValues(std::vector<int> results, int maxI, int maxJ)
 {
     int a = 0;
     for(int i = 1; i < maxI; i++) {

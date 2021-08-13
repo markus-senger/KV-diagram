@@ -2,8 +2,8 @@
 #define BOOLEANFUNCTIONSIMPLIFIER_H
 
 #include <QWidget>
-#include "truthtable.h"
-#include "kvdiagram.h"
+#include "truthtablesimplifier.h"
+#include "kvdiagramsimplifier.h"
 
 namespace Ui {
 class BooleanFunctionSimplifier;
@@ -24,8 +24,8 @@ private slots:
 
 private:
     Ui::BooleanFunctionSimplifier *ui;
-    TruthTable *truthTableData;
-    KVDiagram *kvDiagram;
+    TruthTableSimplifier *truthTableData;
+    KVDiagramSimplifier *kvDiagram;
 
     void addComboBox(int index);
     void resizeTruthTable();

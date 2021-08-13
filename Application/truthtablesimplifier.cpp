@@ -1,8 +1,8 @@
-#include "truthtable.h"
+#include "truthtablesimplifier.h"
 #include "types.h"
 #include "auxiliaryFunctions.h"
 
-TruthTable::TruthTable(QObject *parent)
+TruthTableSimplifier::TruthTableSimplifier(QObject *parent)
     : QStandardItemModel(parent)
 {
     setColumnCount(TRUTH_TABLE_INIT_COL_NUM + 1);
@@ -15,7 +15,7 @@ TruthTable::TruthTable(QObject *parent)
     updateData();
 }
 
-bool TruthTable::addVariable()
+bool TruthTableSimplifier::addVariable()
 {
     if(columnCount() < MAX_VARIABLES+1) {
         mvariable++;
@@ -28,7 +28,7 @@ bool TruthTable::addVariable()
     return false;
 }
 
-bool TruthTable::removeVariable()
+bool TruthTableSimplifier::removeVariable()
 {
     if(columnCount()-1 > MIN_VARIABLES) {
         mvariable--;
@@ -40,37 +40,37 @@ bool TruthTable::removeVariable()
     return false;
 }
 
-void TruthTable::addResult(int result)
+void TruthTableSimplifier::addResult(int result)
 {
     mresults.push_back(result);
 }
 
-void TruthTable::clearResults()
+void TruthTableSimplifier::clearResults()
 {
     mresults.clear();
 }
 
-int TruthTable::getCurRowNum() const
+int TruthTableSimplifier::getCurRowNum() const
 {
     return rowCount();
 }
 
-int TruthTable::getCurColNum() const
+int TruthTableSimplifier::getCurColNum() const
 {
     return columnCount();
 }
 
-int TruthTable::getCurVariableNum() const
+int TruthTableSimplifier::getCurVariableNum() const
 {
     return mvariable;
 }
 
-std::vector<int> TruthTable::getResults() const
+std::vector<int> TruthTableSimplifier::getResults() const
 {
     return mresults;
 }
 
-QVariant TruthTable::data(const QModelIndex &index, int role) const
+QVariant TruthTableSimplifier::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::DisplayRole && index.column() < columnCount()-1) {
        int digit = mdata.at(index.row()).at(index.column());
@@ -84,7 +84,7 @@ QVariant TruthTable::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-void TruthTable::updateData()
+void TruthTableSimplifier::updateData()
 {
     mdata.clear();
     for(int i = 0; i < rowCount(); i++) {

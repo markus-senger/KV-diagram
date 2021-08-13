@@ -11,27 +11,30 @@ CONFIG += c++11
 SOURCES += \
     auxiliaryFunctions.cpp \
     booleanfunctionsimplifier.cpp \
+    editablekvdiagram3var.cpp \
     equationinputfield.cpp \
-    kvdiagram.cpp \
+    kvdiagramsimplifier.cpp \
     main.cpp \
     mainwindow.cpp \
     task1page.cpp \
-    truthtable.cpp \
+    truthtablesimplifier.cpp \
     tutorialpage.cpp
 
 HEADERS += \
     auxiliaryFunctions.h \
     booleanfunctionsimplifier.h \
+    editablekvdiagram3var.h \
     equationinputfield.h \
-    kvdiagram.h \
+    kvdiagramsimplifier.h \
     mainwindow.h \
     task1page.h \
-    truthtable.h \
+    truthtablesimplifier.h \
     tutorialpage.h \
     types.h
 
 FORMS += \
     booleanfunctionsimplifier.ui \
+    editablekvdiagram3var.ui \
     equationinputfield.ui \
     mainwindow.ui \
     task1page.ui \

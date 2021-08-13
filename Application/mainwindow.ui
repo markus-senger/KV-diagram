@@ -436,7 +436,7 @@ QPushButton::hover
               </spacer>
              </item>
              <item>
-              <widget class="BooleanFunctionSimplifier" name="widget_2" native="true"/>
+              <widget class="BooleanFunctionSimplifier" name="widgetSimplifier" native="true"/>
              </item>
              <item>
               <spacer name="verticalSpacer_2">
@@ -1112,14 +1112,13 @@ QPushButton::hover
               </widget>
              </item>
              <item>
-              <widget class="TutorialPage" name="widget_2" native="true">
+              <widget class="TutorialPage" name="widgetTutorial" native="true">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_9"/>
               </widget>
              </item>
             </layout>
@@ -1360,7 +1359,7 @@ QPushButton::hover
               </widget>
              </item>
              <item>
-              <widget class="Task1Page" name="widget_3" native="true"/>
+              <widget class="Task1Page" name="widgetTask1" native="true"/>
              </item>
             </layout>
            </widget>

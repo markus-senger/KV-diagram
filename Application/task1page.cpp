@@ -41,3 +41,15 @@ void Task1Page::on_solutionButtonTask1_1_clicked()
         ui->solutionButtonTask1_1->setText("Lösung anzeigen");
     }
 }
+
+void Task1Page::on_continueButtonTask1Page2_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(2);
+}
+
+
+void Task1Page::on_backButtonTask1Page3_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(1);
+}
+

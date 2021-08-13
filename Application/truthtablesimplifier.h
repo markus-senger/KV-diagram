@@ -1,11 +1,11 @@
-#ifndef TRUTHTABLE_H
-#define TRUTHTABLE_H
+#ifndef TRUTHTABLESIMPLIFIER_H
+#define TRUTHTABLESIMPLIFIER_H
 
 #include <QStandardItemModel>
 #include <map>
 #include <vector>
 
-class TruthTable : public QStandardItemModel
+class TruthTableSimplifier : public QStandardItemModel
 {
     Q_OBJECT
 private:
@@ -16,7 +16,7 @@ private:
     void updateData();
 
 public:
-    TruthTable(QObject *parent = nullptr);
+    TruthTableSimplifier(QObject *parent = nullptr);
     bool addVariable();
     bool removeVariable();
     void addResult(int result);
@@ -28,4 +28,4 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 };
 
-#endif // TRUTHTABLE_H
+#endif // TRUTHTABLESIMPLIFIER_H

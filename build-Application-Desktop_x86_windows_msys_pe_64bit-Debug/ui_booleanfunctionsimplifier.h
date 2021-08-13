@@ -52,7 +52,7 @@ public:
     {
         if (BooleanFunctionSimplifier->objectName().isEmpty())
             BooleanFunctionSimplifier->setObjectName(QString::fromUtf8("BooleanFunctionSimplifier"));
-        BooleanFunctionSimplifier->resize(400, 300);
+        BooleanFunctionSimplifier->resize(426, 300);
         verticalLayout = new QVBoxLayout(BooleanFunctionSimplifier);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout_6 = new QHBoxLayout();
