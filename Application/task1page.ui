@@ -55,8 +55,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
-            <height>454</height>
+            <width>636</width>
+            <height>429</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -455,7 +455,7 @@ QPushButton::hover
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
+            <width>600</width>
             <height>454</height>
            </rect>
           </property>
@@ -821,7 +821,7 @@ QPushButton::hover
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Um diese Schaltung nun zu vereinfachen bietet sich hier, dass KV-Diagramm an. Tragen Sie zunächst die Werte aus der Wahrheitstabelle richtig in das nebenstehende KV-Diagramm ein.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Um diese Schaltung nun zu vereinfachen, bietet sich hier, dass KV-Diagramm an. Tragen Sie zunächst die Werte aus der Wahrheitstabelle richtig in das nebenstehende KV-Diagramm ein.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
