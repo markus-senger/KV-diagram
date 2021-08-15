@@ -2,11 +2,21 @@
 #include "types.h"
 #include <QTableWidgetItem>
 
-KVDiagramSimplifier::KVDiagramSimplifier(QObject *parent)
+KVDiagramSimplifier::KVDiagramSimplifier(QObject *parent, int numOfVar)
     : QStandardItemModel(parent)
 {
-    setColumnCount(KV_DIAGRAM_3VAR_COL_NUM);
-    setRowCount(KV_DIAGRAM_3VAR_ROW_NUM);
+    if(numOfVar == 2) {
+        setColumnCount(KV_DIAGRAM_2VAR_COL_NUM);
+        setRowCount(KV_DIAGRAM_2VAR_ROW_NUM);
+    }
+    else if(numOfVar == 4) {
+        setColumnCount(KV_DIAGRAM_4VAR_COL_NUM);
+        setRowCount(KV_DIAGRAM_4VAR_ROW_NUM);
+    }
+    else {
+        setColumnCount(KV_DIAGRAM_3VAR_COL_NUM);
+        setRowCount(KV_DIAGRAM_3VAR_ROW_NUM);
+    }
     setBorder();
 }
 

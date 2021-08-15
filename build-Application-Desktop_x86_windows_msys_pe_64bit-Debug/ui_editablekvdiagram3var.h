@@ -11,7 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QPushButton>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -19,16 +21,37 @@ QT_BEGIN_NAMESPACE
 class Ui_EditableKVDiagram3Var
 {
 public:
-    QPushButton *pushButton;
+    QHBoxLayout *horizontalLayout;
+    QTableView *kvDiagram;
 
     void setupUi(QWidget *EditableKVDiagram3Var)
     {
         if (EditableKVDiagram3Var->objectName().isEmpty())
             EditableKVDiagram3Var->setObjectName(QString::fromUtf8("EditableKVDiagram3Var"));
-        EditableKVDiagram3Var->resize(400, 300);
-        pushButton = new QPushButton(EditableKVDiagram3Var);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(200, 120, 80, 22));
+        EditableKVDiagram3Var->resize(402, 261);
+        horizontalLayout = new QHBoxLayout(EditableKVDiagram3Var);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        kvDiagram = new QTableView(EditableKVDiagram3Var);
+        kvDiagram->setObjectName(QString::fromUtf8("kvDiagram"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(kvDiagram->sizePolicy().hasHeightForWidth());
+        kvDiagram->setSizePolicy(sizePolicy);
+        kvDiagram->setMinimumSize(QSize(0, 0));
+        kvDiagram->setMaximumSize(QSize(300, 122));
+        kvDiagram->setBaseSize(QSize(300, 122));
+        kvDiagram->setStyleSheet(QString::fromUtf8("QTableView {\n"
+"	background-color: white;\n"
+"}"));
+        kvDiagram->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        kvDiagram->setSelectionMode(QAbstractItemView::NoSelection);
+        kvDiagram->horizontalHeader()->setVisible(false);
+        kvDiagram->verticalHeader()->setVisible(false);
+        kvDiagram->verticalHeader()->setDefaultSectionSize(40);
+
+        horizontalLayout->addWidget(kvDiagram);
+
 
         retranslateUi(EditableKVDiagram3Var);
 
@@ -38,7 +61,6 @@ public:
     void retranslateUi(QWidget *EditableKVDiagram3Var)
     {
         EditableKVDiagram3Var->setWindowTitle(QCoreApplication::translate("EditableKVDiagram3Var", "Form", nullptr));
-        pushButton->setText(QCoreApplication::translate("EditableKVDiagram3Var", "PushButton", nullptr));
     } // retranslateUi
 
 };

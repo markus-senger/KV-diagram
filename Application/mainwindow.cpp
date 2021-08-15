@@ -65,6 +65,7 @@ void MainWindow::on_backToLearningOverviewButton_clicked()
 void MainWindow::on_openTask1Button_clicked()
 {
     ui->mainStackedWidget->setCurrentIndex(PAGE_INDEX_LEARNING_TASK1);
+    ui->widgetTask1->reset();
 }
 
 

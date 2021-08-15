@@ -93,8 +93,17 @@ public:
     QTextBrowser *textBrowser_5;
     QSpacerItem *verticalSpacer_20;
     QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer;
     QLabel *label_8;
-    EditableKVDiagram3Var *widget_2;
+    QSpacerItem *horizontalSpacer_3;
+    QVBoxLayout *verticalLayout_3;
+    EditableKVDiagram3Var *editableKVDiagram1;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *checkKVDiagram;
+    QSpacerItem *verticalSpacer_3;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *resultKVDiagram1Label;
+    QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_22;
     QSpacerItem *verticalSpacer_23;
@@ -512,20 +521,85 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer);
+
         label_8 = new QLabel(gridFrame_4);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        sizePolicy3.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
-        label_8->setSizePolicy(sizePolicy3);
-        label_8->setMinimumSize(QSize(100, 262));
+        sizePolicy.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
+        label_8->setSizePolicy(sizePolicy);
+        label_8->setMinimumSize(QSize(340, 262));
         label_8->setMaximumSize(QSize(16777215, 16777215));
         label_8->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_truthtable1.png)"));
 
         horizontalLayout_4->addWidget(label_8);
 
-        widget_2 = new EditableKVDiagram3Var(gridFrame_4);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_4->addWidget(widget_2);
+        horizontalLayout_4->addItem(horizontalSpacer_3);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        editableKVDiagram1 = new EditableKVDiagram3Var(gridFrame_4);
+        editableKVDiagram1->setObjectName(QString::fromUtf8("editableKVDiagram1"));
+
+        verticalLayout_3->addWidget(editableKVDiagram1);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        checkKVDiagram = new QPushButton(gridFrame_4);
+        checkKVDiagram->setObjectName(QString::fromUtf8("checkKVDiagram"));
+        sizePolicy2.setHeightForWidth(checkKVDiagram->sizePolicy().hasHeightForWidth());
+        checkKVDiagram->setSizePolicy(sizePolicy2);
+        checkKVDiagram->setFont(font1);
+        checkKVDiagram->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	color: white;\n"
+"	width: 150px;\n"
+"	height: 30px;\n"
+"   	border-image: url(:/images/buttons/button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/button_hover.png)\n"
+"}"));
+
+        horizontalLayout_5->addWidget(checkKVDiagram);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_5);
+
+        verticalSpacer_3 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_3->addItem(verticalSpacer_3);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        resultKVDiagram1Label = new QLabel(gridFrame_4);
+        resultKVDiagram1Label->setObjectName(QString::fromUtf8("resultKVDiagram1Label"));
+        sizePolicy2.setHeightForWidth(resultKVDiagram1Label->sizePolicy().hasHeightForWidth());
+        resultKVDiagram1Label->setSizePolicy(sizePolicy2);
+        resultKVDiagram1Label->setMinimumSize(QSize(200, 30));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Arial")});
+        font3.setPointSize(11);
+        font3.setBold(true);
+        resultKVDiagram1Label->setFont(font3);
+        resultKVDiagram1Label->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_6->addWidget(resultKVDiagram1Label);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_6);
+
+
+        horizontalLayout_4->addLayout(verticalLayout_3);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_2);
 
 
         verticalLayout_24->addLayout(horizontalLayout_4);
@@ -641,8 +715,10 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Um diese Schaltung nun zu vereinfachen bietet sich hier, dass KV-Diagramm an. Tragen Sie zun\303\244chst die Werte aus der Wahrheitstabelle richtig in das nebenstehende KV-Diagramm ein.</span></p></body></html>", nullptr));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Um diese Schaltung nun zu vereinfachen, bietet sich hier, dass KV-Diagramm an. Tragen Sie zun\303\244chst die Werte aus der Wahrheitstabelle richtig in das nebenstehende KV-Diagramm ein.</span></p></body></html>", nullptr));
         label_8->setText(QString());
+        checkKVDiagram->setText(QCoreApplication::translate("Task1Page", "L\303\266sung \303\274berpr\303\274fen", nullptr));
+        resultKVDiagram1Label->setText(QString());
         backButtonTask1Page3->setText(QString());
         continueButtonTask1Page3->setText(QString());
     } // retranslateUi

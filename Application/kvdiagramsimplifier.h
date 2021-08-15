@@ -7,7 +7,7 @@ class KVDiagramSimplifier : public QStandardItemModel
 {
      Q_OBJECT
 public:
-    KVDiagramSimplifier(QObject *parent = nullptr);
+    KVDiagramSimplifier(QObject *parent = nullptr, int numOfVar = 3);
     void addVariable();
     void removeVariable();
     void updateValues(std::vector<int> results);

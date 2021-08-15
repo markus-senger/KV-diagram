@@ -15,6 +15,8 @@ public:
     explicit Task1Page(QWidget *parent = nullptr);
     ~Task1Page();
 
+    void reset();
+
 private slots:
     void on_continueButtonTask1Page1_clicked();
 
@@ -25,6 +27,8 @@ private slots:
     void on_continueButtonTask1Page2_clicked();
 
     void on_backButtonTask1Page3_clicked();
+
+    void on_checkKVDiagram_clicked();
 
 private:
     Ui::Task1Page *ui;

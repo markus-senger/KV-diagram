@@ -721,7 +721,7 @@ QPushButton::hover
 	color: white;
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/buttons/button.png)
+   	border-image: url(:/images/buttons/button_hover.png)
 }
 
 QPushButton::hover
@@ -750,7 +750,7 @@ QPushButton::hover
 	color: white;
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/buttons/button.png)
+   	border-image: url(:/images/buttons/button_hover.png)
 }
 
 QPushButton::hover
@@ -779,7 +779,7 @@ QPushButton::hover
 	color: white;
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/buttons/button.png)
+   	border-image: url(:/images/buttons/button_hover.png)
 }
 
 QPushButton::hover
@@ -808,7 +808,7 @@ QPushButton::hover
 	color: white;
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/buttons/button.png)
+   	border-image: url(:/images/buttons/button_hover.png)
 }
 
 QPushButton::hover
@@ -837,7 +837,7 @@ QPushButton::hover
 	color: white;
 	width: 205px;
 	height: 50px;
-   	border-image: url(:/images/buttons/button.png)
+   	border-image: url(:/images/buttons/button_hover.png)
 }
 
 QPushButton::hover
