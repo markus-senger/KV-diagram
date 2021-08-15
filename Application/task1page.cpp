@@ -25,6 +25,7 @@ void Task1Page::reset()
 void Task1Page::on_continueButtonTask1Page1_clicked()
 {
     ui->task1StackedWidget->setCurrentIndex(1);
+    ui->InputField_1->reset();
 }
 
 void Task1Page::on_backButtonTask1Page2_clicked()
@@ -70,10 +71,10 @@ void Task1Page::on_checkKVDiagram_clicked()
     std::map<std::pair<int, int>, int> data;
     data[std::pair(1,1)] = 1;
     data[std::pair(1,2)] = 0;
-    data[std::pair(1,3)] = 1;
-    data[std::pair(1,4)] = 0;
-    data[std::pair(2,1)] = 1;
-    data[std::pair(2,2)] = 0;
+    data[std::pair(1,3)] = 0;
+    data[std::pair(1,4)] = 1;
+    data[std::pair(2,1)] = 0;
+    data[std::pair(2,2)] = 1;
     data[std::pair(2,3)] = 1;
     data[std::pair(2,4)] = 0;
 
@@ -84,6 +85,41 @@ void Task1Page::on_checkKVDiagram_clicked()
     else {
         ui->resultKVDiagram1Label->setText("falsch");
         ui->resultKVDiagram1Label->setStyleSheet("color: white; background-color: red;");
+    }
+}
+
+
+void Task1Page::on_continueButtonTask1Page3_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(3);
+    ui->editableKVDiagram1->reset();
+    ui->resultKVDiagram1Label->setText("");
+    ui->resultKVDiagram1Label->setStyleSheet("");
+}
+
+
+void Task1Page::on_backButtonTask1Page4_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(2);
+    ui->InputField_2->reset();
+}
+
+
+void Task1Page::on_solutionButtonTask1_4_clicked()
+{
+    static bool show = false;
+    if(!show) {
+        ui->solutionLabelTask1_4->setText("(A ▪ C) + (¬A ▪ ¬C)");
+        ui->solutionLabelTask1_4->setStyleSheet("color: black; border: 2px solid #A40018");
+        show = true;
+        show = true;
+        ui->solutionButtonTask1_4->setText("Lösung ausblenden");
+    }
+    else {
+        ui->solutionLabelTask1_4->setText("");
+        ui->solutionLabelTask1_4->setStyleSheet("border: 0px solid black");
+        show = false;
+        ui->solutionButtonTask1_4->setText("Lösung anzeigen");
     }
 }
 

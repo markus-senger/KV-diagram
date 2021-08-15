@@ -30,6 +30,12 @@ private slots:
 
     void on_checkKVDiagram_clicked();
 
+    void on_continueButtonTask1Page3_clicked();
+
+    void on_backButtonTask1Page4_clicked();
+
+    void on_solutionButtonTask1_4_clicked();
+
 private:
     Ui::Task1Page *ui;
 };

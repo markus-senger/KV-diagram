@@ -15,5 +15,7 @@
         <file>buttons/input_help_button.png</file>
         <file>buttons/input_help_button_hover.png</file>
         <file>task1_circuit1.png</file>
+        <file>task1_kvdiagram1.png</file>
+        <file>task1_function_solution1.png</file>
     </qresource>
 </RCC>

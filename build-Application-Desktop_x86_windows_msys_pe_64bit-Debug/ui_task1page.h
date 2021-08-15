@@ -48,7 +48,7 @@ public:
     QSpacerItem *horizontalSpacer_26;
     QFrame *verticalFrame;
     QVBoxLayout *verticalLayout_22;
-    EquationInputField *widget;
+    EquationInputField *InputField_1;
     QFrame *horizontalFrame_4;
     QHBoxLayout *horizontalLayout_20;
     QPushButton *solutionButtonTask1_1;
@@ -70,7 +70,7 @@ public:
     QVBoxLayout *verticalLayout_20;
     QHBoxLayout *horizontalLayout;
     QTextBrowser *textBrowser_4;
-    QSpacerItem *verticalSpacer_17;
+    QHBoxLayout *horizontalLayout_13;
     QLabel *label_7;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
@@ -112,6 +112,37 @@ public:
     QPushButton *backButtonTask1Page3;
     QPushButton *continueButtonTask1Page3;
     QSpacerItem *horizontalSpacer_30;
+    QWidget *page_4;
+    QVBoxLayout *verticalLayout_6;
+    QScrollArea *scrollArea_8;
+    QWidget *scrollAreaWidgetContents_8;
+    QVBoxLayout *verticalLayout_33;
+    QFrame *gridFrame_8;
+    QVBoxLayout *verticalLayout_34;
+    QSpacerItem *verticalSpacer_15;
+    QHBoxLayout *horizontalLayout_32;
+    QTextBrowser *textBrowser_9;
+    QSpacerItem *verticalSpacer_31;
+    QHBoxLayout *horizontalLayout_33;
+    QSpacerItem *horizontalSpacer_40;
+    QLabel *label_13;
+    QSpacerItem *horizontalSpacer_41;
+    QFrame *verticalFrame_3;
+    QVBoxLayout *verticalLayout_35;
+    EquationInputField *InputField_2;
+    QFrame *horizontalFrame_6;
+    QHBoxLayout *horizontalLayout_34;
+    QPushButton *solutionButtonTask1_4;
+    QSpacerItem *horizontalSpacer_42;
+    QSpacerItem *verticalSpacer_32;
+    QHBoxLayout *horizontalLayout_35;
+    QLabel *solutionLabelTask1_4;
+    QSpacerItem *verticalSpacer_33;
+    QHBoxLayout *horizontalLayout_36;
+    QSpacerItem *horizontalSpacer_43;
+    QPushButton *backButtonTask1Page4;
+    QPushButton *continueButtonTask1Page4;
+    QSpacerItem *horizontalSpacer_44;
 
     void setupUi(QWidget *Task1Page)
     {
@@ -211,10 +242,10 @@ public:
         verticalLayout_22 = new QVBoxLayout(verticalFrame);
         verticalLayout_22->setSpacing(6);
         verticalLayout_22->setObjectName(QString::fromUtf8("verticalLayout_22"));
-        widget = new EquationInputField(verticalFrame);
-        widget->setObjectName(QString::fromUtf8("widget"));
+        InputField_1 = new EquationInputField(verticalFrame);
+        InputField_1->setObjectName(QString::fromUtf8("InputField_1"));
 
-        verticalLayout_22->addWidget(widget);
+        verticalLayout_22->addWidget(InputField_1);
 
         horizontalFrame_4 = new QFrame(verticalFrame);
         horizontalFrame_4->setObjectName(QString::fromUtf8("horizontalFrame_4"));
@@ -375,21 +406,22 @@ public:
 
         verticalLayout_20->addLayout(horizontalLayout);
 
-        verticalSpacer_17 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout_20->addItem(verticalSpacer_17);
-
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setObjectName(QString::fromUtf8("horizontalLayout_13"));
         label_7 = new QLabel(gridFrame_3);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         sizePolicy3.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
         label_7->setSizePolicy(sizePolicy3);
-        label_7->setMinimumSize(QSize(100, 226));
+        label_7->setMinimumSize(QSize(100, 242));
         label_7->setMaximumSize(QSize(16777215, 16777215));
         label_7->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_circuit1.png)"));
 
-        verticalLayout_20->addWidget(label_7);
+        horizontalLayout_13->addWidget(label_7);
 
-        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_20->addLayout(horizontalLayout_13);
+
+        verticalSpacer = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_20->addItem(verticalSpacer);
 
@@ -673,13 +705,215 @@ public:
         verticalLayout_2->addWidget(scrollArea_4);
 
         task1StackedWidget->addWidget(page_3);
+        page_4 = new QWidget();
+        page_4->setObjectName(QString::fromUtf8("page_4"));
+        verticalLayout_6 = new QVBoxLayout(page_4);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        scrollArea_8 = new QScrollArea(page_4);
+        scrollArea_8->setObjectName(QString::fromUtf8("scrollArea_8"));
+        sizePolicy1.setHeightForWidth(scrollArea_8->sizePolicy().hasHeightForWidth());
+        scrollArea_8->setSizePolicy(sizePolicy1);
+        scrollArea_8->setMinimumSize(QSize(0, 0));
+        scrollArea_8->setStyleSheet(QString::fromUtf8("background-color:white;"));
+        scrollArea_8->setWidgetResizable(true);
+        scrollArea_8->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        scrollAreaWidgetContents_8 = new QWidget();
+        scrollAreaWidgetContents_8->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_8"));
+        scrollAreaWidgetContents_8->setGeometry(QRect(0, 0, 836, 454));
+        verticalLayout_33 = new QVBoxLayout(scrollAreaWidgetContents_8);
+        verticalLayout_33->setObjectName(QString::fromUtf8("verticalLayout_33"));
+        gridFrame_8 = new QFrame(scrollAreaWidgetContents_8);
+        gridFrame_8->setObjectName(QString::fromUtf8("gridFrame_8"));
+        gridFrame_8->setStyleSheet(QString::fromUtf8(""));
+        verticalLayout_34 = new QVBoxLayout(gridFrame_8);
+        verticalLayout_34->setSpacing(5);
+        verticalLayout_34->setObjectName(QString::fromUtf8("verticalLayout_34"));
+        verticalLayout_34->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer_15 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_34->addItem(verticalSpacer_15);
+
+        horizontalLayout_32 = new QHBoxLayout();
+        horizontalLayout_32->setObjectName(QString::fromUtf8("horizontalLayout_32"));
+        horizontalLayout_32->setSizeConstraint(QLayout::SetNoConstraint);
+        textBrowser_9 = new QTextBrowser(gridFrame_8);
+        textBrowser_9->setObjectName(QString::fromUtf8("textBrowser_9"));
+        sizePolicy2.setHeightForWidth(textBrowser_9->sizePolicy().hasHeightForWidth());
+        textBrowser_9->setSizePolicy(sizePolicy2);
+        textBrowser_9->setMinimumSize(QSize(616, 46));
+        textBrowser_9->setMaximumSize(QSize(16777215, 46));
+        textBrowser_9->setFont(font);
+        textBrowser_9->setStyleSheet(QString::fromUtf8("color:black; alignment:center;"));
+        textBrowser_9->setFrameShape(QFrame::NoFrame);
+        textBrowser_9->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        textBrowser_9->setLineWrapMode(QTextEdit::WidgetWidth);
+
+        horizontalLayout_32->addWidget(textBrowser_9);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_32);
+
+        verticalSpacer_31 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_34->addItem(verticalSpacer_31);
+
+        horizontalLayout_33 = new QHBoxLayout();
+        horizontalLayout_33->setObjectName(QString::fromUtf8("horizontalLayout_33"));
+        horizontalSpacer_40 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_33->addItem(horizontalSpacer_40);
+
+        label_13 = new QLabel(gridFrame_8);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setMinimumSize(QSize(300, 220));
+        label_13->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_kvdiagram1.png)"));
+        label_13->setScaledContents(false);
+
+        horizontalLayout_33->addWidget(label_13);
+
+        horizontalSpacer_41 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_33->addItem(horizontalSpacer_41);
+
+        verticalFrame_3 = new QFrame(gridFrame_8);
+        verticalFrame_3->setObjectName(QString::fromUtf8("verticalFrame_3"));
+        verticalFrame_3->setStyleSheet(QString::fromUtf8(""));
+        verticalLayout_35 = new QVBoxLayout(verticalFrame_3);
+        verticalLayout_35->setSpacing(6);
+        verticalLayout_35->setObjectName(QString::fromUtf8("verticalLayout_35"));
+        InputField_2 = new EquationInputField(verticalFrame_3);
+        InputField_2->setObjectName(QString::fromUtf8("InputField_2"));
+
+        verticalLayout_35->addWidget(InputField_2);
+
+        horizontalFrame_6 = new QFrame(verticalFrame_3);
+        horizontalFrame_6->setObjectName(QString::fromUtf8("horizontalFrame_6"));
+        sizePolicy3.setHeightForWidth(horizontalFrame_6->sizePolicy().hasHeightForWidth());
+        horizontalFrame_6->setSizePolicy(sizePolicy3);
+        horizontalLayout_34 = new QHBoxLayout(horizontalFrame_6);
+        horizontalLayout_34->setSpacing(1);
+        horizontalLayout_34->setObjectName(QString::fromUtf8("horizontalLayout_34"));
+        solutionButtonTask1_4 = new QPushButton(horizontalFrame_6);
+        solutionButtonTask1_4->setObjectName(QString::fromUtf8("solutionButtonTask1_4"));
+        sizePolicy2.setHeightForWidth(solutionButtonTask1_4->sizePolicy().hasHeightForWidth());
+        solutionButtonTask1_4->setSizePolicy(sizePolicy2);
+        solutionButtonTask1_4->setMinimumSize(QSize(20, 5));
+        solutionButtonTask1_4->setFont(font1);
+        solutionButtonTask1_4->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	color: white;\n"
+"	width: 150px;\n"
+"	height: 30px;\n"
+"   	border-image: url(:/images/buttons/button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/button_hover.png)\n"
+"}"));
+
+        horizontalLayout_34->addWidget(solutionButtonTask1_4);
+
+
+        verticalLayout_35->addWidget(horizontalFrame_6);
+
+
+        horizontalLayout_33->addWidget(verticalFrame_3);
+
+        horizontalSpacer_42 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_33->addItem(horizontalSpacer_42);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_33);
+
+        verticalSpacer_32 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_34->addItem(verticalSpacer_32);
+
+        horizontalLayout_35 = new QHBoxLayout();
+        horizontalLayout_35->setObjectName(QString::fromUtf8("horizontalLayout_35"));
+        solutionLabelTask1_4 = new QLabel(gridFrame_8);
+        solutionLabelTask1_4->setObjectName(QString::fromUtf8("solutionLabelTask1_4"));
+        sizePolicy2.setHeightForWidth(solutionLabelTask1_4->sizePolicy().hasHeightForWidth());
+        solutionLabelTask1_4->setSizePolicy(sizePolicy2);
+        solutionLabelTask1_4->setMinimumSize(QSize(440, 30));
+        solutionLabelTask1_4->setBaseSize(QSize(0, 0));
+        solutionLabelTask1_4->setFont(font2);
+        solutionLabelTask1_4->setStyleSheet(QString::fromUtf8("color: black;"));
+        solutionLabelTask1_4->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_35->addWidget(solutionLabelTask1_4);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_35);
+
+        verticalSpacer_33 = new QSpacerItem(20, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_34->addItem(verticalSpacer_33);
+
+        horizontalLayout_36 = new QHBoxLayout();
+        horizontalLayout_36->setObjectName(QString::fromUtf8("horizontalLayout_36"));
+        horizontalSpacer_43 = new QSpacerItem(40, 10, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_36->addItem(horizontalSpacer_43);
+
+        backButtonTask1Page4 = new QPushButton(gridFrame_8);
+        backButtonTask1Page4->setObjectName(QString::fromUtf8("backButtonTask1Page4"));
+        backButtonTask1Page4->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	color: white;\n"
+"	width: 40px;\n"
+"	height: 30px;\n"
+"   	border-image: url(:/images/buttons/back_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/back_button_hover.png)\n"
+"}"));
+
+        horizontalLayout_36->addWidget(backButtonTask1Page4);
+
+        continueButtonTask1Page4 = new QPushButton(gridFrame_8);
+        continueButtonTask1Page4->setObjectName(QString::fromUtf8("continueButtonTask1Page4"));
+        continueButtonTask1Page4->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	color: white;\n"
+"	width: 40px;\n"
+"	height: 30px;\n"
+"   	border-image: url(:/images/buttons/continue_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/continue_button_hover.png)\n"
+"}"));
+
+        horizontalLayout_36->addWidget(continueButtonTask1Page4);
+
+        horizontalSpacer_44 = new QSpacerItem(20, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_36->addItem(horizontalSpacer_44);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_36);
+
+
+        verticalLayout_33->addWidget(gridFrame_8);
+
+        scrollArea_8->setWidget(scrollAreaWidgetContents_8);
+
+        verticalLayout_6->addWidget(scrollArea_8);
+
+        task1StackedWidget->addWidget(page_4);
 
         verticalLayout->addWidget(task1StackedWidget);
 
 
         retranslateUi(Task1Page);
 
-        task1StackedWidget->setCurrentIndex(2);
+        task1StackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Task1Page);
@@ -701,7 +935,7 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Die auf der vorherigen Seite erstellte Funktionsgleichung w\303\274rde die folgende Schaltung liefern:</span></p></body></html>", nullptr));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Die auf der vorherigen Seite erstellte Funktionsgleichung w\303\274rde die folgende Schaltung liefern ((\302\254A \342\226\252 \302\254B \342\226\252 \302\254C) + (\302\254A \342\226\252 B \342\226\252 \302\254C) + (A \342\226\252 \302\254B \342\226\252 C) + (A \342\226\252 B \342\226\252 C)):</span></p></body></html>", nullptr));
         label_7->setText(QString());
         textBrowser->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -721,6 +955,16 @@ public:
         resultKVDiagram1Label->setText(QString());
         backButtonTask1Page3->setText(QString());
         continueButtonTask1Page3->setText(QString());
+        textBrowser_9->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Da nun das KV-Diagramm ausgef\303\274llt ist, nehmen Sie gedanklich eine Gruppierung vor und geben sie dann die vereinfachte Funktionsgleichung an.</span></p></body></html>", nullptr));
+        label_13->setText(QString());
+        solutionButtonTask1_4->setText(QCoreApplication::translate("Task1Page", "L\303\266sung anzeigen", nullptr));
+        solutionLabelTask1_4->setText(QString());
+        backButtonTask1Page4->setText(QString());
+        continueButtonTask1Page4->setText(QString());
     } // retranslateUi
 
 };

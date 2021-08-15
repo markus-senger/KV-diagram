@@ -15,6 +15,8 @@ public:
     explicit EquationInputField(QWidget *parent = nullptr);
     ~EquationInputField();
 
+    void reset();
+
 private slots:
     void on_AButton_clicked();
 

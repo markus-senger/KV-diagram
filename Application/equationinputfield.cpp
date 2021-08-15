@@ -13,6 +13,11 @@ EquationInputField::~EquationInputField()
     delete ui;
 }
 
+void EquationInputField::reset()
+{
+    on_clearButton_clicked();
+}
+
 void EquationInputField::on_AButton_clicked()
 {
     ui->lineEdit->setText(ui->lineEdit->text() + " A");
