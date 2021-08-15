@@ -26,6 +26,9 @@ void Task1Page::on_continueButtonTask1Page1_clicked()
 {
     ui->task1StackedWidget->setCurrentIndex(1);
     ui->InputField_1->reset();
+    if(ui->solutionLabelTask1_1->text() != "") {
+        on_solutionButtonTask1_1_clicked();
+    }
 }
 
 void Task1Page::on_backButtonTask1Page2_clicked()
@@ -39,7 +42,6 @@ void Task1Page::on_solutionButtonTask1_1_clicked()
     if(!show) {
         ui->solutionLabelTask1_1->setText("(¬A ▪ ¬B ▪ ¬C) + (¬A ▪ B ▪ ¬C) + (A ▪ ¬B ▪ C) + (A ▪ B ▪ C)");
         ui->solutionLabelTask1_1->setStyleSheet("color: black; border: 2px solid #A40018");
-        show = true;
         show = true;
         ui->solutionButtonTask1_1->setText("Lösung ausblenden");
     }
@@ -102,6 +104,9 @@ void Task1Page::on_backButtonTask1Page4_clicked()
 {
     ui->task1StackedWidget->setCurrentIndex(2);
     ui->InputField_2->reset();
+    if(ui->solutionLabelTask1_4->text() != "") {
+        on_solutionButtonTask1_4_clicked();
+    }
 }
 
 
