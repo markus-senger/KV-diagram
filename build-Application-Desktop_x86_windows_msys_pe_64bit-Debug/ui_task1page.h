@@ -68,14 +68,15 @@ public:
     QVBoxLayout *verticalLayout_19;
     QFrame *gridFrame_3;
     QVBoxLayout *verticalLayout_20;
+    QSpacerItem *verticalSpacer_7;
     QHBoxLayout *horizontalLayout;
     QTextBrowser *textBrowser_4;
+    QSpacerItem *verticalSpacer_8;
     QHBoxLayout *horizontalLayout_13;
     QLabel *label_7;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QTextBrowser *textBrowser;
-    QHBoxLayout *horizontalLayout_17;
     QSpacerItem *verticalSpacer_18;
     QHBoxLayout *horizontalLayout_18;
     QSpacerItem *horizontalSpacer_23;
@@ -89,6 +90,7 @@ public:
     QVBoxLayout *verticalLayout_23;
     QFrame *gridFrame_4;
     QVBoxLayout *verticalLayout_24;
+    QSpacerItem *verticalSpacer_6;
     QHBoxLayout *horizontalLayout_3;
     QTextBrowser *textBrowser_5;
     QSpacerItem *verticalSpacer_20;
@@ -105,8 +107,6 @@ public:
     QLabel *resultKVDiagram1Label;
     QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer_2;
-    QHBoxLayout *horizontalLayout_22;
-    QSpacerItem *verticalSpacer_23;
     QHBoxLayout *horizontalLayout_23;
     QSpacerItem *horizontalSpacer_29;
     QPushButton *backButtonTask1Page3;
@@ -125,7 +125,7 @@ public:
     QSpacerItem *verticalSpacer_31;
     QHBoxLayout *horizontalLayout_33;
     QSpacerItem *horizontalSpacer_40;
-    QLabel *label_13;
+    QLabel *kvDiagramTask1_4;
     QSpacerItem *horizontalSpacer_41;
     QFrame *verticalFrame_3;
     QVBoxLayout *verticalLayout_35;
@@ -143,6 +143,31 @@ public:
     QPushButton *backButtonTask1Page4;
     QPushButton *continueButtonTask1Page4;
     QSpacerItem *horizontalSpacer_44;
+    QWidget *page_5;
+    QVBoxLayout *verticalLayout_4;
+    QScrollArea *scrollArea_5;
+    QWidget *scrollAreaWidgetContents_5;
+    QVBoxLayout *verticalLayout_25;
+    QFrame *gridFrame_5;
+    QVBoxLayout *verticalLayout_26;
+    QSpacerItem *verticalSpacer_9;
+    QHBoxLayout *horizontalLayout_7;
+    QVBoxLayout *verticalLayout_7;
+    QLabel *label_2;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *label_3;
+    QVBoxLayout *verticalLayout_5;
+    QLabel *label;
+    QHBoxLayout *horizontalLayout_11;
+    QLabel *label_4;
+    QSpacerItem *verticalSpacer_10;
+    QHBoxLayout *horizontalLayout_9;
+    QTextBrowser *textBrowser_2;
+    QSpacerItem *verticalSpacer_24;
+    QHBoxLayout *horizontalLayout_25;
+    QSpacerItem *horizontalSpacer_31;
+    QPushButton *backButtonTask1Page5;
+    QSpacerItem *horizontalSpacer_32;
 
     void setupUi(QWidget *Task1Page)
     {
@@ -388,14 +413,18 @@ public:
         verticalLayout_20->setSpacing(5);
         verticalLayout_20->setObjectName(QString::fromUtf8("verticalLayout_20"));
         verticalLayout_20->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer_7 = new QSpacerItem(20, 8, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+
+        verticalLayout_20->addItem(verticalSpacer_7);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         textBrowser_4 = new QTextBrowser(gridFrame_3);
         textBrowser_4->setObjectName(QString::fromUtf8("textBrowser_4"));
         sizePolicy2.setHeightForWidth(textBrowser_4->sizePolicy().hasHeightForWidth());
         textBrowser_4->setSizePolicy(sizePolicy2);
-        textBrowser_4->setMinimumSize(QSize(580, 47));
-        textBrowser_4->setMaximumSize(QSize(16777215, 16777215));
+        textBrowser_4->setMinimumSize(QSize(580, 50));
+        textBrowser_4->setMaximumSize(QSize(16777215, 50));
         textBrowser_4->setStyleSheet(QString::fromUtf8("color:black;"));
         textBrowser_4->setFrameShape(QFrame::NoFrame);
         textBrowser_4->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
@@ -406,13 +435,17 @@ public:
 
         verticalLayout_20->addLayout(horizontalLayout);
 
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_20->addItem(verticalSpacer_8);
+
         horizontalLayout_13 = new QHBoxLayout();
         horizontalLayout_13->setObjectName(QString::fromUtf8("horizontalLayout_13"));
         label_7 = new QLabel(gridFrame_3);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         sizePolicy3.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
         label_7->setSizePolicy(sizePolicy3);
-        label_7->setMinimumSize(QSize(100, 242));
+        label_7->setMinimumSize(QSize(100, 240));
         label_7->setMaximumSize(QSize(16777215, 16777215));
         label_7->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_circuit1.png)"));
 
@@ -421,7 +454,7 @@ public:
 
         verticalLayout_20->addLayout(horizontalLayout_13);
 
-        verticalSpacer = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_20->addItem(verticalSpacer);
 
@@ -440,13 +473,7 @@ public:
 
         verticalLayout_20->addLayout(horizontalLayout_2);
 
-        horizontalLayout_17 = new QHBoxLayout();
-        horizontalLayout_17->setObjectName(QString::fromUtf8("horizontalLayout_17"));
-        horizontalLayout_17->setSizeConstraint(QLayout::SetNoConstraint);
-
-        verticalLayout_20->addLayout(horizontalLayout_17);
-
-        verticalSpacer_18 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+        verticalSpacer_18 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_20->addItem(verticalSpacer_18);
 
@@ -529,6 +556,10 @@ public:
         verticalLayout_24->setSpacing(5);
         verticalLayout_24->setObjectName(QString::fromUtf8("verticalLayout_24"));
         verticalLayout_24->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer_6 = new QSpacerItem(20, 8, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+
+        verticalLayout_24->addItem(verticalSpacer_6);
+
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         textBrowser_5 = new QTextBrowser(gridFrame_4);
@@ -536,7 +567,7 @@ public:
         sizePolicy2.setHeightForWidth(textBrowser_5->sizePolicy().hasHeightForWidth());
         textBrowser_5->setSizePolicy(sizePolicy2);
         textBrowser_5->setMinimumSize(QSize(580, 65));
-        textBrowser_5->setMaximumSize(QSize(16777215, 16777215));
+        textBrowser_5->setMaximumSize(QSize(16777215, 65));
         textBrowser_5->setStyleSheet(QString::fromUtf8("color:black;"));
         textBrowser_5->setFrameShape(QFrame::NoFrame);
         textBrowser_5->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
@@ -547,7 +578,7 @@ public:
 
         verticalLayout_24->addLayout(horizontalLayout_3);
 
-        verticalSpacer_20 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_20 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_24->addItem(verticalSpacer_20);
 
@@ -636,19 +667,9 @@ public:
 
         verticalLayout_24->addLayout(horizontalLayout_4);
 
-        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_24->addItem(verticalSpacer_2);
-
-        horizontalLayout_22 = new QHBoxLayout();
-        horizontalLayout_22->setObjectName(QString::fromUtf8("horizontalLayout_22"));
-        horizontalLayout_22->setSizeConstraint(QLayout::SetNoConstraint);
-
-        verticalLayout_24->addLayout(horizontalLayout_22);
-
-        verticalSpacer_23 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
-
-        verticalLayout_24->addItem(verticalSpacer_23);
 
         horizontalLayout_23 = new QHBoxLayout();
         horizontalLayout_23->setObjectName(QString::fromUtf8("horizontalLayout_23"));
@@ -763,13 +784,13 @@ public:
 
         horizontalLayout_33->addItem(horizontalSpacer_40);
 
-        label_13 = new QLabel(gridFrame_8);
-        label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setMinimumSize(QSize(300, 220));
-        label_13->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_kvdiagram1.png)"));
-        label_13->setScaledContents(false);
+        kvDiagramTask1_4 = new QLabel(gridFrame_8);
+        kvDiagramTask1_4->setObjectName(QString::fromUtf8("kvDiagramTask1_4"));
+        kvDiagramTask1_4->setMinimumSize(QSize(305, 220));
+        kvDiagramTask1_4->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_kvdiagram1.png)"));
+        kvDiagramTask1_4->setScaledContents(false);
 
-        horizontalLayout_33->addWidget(label_13);
+        horizontalLayout_33->addWidget(kvDiagramTask1_4);
 
         horizontalSpacer_41 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -907,13 +928,168 @@ public:
         verticalLayout_6->addWidget(scrollArea_8);
 
         task1StackedWidget->addWidget(page_4);
+        page_5 = new QWidget();
+        page_5->setObjectName(QString::fromUtf8("page_5"));
+        verticalLayout_4 = new QVBoxLayout(page_5);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        scrollArea_5 = new QScrollArea(page_5);
+        scrollArea_5->setObjectName(QString::fromUtf8("scrollArea_5"));
+        sizePolicy4.setHeightForWidth(scrollArea_5->sizePolicy().hasHeightForWidth());
+        scrollArea_5->setSizePolicy(sizePolicy4);
+        scrollArea_5->setMinimumSize(QSize(0, 0));
+        scrollArea_5->setStyleSheet(QString::fromUtf8("background-color:white;"));
+        scrollArea_5->setWidgetResizable(true);
+        scrollArea_5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        scrollAreaWidgetContents_5 = new QWidget();
+        scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 836, 454));
+        verticalLayout_25 = new QVBoxLayout(scrollAreaWidgetContents_5);
+        verticalLayout_25->setObjectName(QString::fromUtf8("verticalLayout_25"));
+        gridFrame_5 = new QFrame(scrollAreaWidgetContents_5);
+        gridFrame_5->setObjectName(QString::fromUtf8("gridFrame_5"));
+        gridFrame_5->setStyleSheet(QString::fromUtf8(""));
+        verticalLayout_26 = new QVBoxLayout(gridFrame_5);
+        verticalLayout_26->setSpacing(5);
+        verticalLayout_26->setObjectName(QString::fromUtf8("verticalLayout_26"));
+        verticalLayout_26->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer_9 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_26->addItem(verticalSpacer_9);
+
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        label_2 = new QLabel(gridFrame_5);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        QFont font4;
+        font4.setPointSize(11);
+        label_2->setFont(font4);
+        label_2->setStyleSheet(QString::fromUtf8("color: black;"));
+        label_2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_7->addWidget(label_2);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        label_3 = new QLabel(gridFrame_5);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        sizePolicy2.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy2);
+        label_3->setMinimumSize(QSize(350, 230));
+        label_3->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_circuit1.png)"));
+        label_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+
+        horizontalLayout_10->addWidget(label_3);
+
+
+        verticalLayout_7->addLayout(horizontalLayout_10);
+
+
+        horizontalLayout_7->addLayout(verticalLayout_7);
+
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        label = new QLabel(gridFrame_5);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font4);
+        label->setStyleSheet(QString::fromUtf8("color: black;"));
+        label->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_5->addWidget(label);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        label_4 = new QLabel(gridFrame_5);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setEnabled(true);
+        sizePolicy2.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
+        label_4->setSizePolicy(sizePolicy2);
+        label_4->setMinimumSize(QSize(350, 230));
+        label_4->setStyleSheet(QString::fromUtf8("image: url(:/images/task1_circuit2.PNG)"));
+
+        horizontalLayout_11->addWidget(label_4);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_11);
+
+
+        horizontalLayout_7->addLayout(verticalLayout_5);
+
+
+        verticalLayout_26->addLayout(horizontalLayout_7);
+
+        verticalSpacer_10 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_26->addItem(verticalSpacer_10);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        textBrowser_2 = new QTextBrowser(gridFrame_5);
+        textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
+        sizePolicy2.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
+        textBrowser_2->setSizePolicy(sizePolicy2);
+        textBrowser_2->setMinimumSize(QSize(696, 108));
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial")});
+        textBrowser_2->setFont(font5);
+        textBrowser_2->setStyleSheet(QString::fromUtf8("color: black;"));
+        textBrowser_2->setFrameShape(QFrame::NoFrame);
+
+        horizontalLayout_9->addWidget(textBrowser_2);
+
+
+        verticalLayout_26->addLayout(horizontalLayout_9);
+
+        verticalSpacer_24 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+
+        verticalLayout_26->addItem(verticalSpacer_24);
+
+        horizontalLayout_25 = new QHBoxLayout();
+        horizontalLayout_25->setObjectName(QString::fromUtf8("horizontalLayout_25"));
+        horizontalSpacer_31 = new QSpacerItem(40, 10, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_25->addItem(horizontalSpacer_31);
+
+        backButtonTask1Page5 = new QPushButton(gridFrame_5);
+        backButtonTask1Page5->setObjectName(QString::fromUtf8("backButtonTask1Page5"));
+        backButtonTask1Page5->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	color: white;\n"
+"	width: 40px;\n"
+"	height: 30px;\n"
+"   	border-image: url(:/images/buttons/back_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/back_button_hover.png)\n"
+"}"));
+
+        horizontalLayout_25->addWidget(backButtonTask1Page5);
+
+        horizontalSpacer_32 = new QSpacerItem(65, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_25->addItem(horizontalSpacer_32);
+
+
+        verticalLayout_26->addLayout(horizontalLayout_25);
+
+
+        verticalLayout_25->addWidget(gridFrame_5);
+
+        scrollArea_5->setWidget(scrollAreaWidgetContents_5);
+
+        verticalLayout_4->addWidget(scrollArea_5);
+
+        task1StackedWidget->addWidget(page_5);
 
         verticalLayout->addWidget(task1StackedWidget);
 
 
         retranslateUi(Task1Page);
 
-        task1StackedWidget->setCurrentIndex(1);
+        task1StackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(Task1Page);
@@ -960,11 +1136,25 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Da nun das KV-Diagramm ausgef\303\274llt ist, nehmen Sie gedanklich eine Gruppierung vor und geben sie dann die vereinfachte Funktionsgleichung an.</span></p></body></html>", nullptr));
-        label_13->setText(QString());
+        kvDiagramTask1_4->setText(QString());
         solutionButtonTask1_4->setText(QCoreApplication::translate("Task1Page", "L\303\266sung anzeigen", nullptr));
         solutionLabelTask1_4->setText(QString());
         backButtonTask1Page4->setText(QString());
         continueButtonTask1Page4->setText(QString());
+        label_2->setText(QCoreApplication::translate("Task1Page", "(\302\254A \342\226\252 \302\254B \342\226\252 \302\254C) + (\302\254A \342\226\252 B \342\226\252 \302\254C) + (A \342\226\252 \302\254B \342\226\252 C) + (A \342\226\252 B \342\226\252 C)", nullptr));
+        label_3->setText(QString());
+        label->setText(QCoreApplication::translate("Task1Page", "(A \342\226\252 C) + (\302\254A \342\226\252 \302\254C)", nullptr));
+        label_4->setText(QString());
+        textBrowser_2->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;\">\303\234bung 1 abgeschlossen!</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; fon"
+                        "t-size:11pt;\">Zum Abschluss hier noch einmal beide Schaltungen (rechts: ohne Optimierung, links: mit Optimierung). </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Wie man deutlich sieht, ist die rechte Schaltung deutlich kompakter als die linke Schaltung, obwohl beide Schaltung exakt die gleiche Funktionalit\303\244t bietet.</span></p></body></html>", nullptr));
+        backButtonTask1Page5->setText(QString());
     } // retranslateUi
 
 };

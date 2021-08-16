@@ -119,12 +119,30 @@ void Task1Page::on_solutionButtonTask1_4_clicked()
         show = true;
         show = true;
         ui->solutionButtonTask1_4->setText("Lösung ausblenden");
+        ui->kvDiagramTask1_4->setStyleSheet("image: url(:/images/task1_kvdiagram1_solution.png)");
     }
     else {
         ui->solutionLabelTask1_4->setText("");
         ui->solutionLabelTask1_4->setStyleSheet("border: 0px solid black");
         show = false;
         ui->solutionButtonTask1_4->setText("Lösung anzeigen");
+        ui->kvDiagramTask1_4->setStyleSheet("image: url(:/images/task1_kvdiagram1.png)");
     }
+}
+
+
+void Task1Page::on_continueButtonTask1Page4_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(4);
+    ui->InputField_2->reset();
+    if(ui->solutionLabelTask1_4->text() != "") {
+        on_solutionButtonTask1_4_clicked();
+    }
+}
+
+
+void Task1Page::on_backButtonTask1Page5_clicked()
+{
+    ui->task1StackedWidget->setCurrentIndex(3);
 }
 
