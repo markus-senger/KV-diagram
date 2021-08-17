@@ -45,7 +45,7 @@ public:
     QSpacerItem *horizontalSpacer_13;
     QVBoxLayout *verticalLayout_6;
     QLabel *label;
-    QLabel *label_2;
+    QLabel *resultLabel;
     QSpacerItem *horizontalSpacer_12;
 
     void setupUi(QWidget *BooleanFunctionSimplifier)
@@ -237,19 +237,19 @@ public:
 
         verticalLayout_6->addWidget(label);
 
-        label_2 = new QLabel(BooleanFunctionSimplifier);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        resultLabel = new QLabel(BooleanFunctionSimplifier);
+        resultLabel->setObjectName(QString::fromUtf8("resultLabel"));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Arial")});
         font3.setPointSize(13);
         font3.setBold(true);
-        label_2->setFont(font3);
-        label_2->setStyleSheet(QString::fromUtf8("border: 2px solid black;\n"
+        resultLabel->setFont(font3);
+        resultLabel->setStyleSheet(QString::fromUtf8("border: 2px solid black;\n"
 "color: black;"));
-        label_2->setAlignment(Qt::AlignCenter);
-        label_2->setMargin(3);
+        resultLabel->setAlignment(Qt::AlignCenter);
+        resultLabel->setMargin(3);
 
-        verticalLayout_6->addWidget(label_2);
+        verticalLayout_6->addWidget(resultLabel);
 
 
         horizontalLayout_7->addLayout(verticalLayout_6);
@@ -272,8 +272,8 @@ public:
         BooleanFunctionSimplifier->setWindowTitle(QCoreApplication::translate("BooleanFunctionSimplifier", "Form", nullptr));
         addColButton->setText(QString());
         removeColButton->setText(QString());
-        label->setText(QCoreApplication::translate("BooleanFunctionSimplifier", "optimierte Funktion", nullptr));
-        label_2->setText(QCoreApplication::translate("BooleanFunctionSimplifier", "A + B", nullptr));
+        label->setText(QCoreApplication::translate("BooleanFunctionSimplifier", "minimale Funktion", nullptr));
+        resultLabel->setText(QCoreApplication::translate("BooleanFunctionSimplifier", "( )", nullptr));
     } // retranslateUi
 
 };

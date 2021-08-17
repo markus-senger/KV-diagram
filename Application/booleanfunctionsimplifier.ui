@@ -396,7 +396,7 @@ background-color: #a40018 ;
 margin-right: 30px;</string>
          </property>
          <property name="text">
-          <string>optimierte Funktion</string>
+          <string>minimale Funktion</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -407,7 +407,7 @@ margin-right: 30px;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="resultLabel">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -421,7 +421,7 @@ margin-right: 30px;</string>
 color: black;</string>
          </property>
          <property name="text">
-          <string>A + B</string>
+          <string>( )</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

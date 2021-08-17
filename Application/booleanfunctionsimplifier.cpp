@@ -64,7 +64,7 @@ void BooleanFunctionSimplifier::valueChanged()
         QComboBox* tmp = (QComboBox*) ui->truthTable->indexWidget(truthTableData->index(i, truthTableData->getCurColNum()-1));
         truthTableData->addResult(tmp->currentIndex());
     }
-    updateValueKVDiagram();
+    updateValues();
 }
 
 void BooleanFunctionSimplifier::addComboBox(int index)
@@ -107,7 +107,116 @@ void BooleanFunctionSimplifier::resizeKVDiagram()
     }
 }
 
-void BooleanFunctionSimplifier::updateValueKVDiagram()
+void BooleanFunctionSimplifier::updateValues()
 {
     kvDiagram->updateValues(truthTableData->getResults());
+    findPrimeImplicants();
+    printPrimeImplicants();
 }
+
+std::map<std::vector<int>, std::pair<std::vector<int>, bool>> BooleanFunctionSimplifier::findMinTerms()
+{
+    std::map<std::vector<int>, std::pair<std::vector<int>, bool>> minTerms;
+    int i = 0;
+    for(auto& entry : truthTableData->getResults()) {
+        if (entry == 1 || entry == OPTION_DONT_CARE) {
+            std::vector<int> tmp;
+            tmp.push_back(i);
+            minTerms[tmp].first = truthTableData->getDataAtIdx(i);
+            if(entry == OPTION_DONT_CARE) minTerms[tmp].second = true;
+            else minTerms[tmp].second = false;
+        }
+        i++;
+    }
+    return minTerms;
+}
+
+void BooleanFunctionSimplifier::findPrimeImplicants()
+{
+    primeImplicants.clear();
+    std::map<std::vector<int>, std::pair<std::vector<int>, bool>> quinesTable1 = findMinTerms();
+    std::map<std::vector<int>, std::vector<int>> termsAlreadySummarized;
+    while(!quinesTable1.empty()) {
+        std::map<std::vector<int>, std::pair<std::vector<int>, bool>> quinesTableTmp;
+
+        for(auto entry1 = quinesTable1.begin(); entry1 != quinesTable1.end(); ++entry1) {
+            bool insertedEntry = false;
+            for(auto entry2 = entry1; entry2 != quinesTable1.end(); ++entry2) {
+                std::vector<int> summarizedTerm;
+                int diff = summarizeTerms(entry1->second.first, entry2->second.first, summarizedTerm);
+                if(diff == 1) {
+                    termsAlreadySummarized[entry2->second.first] = entry1->second.first;
+                    insertedEntry = true;
+                    std::vector<int> tmpIdx = entry1->first;
+                    tmpIdx.insert(tmpIdx.end(), entry2->first.begin(), entry2->first.end());
+                    quinesTableTmp[tmpIdx].first = summarizedTerm;
+                    if(entry1->second.second == true && entry2->second.second == true) quinesTableTmp[tmpIdx].second = true;
+                    else quinesTableTmp[tmpIdx].second = false;
+                }
+                else if(termsAlreadySummarized.find(entry1->second.first) != termsAlreadySummarized.end()) {
+                    insertedEntry = true;
+                }
+            }
+            if (!insertedEntry) {
+                primeImplicants[entry1->second.first].first = entry1->first;
+                primeImplicants[entry1->second.first].second = entry1->second.second;
+            }
+        }
+        quinesTable1 = quinesTableTmp;
+    }
+}
+
+int BooleanFunctionSimplifier::summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm)
+{
+    int differenceCount = 0;
+    int i = 0;
+    for(int entry1 : term1) {
+        if(entry1 != term2.at(i)) {
+            differenceCount++;
+            newTerm.push_back(OPTION_DONT_CARE);
+        }
+        else {
+            newTerm.push_back(entry1);
+        }
+        i++;
+    }
+
+    return differenceCount;
+}
+
+void BooleanFunctionSimplifier::printPrimeImplicants()
+{
+    QString result = "";
+    char letter = 'A';
+    int i = 0;
+    int primeImplicantsSize = primeImplicants.size();
+    for(auto& entry : primeImplicants) {
+        result += "( ";
+        int entrySize = count_if(entry.first.begin(), entry.first.end(), [](int i) {
+                                     return i != OPTION_DONT_CARE;
+                                 });
+        int j = 0;
+        if(entry.second.second != true) {
+            for(int variable : entry.first) {
+                if(variable != 2) {
+                    if(variable == 1) {
+                        result += QString(letter);
+                    }
+                    else if(variable == 0) {
+                        result += "¬" + QString(letter);
+                    }
+                    if(entrySize - 1 > j) result += " ▪ ";
+                    j++;
+                }
+                letter++;
+            }
+        }
+        letter = 'A';
+        result += " )";
+        if(primeImplicantsSize - 1 > i) result += " + ";
+        i++;
+    }
+    if(result == "") ui->resultLabel->setText("( )");
+    else ui->resultLabel->setText(result);
+}
+

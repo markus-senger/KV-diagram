@@ -26,11 +26,17 @@ private:
     Ui::BooleanFunctionSimplifier *ui;
     TruthTableSimplifier *truthTableData;
     KVDiagramSimplifier *kvDiagram;
+    std::map<std::vector<int>, std::pair<std::vector<int>, bool>> primeImplicants;
+
 
     void addComboBox(int index);
     void resizeTruthTable();
     void resizeKVDiagram();
-    void updateValueKVDiagram();
+    void updateValues();
+    std::map<std::vector<int>, std::pair<std::vector<int>, bool>> findMinTerms();
+    void findPrimeImplicants();
+    int summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm);
+    void printPrimeImplicants();
 };
 
 #endif // BOOLEANFUNCTIONSIMPLIFIER_H

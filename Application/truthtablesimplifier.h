@@ -8,12 +8,6 @@
 class TruthTableSimplifier : public QStandardItemModel
 {
     Q_OBJECT
-private:
-    std::map<int, std::vector<int>> mdata;
-    std::vector<int> mresults;
-    int mvariable;
-
-    void updateData();
 
 public:
     TruthTableSimplifier(QObject *parent = nullptr);
@@ -25,7 +19,15 @@ public:
     int getCurColNum() const;
     int getCurVariableNum() const;
     std::vector<int> getResults() const;
+    std::vector<int> getDataAtIdx(int i) const;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+
+private:
+    std::map<int, std::vector<int>> mdata;
+    std::vector<int> mresults;
+    int mvariable;
+
+    void updateData();
 };
 
 #endif // TRUTHTABLESIMPLIFIER_H

@@ -70,6 +70,11 @@ std::vector<int> TruthTableSimplifier::getResults() const
     return mresults;
 }
 
+std::vector<int> TruthTableSimplifier::getDataAtIdx(int i) const
+{
+    return mdata.at(i);
+}
+
 QVariant TruthTableSimplifier::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::DisplayRole && index.column() < columnCount()-1) {
