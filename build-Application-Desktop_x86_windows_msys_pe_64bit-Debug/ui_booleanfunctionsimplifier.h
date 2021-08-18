@@ -36,6 +36,7 @@ public:
     QVBoxLayout *verticalLayout_5;
     QPushButton *addColButton;
     QPushButton *removeColButton;
+    QPushButton *clearButton;
     QSpacerItem *verticalSpacer;
     QSpacerItem *horizontalSpacer_5;
     QTableView *kvDiagram;
@@ -133,7 +134,7 @@ public:
         addColButton->setLayoutDirection(Qt::LeftToRight);
         addColButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	width: 50px;\n"
+"	width: 40px;\n"
 "	height: 40px;\n"
 "   	border-image: url(:/images/buttons/add_button.png)\n"
 "}\n"
@@ -155,7 +156,7 @@ public:
         removeColButton->setLayoutDirection(Qt::LeftToRight);
         removeColButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	width: 50px;\n"
+"	width: 40px;\n"
 "	height: 40px;\n"
 "   	border-image: url(:/images/buttons/remove_button.png)\n"
 "}\n"
@@ -166,6 +167,27 @@ public:
 "}"));
 
         verticalLayout_5->addWidget(removeColButton);
+
+        clearButton = new QPushButton(frame);
+        clearButton->setObjectName(QString::fromUtf8("clearButton"));
+        sizePolicy2.setHeightForWidth(clearButton->sizePolicy().hasHeightForWidth());
+        clearButton->setSizePolicy(sizePolicy2);
+        QFont font2;
+        font2.setPointSize(12);
+        clearButton->setFont(font2);
+        clearButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	width: 40px;\n"
+"	height: 40px;\n"
+"   	border-image: url(:/images/buttons/clr_button.png)\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	border-image: url(:/images/buttons/clr_button_hover.png)\n"
+"}"));
+
+        verticalLayout_5->addWidget(clearButton);
 
         verticalSpacer = new QSpacerItem(20, 1000, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -225,10 +247,10 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy3);
-        QFont font2;
-        font2.setPointSize(9);
-        font2.setBold(true);
-        label->setFont(font2);
+        QFont font3;
+        font3.setPointSize(9);
+        font3.setBold(true);
+        label->setFont(font3);
         label->setStyleSheet(QString::fromUtf8("color: white;\n"
 "background-color: #a40018 ;\n"
 "margin-right: 30px;"));
@@ -239,11 +261,11 @@ public:
 
         resultLabel = new QLabel(BooleanFunctionSimplifier);
         resultLabel->setObjectName(QString::fromUtf8("resultLabel"));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Arial")});
-        font3.setPointSize(13);
-        font3.setBold(true);
-        resultLabel->setFont(font3);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Arial")});
+        font4.setPointSize(13);
+        font4.setBold(true);
+        resultLabel->setFont(font4);
         resultLabel->setStyleSheet(QString::fromUtf8("border: 2px solid black;\n"
 "color: black;"));
         resultLabel->setAlignment(Qt::AlignCenter);
@@ -272,6 +294,7 @@ public:
         BooleanFunctionSimplifier->setWindowTitle(QCoreApplication::translate("BooleanFunctionSimplifier", "Form", nullptr));
         addColButton->setText(QString());
         removeColButton->setText(QString());
+        clearButton->setText(QString());
         label->setText(QCoreApplication::translate("BooleanFunctionSimplifier", "minimale Funktion", nullptr));
         resultLabel->setText(QCoreApplication::translate("BooleanFunctionSimplifier", "( )", nullptr));
     } // retranslateUi

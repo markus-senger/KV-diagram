@@ -178,7 +178,7 @@ QTableView {
              <property name="styleSheet">
               <string notr="true">QPushButton
 {
-	width: 50px;
+	width: 40px;
 	height: 40px;
    	border-image: url(:/images/buttons/add_button.png)
 }
@@ -226,7 +226,7 @@ QPushButton::hover
              <property name="styleSheet">
               <string notr="true">QPushButton
 {
-	width: 50px;
+	width: 40px;
 	height: 40px;
    	border-image: url(:/images/buttons/remove_button.png)
 }
@@ -234,6 +234,37 @@ QPushButton::hover
 QPushButton::hover
 {
 	border-image: url(:/images/buttons/remove_button_hover.png)
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="clearButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+	width: 40px;
+	height: 40px;
+   	border-image: url(:/images/buttons/clr_button.png)
+}
+
+QPushButton::hover
+{
+	border-image: url(:/images/buttons/clr_button_hover.png)
 }</string>
              </property>
              <property name="text">

@@ -19,5 +19,7 @@
         <file>task1_function_solution1.png</file>
         <file>task1_kvdiagram1_solution.png</file>
         <file>task1_circuit2.PNG</file>
+        <file>buttons/clr_button.png</file>
+        <file>buttons/clr_button_hover.png</file>
     </qresource>
 </RCC>
