@@ -17,8 +17,8 @@ PainterForKVDiagram::PainterForKVDiagram(QObject *parent, std::map<std::vector<i
         colNum = 4;
     }
     else if(currentSize == TRUTH_TABLE_4VAR) {
-        rowNum = 5;
-        colNum = 5;
+        rowNum = 4;
+        colNum = 4;
     }
 }
 
@@ -46,9 +46,9 @@ void PainterForKVDiagram::paint(QPainter* painter, const QStyleOptionViewItem& o
                         truthtableIndexIntoKVDiagramRow(e) == index.row() && !isFullRow(entry.second)) left = true;
                 else if(index.column() == colNum && truthtableIndexIntoKVDiagramCol(e) == 1 &&
                         truthtableIndexIntoKVDiagramRow(e) == index.row() && !isFullRow(entry.second)) right = true;
-                else if(index.row() == 1 && truthtableIndexIntoKVDiagramRow(e) == rowNum - 1 &&
+                else if(index.row() == 1 && truthtableIndexIntoKVDiagramRow(e) == rowNum &&
                         truthtableIndexIntoKVDiagramCol(e) == index.column() && !isFullCol(entry.second)) top = true;
-                else if(index.row() == rowNum - 1 && truthtableIndexIntoKVDiagramRow(e) == 1 &&
+                else if(index.row() == rowNum && truthtableIndexIntoKVDiagramRow(e) == 1 &&
                         truthtableIndexIntoKVDiagramCol(e) == index.column() && !isFullCol(entry.second)) bottom = true;
             }
 

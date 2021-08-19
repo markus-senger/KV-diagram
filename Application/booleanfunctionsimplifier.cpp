@@ -181,18 +181,18 @@ void BooleanFunctionSimplifier::findPrimeImplicants()
         }
         quinesTable1 = quinesTableTmp;
     }
-    /*qInfo() << "1 *********************";
+    qInfo() << "1 *********************";
     for(auto& tmp : primeImplicants) {
         qInfo() << tmp.first << tmp.second;
-    }*/
+    }
 
-    ui->kvDiagram->setItemDelegate(new PainterForKVDiagram(this, primeImplicants, truthTableData->getCurVariableNum()));
     coverFunction();
+    ui->kvDiagram->setItemDelegate(new PainterForKVDiagram(this, primeImplicants, truthTableData->getCurVariableNum()));
 
-    /*qInfo() << "2 *********************";
+    qInfo() << "2 *********************";
     for(auto& tmp : primeImplicants) {
         qInfo() << tmp.first << tmp.second;
-    }*/
+    }
 }
 
 int BooleanFunctionSimplifier::summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm)
@@ -215,8 +215,10 @@ int BooleanFunctionSimplifier::summarizeTerms(std::vector<int>& term1, std::vect
 
 void BooleanFunctionSimplifier::coverFunction()
 {
+    std::map<std::vector<int>, std::vector<int>> primeImplicantsClone;
+    primeImplicantsClone.insert(primeImplicants.begin(), primeImplicants.end());
     std::vector<int> termsWithoutDontCare = findTermsWithoutDontCare();
-    for(auto& entry : primeImplicants) {
+    for(auto& entry : primeImplicantsClone) {
         entry.second.erase(remove_if(entry.second.begin(), entry.second.end(), [&termsWithoutDontCare](int i) {
             return (std::find(termsWithoutDontCare.begin(), termsWithoutDontCare.end(), i) == termsWithoutDontCare.end());
         }), entry.second.end());
@@ -225,7 +227,7 @@ void BooleanFunctionSimplifier::coverFunction()
     std::map<int, int> termsColumnFrequency;
     for(auto& entry1 : termsWithoutDontCare) {
         int cnt = 0;
-        for(auto& entry2 : primeImplicants) {
+        for(auto& entry2 : primeImplicantsClone) {
             if(std::find(entry2.second.begin(), entry2.second.end(), entry1) != entry2.second.end()) {
                 cnt++;
             }
@@ -234,25 +236,59 @@ void BooleanFunctionSimplifier::coverFunction()
     }
 
     bool erased = true;
-    while (erased) {
-        erased = columnDominance(termsColumnFrequency);
-        erased = rowDominance();
+    bool erased2 = true;
+    while (erased || erased2) {
+        erased = columnDominance(termsColumnFrequency, primeImplicantsClone);
+        erased2 = rowDominance(primeImplicantsClone);
     }
+
+    for(auto entry = primeImplicants.begin(); entry != primeImplicants.end(); entry++) {
+        if(primeImplicantsClone.find(entry->first) == primeImplicantsClone.end()) {
+            primeImplicants.erase(entry->first);
+            entry--;
+        }
+    }
+
+    /*bool test=true;
+    std::vector<int> r;
+    primeImplicantsClone.clear();
+    unsigned int i = 0;
+    unsigned int j = 0;
+    while (test) {
+        test = false;
+        for(auto& tmp : primeImplicants) {
+            for(auto& tmp2 : tmp.second) {
+                if(std::find(r.begin(), r.end(), tmp2) == r.end()) {
+                    i++;
+                }
+            }
+            if(i >= tmp.second.size() - j && i >= 1) {
+                primeImplicantsClone[tmp.first] = tmp.second;
+                r.insert(r.begin(), tmp.second.begin(), tmp.second.end());
+                test = true;
+            }
+            i = 0;
+        }
+        j++;
+    }
+
+    primeImplicants = primeImplicantsClone;*/
 }
 
-bool BooleanFunctionSimplifier::columnDominance(std::map<int, int>& termsColumnFrequency)
+bool BooleanFunctionSimplifier::columnDominance(std::map<int, int>& termsColumnFrequency, std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone)
 {
     bool erased = false;
     unsigned int cnt = 0;
     int max = 1;
     int maxNumber = -1;
-    for(auto& entry1 : primeImplicants) {
+    for(auto& entry1 : primeImplicantsClone) {
         if(!erased) {
             cnt = 0;
             max = 1;
             maxNumber = -1;
             for(auto& entry2 : entry1.second) {
                 if(termsColumnFrequency[entry2] >= max) {
+                    if(termsColumnFrequency[entry2] > max) cnt = 0;
                     max = termsColumnFrequency[entry2];
                     maxNumber = entry2;
                     cnt++;
@@ -261,7 +297,7 @@ bool BooleanFunctionSimplifier::columnDominance(std::map<int, int>& termsColumnF
         }
 
         if(maxNumber != -1 && cnt < entry1.second.size()) {
-            for(auto& entry1 : primeImplicants) {
+            for(auto& entry1 : primeImplicantsClone) {
                 entry1.second.erase(remove_if(entry1.second.begin(), entry1.second.end(), [&maxNumber](int i) {
                     return (maxNumber == i);
                 }), entry1.second.end());
@@ -274,16 +310,16 @@ bool BooleanFunctionSimplifier::columnDominance(std::map<int, int>& termsColumnF
     return erased;
 }
 
-bool BooleanFunctionSimplifier::rowDominance()
+bool BooleanFunctionSimplifier::rowDominance(std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone)
 {
     bool erased = false;
-    for(auto& entry1 : primeImplicants) {
-        for(auto& entry2 : primeImplicants) {
+    for(auto& entry1 : primeImplicantsClone) {
+        for(auto& entry2 : primeImplicantsClone) {
             if(entry1 != entry2) {
                 if(std::all_of(entry1.second.begin(), entry1.second.end(), [&entry2] (int i) {
                     return std::find(entry2.second.begin(), entry2.second.end(), i) != entry2.second.end();
                 })) {
-                    primeImplicants.erase(entry1.first);
+                    primeImplicantsClone.erase(entry1.first);
                     erased = true;
                     break;
                 }

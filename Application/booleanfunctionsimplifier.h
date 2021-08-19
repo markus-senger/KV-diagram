@@ -40,8 +40,8 @@ private:
     void findPrimeImplicants();
     int summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm);
     void coverFunction();
-    bool columnDominance(std::map<int, int>& termsColumnFrequency);
-    bool rowDominance();
+    bool columnDominance(std::map<int, int>& termsColumnFrequency, std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone);
+    bool rowDominance(std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone);
     void printPrimeImplicants();
 };
 
