@@ -807,7 +807,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "SBF", nullptr));
         applicationNameShort->setText(QCoreApplication::translate("MainWindow", "SBF", nullptr));
-        applicationName->setText(QCoreApplication::translate("MainWindow", "Simplifier of Boolean functions", nullptr));
+        applicationName->setText(QCoreApplication::translate("MainWindow", "Simplifier of Boolean Functions", nullptr));
 #if QT_CONFIG(whatsthis)
         fh_logo->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/images/fhooe_logo.png\"/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)

@@ -3,6 +3,7 @@
 #include "types.h"
 #include <QComboBox>
 #include <QLineEdit>
+#include "painterforkvdiagram.h"
 
 BooleanFunctionSimplifier::BooleanFunctionSimplifier(QWidget *parent) :
     QWidget(parent),
@@ -185,6 +186,7 @@ void BooleanFunctionSimplifier::findPrimeImplicants()
         qInfo() << tmp.first << tmp.second;
     }*/
 
+    ui->kvDiagram->setItemDelegate(new PainterForKVDiagram(this, primeImplicants, truthTableData->getCurVariableNum()));
     coverFunction();
 
     /*qInfo() << "2 *********************";

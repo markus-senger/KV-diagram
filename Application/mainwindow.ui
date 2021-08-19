@@ -177,7 +177,7 @@
             <string notr="true">color: white;</string>
            </property>
            <property name="text">
-            <string>Simplifier of Boolean functions</string>
+            <string>Simplifier of Boolean Functions</string>
            </property>
           </widget>
          </item>

@@ -16,6 +16,7 @@ SOURCES += \
     kvdiagramsimplifier.cpp \
     main.cpp \
     mainwindow.cpp \
+    painterforkvdiagram.cpp \
     task1page.cpp \
     truthtablesimplifier.cpp \
     tutorialpage.cpp
@@ -27,6 +28,7 @@ HEADERS += \
     equationinputfield.h \
     kvdiagramsimplifier.h \
     mainwindow.h \
+    painterforkvdiagram.h \
     task1page.h \
     truthtablesimplifier.h \
     tutorialpage.h \

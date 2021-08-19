@@ -1,6 +1,7 @@
 #include "kvdiagramsimplifier.h"
 #include "types.h"
 #include <QTableWidgetItem>
+#include <QPainter>
 
 KVDiagramSimplifier::KVDiagramSimplifier(QObject *parent, int numOfVar)
     : QStandardItemModel(parent)
@@ -142,6 +143,7 @@ void KVDiagramSimplifier::writeValues(std::vector<int> results, int maxI, int ma
             else {
                 item(i,j)->setText("X");
             }
+
             a++;
         }
     }
