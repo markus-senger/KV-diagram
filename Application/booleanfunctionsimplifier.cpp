@@ -249,30 +249,40 @@ void BooleanFunctionSimplifier::coverFunction()
         }
     }
 
-    /*bool test=true;
+    bool test=true;
     std::vector<int> r;
+    std::vector<int> groups;
     primeImplicantsClone.clear();
     unsigned int i = 0;
     unsigned int j = 0;
+    int a = 0;
     while (test) {
         test = false;
         for(auto& tmp : primeImplicants) {
-            for(auto& tmp2 : tmp.second) {
-                if(std::find(r.begin(), r.end(), tmp2) == r.end()) {
-                    i++;
+            if(std::find(groups.begin(), groups.end(), std::count(tmp.first.begin(), tmp.first.end(), 1)) == groups.end()) {
+                for(auto& tmp2 : tmp.second) {
+                    if(std::find(r.begin(), r.end(), tmp2) == r.end()) {
+                        i++;
+                        test = true;
+                    }
                 }
+                if(i >= tmp.second.size() - j && i >= 1) {
+                    groups.push_back(std::count(tmp.first.begin(), tmp.first.end(), 1));
+                    primeImplicantsClone[tmp.first] = tmp.second;
+                    r.insert(r.begin(), tmp.second.begin(), tmp.second.end());
+                }
+                i = 0;
             }
-            if(i >= tmp.second.size() - j && i >= 1) {
-                primeImplicantsClone[tmp.first] = tmp.second;
-                r.insert(r.begin(), tmp.second.begin(), tmp.second.end());
+            else {
                 test = true;
             }
-            i = 0;
         }
         j++;
+        a++;
+        groups.clear();
     }
 
-    primeImplicants = primeImplicantsClone;*/
+    primeImplicants = primeImplicantsClone;
 }
 
 bool BooleanFunctionSimplifier::columnDominance(std::map<int, int>& termsColumnFrequency, std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone)
