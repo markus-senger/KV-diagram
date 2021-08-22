@@ -4,6 +4,7 @@
 #include <QComboBox>
 #include <QLineEdit>
 #include "painterforkvdiagram.h"
+#include <set>
 
 BooleanFunctionSimplifier::BooleanFunctionSimplifier(QWidget *parent) :
     QWidget(parent),
@@ -216,18 +217,25 @@ int BooleanFunctionSimplifier::summarizeTerms(std::vector<int>& term1, std::vect
 void BooleanFunctionSimplifier::coverFunction()
 {
     std::map<std::vector<int>, std::vector<int>> primeImplicantsClone;
-    primeImplicantsClone.insert(primeImplicants.begin(), primeImplicants.end());
+    std::map<std::vector<int>, std::vector<int>> primeImplicants2;
+    primeImplicants2.insert(primeImplicants.begin(), primeImplicants.end());
     std::vector<int> termsWithoutDontCare = findTermsWithoutDontCare();
-    for(auto& entry : primeImplicantsClone) {
+    for(auto& entry : primeImplicants) {
         entry.second.erase(remove_if(entry.second.begin(), entry.second.end(), [&termsWithoutDontCare](int i) {
             return (std::find(termsWithoutDontCare.begin(), termsWithoutDontCare.end(), i) == termsWithoutDontCare.end());
         }), entry.second.end());
     }
 
+    qInfo() << "3 *********************";
+    for(auto& tmp : primeImplicantsClone) {
+        qInfo() << tmp.first << tmp.second;
+    }
+    qInfo() << termsWithoutDontCare;
+
     std::map<int, int> termsColumnFrequency;
     for(auto& entry1 : termsWithoutDontCare) {
         int cnt = 0;
-        for(auto& entry2 : primeImplicantsClone) {
+        for(auto& entry2 : primeImplicants) {
             if(std::find(entry2.second.begin(), entry2.second.end(), entry1) != entry2.second.end()) {
                 cnt++;
             }
@@ -235,54 +243,104 @@ void BooleanFunctionSimplifier::coverFunction()
         termsColumnFrequency[entry1] = cnt;
     }
 
-    bool erased = true;
+    /*bool erased = true;
     bool erased2 = true;
     while (erased || erased2) {
-        erased = columnDominance(termsColumnFrequency, primeImplicantsClone);
+        erased = columnDominance(termsColumnFrequency, primeImplicants);
         erased2 = rowDominance(primeImplicantsClone);
-    }
+    }*/
 
-    for(auto entry = primeImplicants.begin(); entry != primeImplicants.end(); entry++) {
+    /*for(auto entry = primeImplicants.begin(); entry != primeImplicants.end(); entry++) {
         if(primeImplicantsClone.find(entry->first) == primeImplicantsClone.end()) {
             primeImplicants.erase(entry->first);
             entry--;
         }
-    }
+    }*/
 
     bool test=true;
-    std::vector<int> r;
+    std::set<int> r;
     std::vector<int> groups;
+    std::set<int> gh;
     primeImplicantsClone.clear();
-    unsigned int i = 0;
-    unsigned int j = 0;
-    int a = 0;
+    int i = 0;
+    int j = 0;
+    int a = 1;
+    bool flag = false;
+    bool aFlag = false;
     while (test) {
-        test = false;
+        qInfo() << "TESSST";
+        if(flag) {
+            test = true;
+            flag = false;
+        }
+        else {
+            test = false;
+        }
         for(auto& tmp : primeImplicants) {
             if(std::find(groups.begin(), groups.end(), std::count(tmp.first.begin(), tmp.first.end(), 1)) == groups.end()) {
+                qInfo() << "TESSST2222";
+                int min = INT32_MAX;
                 for(auto& tmp2 : tmp.second) {
                     if(std::find(r.begin(), r.end(), tmp2) == r.end()) {
                         i++;
-                        test = true;
+                        gh.insert(tmp2);
+                        qInfo() << "udghuwihdui" << tmp2 << termsColumnFrequency[tmp2] << min;
+                        if(termsColumnFrequency[tmp2] < min) {
+                            min = termsColumnFrequency[tmp2];
+                        }
                     }
                 }
-                if(i >= tmp.second.size() - j && i >= 1) {
+                qInfo() << i << tmp.second.size() << j << tmp.second << min << a;
+                if(i >= (int)tmp.second.size() - j && i >= 1 && min <= a) {
+                    qInfo() << "true";
                     groups.push_back(std::count(tmp.first.begin(), tmp.first.end(), 1));
                     primeImplicantsClone[tmp.first] = tmp.second;
-                    r.insert(r.begin(), tmp.second.begin(), tmp.second.end());
+                    std::copy(tmp.second.begin(), tmp.second.end(), std::inserter(r, r.begin()));
+                    //r.insert(r.begin(), tmp.second.begin(), tmp.second.end());
+                    test = true;
+                    //flag = true;
+                    aFlag = true;
+                    /*for(auto& entry : tmp.second) {
+                        termsColumnFrequency[entry]--;
+                    }*/
+                }
+                else if (i >= (int)tmp.second.size() - j && i >= 1) {
+                    flag = true;
                 }
                 i = 0;
             }
             else {
                 test = true;
+                flag = true;
             }
         }
-        j++;
-        a++;
+        if(!flag) {
+            j++;
+        }
+        qInfo() << "AAAAAAAAAAAAAAAAA!" << aFlag;
+        if(!aFlag) {
+            a++;
+        }
+        aFlag = false;
+        if(gh.size() > r.size()) {
+            test = true;
+        }
         groups.clear();
     }
 
-    primeImplicants = primeImplicantsClone;
+    primeImplicants.clear();
+    primeImplicants.insert(primeImplicantsClone.begin(), primeImplicantsClone.end());
+    qInfo() << "3.5 *********************";
+    for(auto& tmp : primeImplicants) {
+        qInfo() << tmp.first << tmp.second;
+    }
+    for(auto& tmp : primeImplicants) {
+        primeImplicants[tmp.first] = primeImplicants2[tmp.first];
+    }
+    qInfo() << "4 *********************";
+    for(auto& tmp : primeImplicants) {
+        qInfo() << tmp.first << tmp.second;
+    }
 }
 
 bool BooleanFunctionSimplifier::columnDominance(std::map<int, int>& termsColumnFrequency, std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone)
