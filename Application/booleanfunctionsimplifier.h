@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "truthtablesimplifier.h"
 #include "kvdiagramsimplifier.h"
+#include <set>
 
 namespace Ui {
 class BooleanFunctionSimplifier;
@@ -37,12 +38,12 @@ private:
     void updateValues();
     std::map<std::vector<int>, std::vector<int>> findMinTerms(bool dontCare = true);
     std::vector<int> findTermsWithoutDontCare();
-    void findPrimeImplicants();
+    void findEssentialPrimeImplicants();
     int summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm);
     void coverFunction();
     bool columnDominance(std::map<int, int>& termsColumnFrequency, std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone);
     bool rowDominance(std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone);
-    void printPrimeImplicants();
+    void printEssentialPrimeImplicants();
 };
 
 #endif // BOOLEANFUNCTIONSIMPLIFIER_H

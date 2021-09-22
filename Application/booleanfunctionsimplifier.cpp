@@ -4,7 +4,6 @@
 #include <QComboBox>
 #include <QLineEdit>
 #include "painterforkvdiagram.h"
-#include <set>
 
 BooleanFunctionSimplifier::BooleanFunctionSimplifier(QWidget *parent) :
     QWidget(parent),
@@ -120,8 +119,8 @@ void BooleanFunctionSimplifier::resizeKVDiagram()
 void BooleanFunctionSimplifier::updateValues()
 {
     kvDiagram->updateValues(truthTableData->getResults());
-    findPrimeImplicants();
-    printPrimeImplicants();
+    findEssentialPrimeImplicants();
+    printEssentialPrimeImplicants();
 }
 
 std::map<std::vector<int>, std::vector<int>> BooleanFunctionSimplifier::findMinTerms(bool dontCare)
@@ -152,48 +151,42 @@ std::vector<int> BooleanFunctionSimplifier::findTermsWithoutDontCare()
     return terms;
 }
 
-void BooleanFunctionSimplifier::findPrimeImplicants()
+void BooleanFunctionSimplifier::findEssentialPrimeImplicants()
 {
     primeImplicants.clear();
     std::map<std::vector<int>, std::vector<int>> quinesTable1 = findMinTerms();
-    std::map<std::vector<int>, std::vector<int>> termsAlreadySummarized;
+
     while(!quinesTable1.empty()) {
         std::map<std::vector<int>, std::vector<int>> quinesTableTmp;
+        std::set<std::vector<int>> termsAlreadySummarized;
 
         for(auto entry1 = quinesTable1.begin(); entry1 != quinesTable1.end(); ++entry1) {
-            bool insertedEntry = false;
+            bool entry1Summarized = false;
+
             for(auto entry2 = entry1; entry2 != quinesTable1.end(); ++entry2) {
+
                 std::vector<int> summarizedTerm;
                 int diff = summarizeTerms(entry1->second, entry2->second, summarizedTerm);
                 if(diff == 1) {
-                    termsAlreadySummarized[entry2->second] = entry1->second;
-                    insertedEntry = true;
+                    termsAlreadySummarized.insert(entry2->second);
+                    entry1Summarized = true;
                     std::vector<int> tmpIdx = entry1->first;
                     tmpIdx.insert(tmpIdx.end(), entry2->first.begin(), entry2->first.end());
                     quinesTableTmp[tmpIdx] = summarizedTerm;
                 }
                 else if(termsAlreadySummarized.find(entry1->second) != termsAlreadySummarized.end()) {
-                    insertedEntry = true;
+                    entry1Summarized = true;
                 }
             }
-            if (!insertedEntry) {
+            if (!entry1Summarized) {
                 primeImplicants[entry1->second] = entry1->first;
             }
         }
         quinesTable1 = quinesTableTmp;
     }
-    qInfo() << "1 *********************";
-    for(auto& tmp : primeImplicants) {
-        qInfo() << tmp.first << tmp.second;
-    }
 
     coverFunction();
     ui->kvDiagram->setItemDelegate(new PainterForKVDiagram(this, primeImplicants, truthTableData->getCurVariableNum()));
-
-    qInfo() << "2 *********************";
-    for(auto& tmp : primeImplicants) {
-        qInfo() << tmp.first << tmp.second;
-    }
 }
 
 int BooleanFunctionSimplifier::summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm)
@@ -399,7 +392,7 @@ bool BooleanFunctionSimplifier::rowDominance(std::map<std::vector<int>, std::vec
     return erased;
 }
 
-void BooleanFunctionSimplifier::printPrimeImplicants()
+void BooleanFunctionSimplifier::printEssentialPrimeImplicants()
 {
     QString result = "";
     char letter = 'A';
