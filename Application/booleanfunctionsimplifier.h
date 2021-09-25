@@ -41,6 +41,11 @@ private:
     void findEssentialPrimeImplicants();
     int summarizeTerms(std::vector<int>& term1, std::vector<int>& term2, std::vector<int>& newTerm);
     void coverFunction();
+    void coverFunction2();
+    std::map<int, std::set<int>> createCoverageTable();
+    std::map<int, std::set<int>> computeBracketExpressions(std::map<int, std::set<int>>& coverageTable);
+    void minimizeFunction(std::map<int, std::set<int>>& function);
+    std::map<std::vector<int>, std::vector<int>> findBestSolution(std::map<int, std::set<int>>& function);
     bool columnDominance(std::map<int, int>& termsColumnFrequency, std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone);
     bool rowDominance(std::map<std::vector<int>, std::vector<int>>& primeImplicantsClone);
     void printEssentialPrimeImplicants();
