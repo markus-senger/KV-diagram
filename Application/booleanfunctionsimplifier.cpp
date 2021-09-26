@@ -139,13 +139,13 @@ std::map<std::vector<int>, std::vector<int>> BooleanFunctionSimplifier::findMinT
     return minTerms;
 }
 
-std::vector<int> BooleanFunctionSimplifier::findTermsWithoutDontCare()
+std::set<int> BooleanFunctionSimplifier::findTermsWithoutDontCare()
 {
-    std::vector<int> terms;
+    std::set<int> terms;
     int i = 0;
     for(auto& entry : truthTableData->getResults()) {
         if (entry == 1) {
-            terms.push_back(i);
+            terms.insert(i);
         }
         i++;
     }
@@ -210,109 +210,111 @@ int BooleanFunctionSimplifier::summarizeTerms(std::vector<int>& term1, std::vect
 
 void BooleanFunctionSimplifier::coverFunction()
 {
-    std::map<int, std::set<int>> coverageTable = createCoverageTable();
-    std::map<int, std::set<int>> function = computeBracketExpressions(coverageTable);
-
+    std::map<int, std::set<int>> function = createFunction();
+    function = computeBracketExpressions(function);
     minimizeFunction(function);
     primeImplicants = findBestSolution(function);
 }
 
-std::map<int, std::set<int>> BooleanFunctionSimplifier::createCoverageTable()
+std::map<int, std::set<int>> BooleanFunctionSimplifier::createFunction()
 {
-    std::map<int, std::set<int>> coverageTable;
-    int i = 0;
-    for(auto& tmp : primeImplicants) {
-        for(auto& tmp2 : tmp.second) {
-            coverageTable[tmp2].insert(i);
+    std::map<int, std::set<int>> function;
+    std::set<int> termsWithoutDontCare = findTermsWithoutDontCare();
+    size_t i = 0;
+    for(auto& entry : primeImplicants) {
+        for(auto& term : entry.second) {
+            if(termsWithoutDontCare.find(term) != termsWithoutDontCare.end()) {
+                function[term].insert(i);
+            }
         }
         i++;
     }
-    return coverageTable;
+
+    return function;
 }
 
-std::map<int, std::set<int>> BooleanFunctionSimplifier::computeBracketExpressions(std::map<int, std::set<int>>& coverageTable)
+std::map<int, std::set<int>> BooleanFunctionSimplifier::computeBracketExpressions(std::map<int, std::set<int>>& function)
 {
-    std::map<int, std::set<int>> function;
+    std::map<int, std::set<int>> newFunction;
     size_t size = 0;
-    for(auto& tmp : coverageTable) {
-        if(size != 0 && tmp.second.size() > 0) {
-            int a = function.size() * 2 - 1;
-            for(auto& tmp11 : function) {
-                function[a] = tmp11.second;
-                a--;
+    for(auto& oldTerm : function) {
+        if(size != 0 && oldTerm.second.size() > 0) {
+            int doublingCnt = newFunction.size() * 2 - 1;
+            for(auto& newTerm : newFunction) {
+                newFunction[doublingCnt] = newTerm.second;
+                doublingCnt--;
             }
-            size = function.size() / tmp.second.size();
+            size = newFunction.size() / oldTerm.second.size();
         }
         else if(size == 0) {
             size = 1;
         }
 
-        int j = 0;
-        size_t i;
-        for(i = 0; i < size; i++) {
-            for(auto& tmp2 : tmp.second) {
-                function[j].insert(tmp2);
+        size_t j = 0;
+        for(size_t i = 0; i < size; i++) {
+            for(auto& term : oldTerm.second) {
+                newFunction[j].insert(term);
                 j++;
             }
         }
     }
-    return function;
+    return newFunction;
 }
 
 void BooleanFunctionSimplifier::minimizeFunction(std::map<int, std::set<int>>& function)
 {
-    std::map<int, std::set<int>> deleteFunc;
-    for(auto tmp = function.begin(); tmp != function.end(); ++tmp) {
-        for(auto tmp2 = function.begin(); tmp2 != function.end(); ++tmp2) {
-            if(tmp2->second.size() < tmp->second.size()) {
-                bool e = true;
-                for(auto& tmp3 : tmp2->second) {
-                    if(tmp->second.find(tmp3) == tmp->second.end()) {
-                        e = false;
+    std::map<int, std::set<int>> redundantTherms;
+    for(auto entry1 = function.begin(); entry1 != function.end(); ++entry1) {
+        for(auto entry2 = function.begin(); entry2 != function.end(); ++entry2) {
+            if(entry2->second.size() < entry1->second.size()) {
+                bool found = true;
+                for(auto& term : entry2->second) {
+                    if(entry1->second.find(term) == entry1->second.end()) {
+                        found = false;
                         break;
                     }
                 }
-                if(e) {
-                    deleteFunc[tmp->first] = tmp->second;
+                if(found) {
+                    redundantTherms[entry1->first] = entry1->second;
                 }
             }
         }
     }
 
-    for(auto& tmp : deleteFunc) {
+    for(auto& tmp : redundantTherms) {
         function.erase(tmp.first);
     }
 }
 
 std::map<std::vector<int>, std::vector<int>> BooleanFunctionSimplifier::findBestSolution(std::map<int, std::set<int>>& function)
 {
-    int i = -1;
+    int minKey = -1;
     size_t min = std::numeric_limits<int>::max();
-    for(auto& tmp : function) {
-        if(tmp.second.size() < min) {
-            min = tmp.second.size();
-            i = tmp.first;
+    for(auto& term : function) {
+        if(term.second.size() < min) {
+            min = term.second.size();
+            minKey = term.first;
         }
     }
 
     std::map<std::vector<int>, std::vector<int>> p;
-    int j = 0;
-    if(i != -1) {
-        for(auto& tmp2 : function.at(i)) {
-            for(auto& tmp : primeImplicants) {
-                if(j == tmp2) {
-                    p[tmp.first] = tmp.second;
+    int i = 0;
+    if(minKey != -1) {
+        for(auto& functionTerm : function.at(minKey)) {
+            for(auto& primeImplicant : primeImplicants) {
+                if(i == functionTerm) {
+                    p[primeImplicant.first] = primeImplicant.second;
                     break;
                 }
-                j++;
+                i++;
             }
-            j = 0;
+            i = 0;
         }
     }
     return p;
 }
 
-void BooleanFunctionSimplifier::coverFunction2()
+/*void BooleanFunctionSimplifier::coverFunction2()
 {
     std::map<std::vector<int>, std::vector<int>> primeImplicantsClone;
     std::map<std::vector<int>, std::vector<int>> primeImplicants2;
@@ -455,7 +457,7 @@ bool BooleanFunctionSimplifier::rowDominance(std::map<std::vector<int>, std::vec
     }
 
     return erased;
-}
+}*/
 
 void BooleanFunctionSimplifier::printEssentialPrimeImplicants()
 {
