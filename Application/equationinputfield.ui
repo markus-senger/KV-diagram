@@ -51,7 +51,7 @@
       <string notr="true">color: black;</string>
      </property>
      <property name="text">
-      <string>Geben Sie die Funktionsgleichung an (in DNF):</string>
+      <string>Geben Sie die Funktionsgleichung an (in KDNF):</string>
      </property>
     </widget>
    </item>

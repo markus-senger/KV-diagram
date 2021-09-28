@@ -1102,7 +1102,7 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Sie sehen unten eine Wahrheitstabelle, bilden Sie daraus die Funktionsgleichung in DNF. Eine Optimierung mittels KV-Diagramm ist hier noch nicht erforderlich.</span></p></body></html>", nullptr));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Sie sehen unten eine Wahrheitstabelle, bilden Sie daraus die Funktionsgleichung in KDNF. Eine Optimierung mittels KV-Diagramm ist hier noch nicht erforderlich.</span></p></body></html>", nullptr));
         label_9->setText(QString());
         solutionButtonTask1_1->setText(QCoreApplication::translate("Task1Page", "L\303\266sung anzeigen", nullptr));
         solutionLabelTask1_1->setText(QString());

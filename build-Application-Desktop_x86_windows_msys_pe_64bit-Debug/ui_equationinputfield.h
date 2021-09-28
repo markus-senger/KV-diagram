@@ -362,7 +362,7 @@ public:
     void retranslateUi(QWidget *EquationInputField)
     {
         EquationInputField->setWindowTitle(QCoreApplication::translate("EquationInputField", "Form", nullptr));
-        label->setText(QCoreApplication::translate("EquationInputField", "Geben Sie die Funktionsgleichung an (in DNF):", nullptr));
+        label->setText(QCoreApplication::translate("EquationInputField", "Geben Sie die Funktionsgleichung an (in KDNF):", nullptr));
         lineEdit->setText(QString());
         CButton->setText(QCoreApplication::translate("EquationInputField", "C", nullptr));
         leftBracketButton->setText(QCoreApplication::translate("EquationInputField", "(", nullptr));

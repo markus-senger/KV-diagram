@@ -281,8 +281,8 @@ void BooleanFunctionSimplifier::minimizeFunction(std::map<int, std::set<int>>& f
         }
     }
 
-    for(auto& tmp : redundantTherms) {
-        function.erase(tmp.first);
+    for(auto& redundantTherm : redundantTherms) {
+        function.erase(redundantTherm.first);
     }
 }
 
