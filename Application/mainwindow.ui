@@ -82,7 +82,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #A40018;</string>
+       <string notr="true">background-color: #ffcc80;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -147,13 +147,14 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>16</pointsize>
+             <family>Arial</family>
+             <pointsize>18</pointsize>
              <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">color: white;</string>
+            <string notr="true">color: black;</string>
            </property>
            <property name="text">
             <string>SBF</string>
@@ -170,11 +171,12 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>11</pointsize>
+             <family>Arial</family>
+             <pointsize>14</pointsize>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">color: white;</string>
+            <string notr="true">color: black;</string>
            </property>
            <property name="text">
             <string>Simplifier of Boolean Functions</string>
@@ -385,7 +387,7 @@
                  <property name="styleSheet">
                   <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button.png)
@@ -574,7 +576,7 @@ QPushButton::hover
                  <property name="styleSheet">
                   <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button.png)
@@ -660,7 +662,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button.png)
@@ -689,7 +691,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button.png)
@@ -718,7 +720,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button_hover.png)
@@ -747,7 +749,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button_hover.png)
@@ -776,7 +778,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button_hover.png)
@@ -805,7 +807,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button_hover.png)
@@ -834,7 +836,7 @@ QPushButton::hover
                    <property name="styleSheet">
                     <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 205px;
 	height: 50px;
    	border-image: url(:/images/buttons/button_hover.png)
@@ -963,7 +965,7 @@ border: 1px solid black;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color: #a40018;
+                   <string notr="true">color: black;
 background-color: white ;
 border-bottom: 3px solid black;
 padding-bottom: 10px;
@@ -1012,7 +1014,7 @@ padding-top: 10px;</string>
                   <property name="styleSheet">
                    <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 155px;
 	height: 40px;
    	border-image: url(:/images/buttons/button.png)
@@ -1063,7 +1065,7 @@ QPushButton::hover
                   <property name="styleSheet">
                    <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 155px;
 	height: 40px;
    	border-image: url(:/images/buttons/button.png)
@@ -1210,7 +1212,7 @@ border: 1px solid black;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color: #a40018;
+                   <string notr="true">color: black;
 background-color: white ;
 border-bottom: 3px solid black;
 padding-bottom: 10px;
@@ -1259,7 +1261,7 @@ padding-top: 10px;</string>
                   <property name="styleSheet">
                    <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 155px;
 	height: 40px;
    	border-image: url(:/images/buttons/button.png)
@@ -1310,7 +1312,7 @@ QPushButton::hover
                   <property name="styleSheet">
                    <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 155px;
 	height: 40px;
    	border-image: url(:/images/buttons/button.png)

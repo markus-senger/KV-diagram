@@ -109,7 +109,7 @@ public:
         CButton->setFont(font1);
         CButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -129,7 +129,7 @@ public:
         leftBracketButton->setFont(font1);
         leftBracketButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -149,7 +149,7 @@ public:
         rightBracketButton->setFont(font1);
         rightBracketButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -167,7 +167,7 @@ public:
         clearButton->setFont(font1);
         clearButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -187,7 +187,7 @@ public:
         notAButton->setFont(font1);
         notAButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -211,7 +211,7 @@ public:
         ANDButton->setFont(font2);
         ANDButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -231,7 +231,7 @@ public:
         AButton->setFont(font1);
         AButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -251,7 +251,7 @@ public:
         BButton->setFont(font1);
         BButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -273,7 +273,7 @@ public:
         deleteButton->setFont(font1);
         deleteButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -293,7 +293,7 @@ public:
         ORButton->setFont(font2);
         ORButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -313,7 +313,7 @@ public:
         notCButton->setFont(font1);
         notCButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"
@@ -333,7 +333,7 @@ public:
         notBButton->setFont(font1);
         notBButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 40px;\n"
 "	height: 35px;\n"
 "   	border-image: url(:/images/buttons/input_help_button.png)\n"

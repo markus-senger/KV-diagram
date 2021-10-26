@@ -17,7 +17,7 @@ EditableKVDiagram3Var::EditableKVDiagram3Var(QWidget *parent) :
 
     QPushButton* button = new QPushButton(this);
     button->setText("CLR");
-    button->setStyleSheet("background-color: #BF4D5D; color: white; font-weight: bold;");
+    button->setStyleSheet("background-color: #ffcc80; color: black; font-weight: bold;");
     ui->kvDiagram->setIndexWidget(kvDiagram->index(0, 0), button);
     connect(button, &QPushButton::clicked, [this]{
         reset();

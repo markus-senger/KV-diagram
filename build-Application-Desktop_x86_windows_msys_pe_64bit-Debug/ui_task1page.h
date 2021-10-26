@@ -173,7 +173,7 @@ public:
     {
         if (Task1Page->objectName().isEmpty())
             Task1Page->setObjectName(QString::fromUtf8("Task1Page"));
-        Task1Page->resize(874, 492);
+        Task1Page->resize(1016, 599);
         verticalLayout = new QVBoxLayout(Task1Page);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         task1StackedWidget = new QStackedWidget(Task1Page);
@@ -200,7 +200,7 @@ public:
         scrollArea_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 836, 454));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 970, 553));
         verticalLayout_15 = new QVBoxLayout(scrollAreaWidgetContents_2);
         verticalLayout_15->setObjectName(QString::fromUtf8("verticalLayout_15"));
         gridFrame_2 = new QFrame(scrollAreaWidgetContents_2);
@@ -294,7 +294,7 @@ public:
         solutionButtonTask1_1->setFont(font1);
         solutionButtonTask1_1->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 150px;\n"
 "	height: 30px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -403,7 +403,7 @@ public:
         scrollArea_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 836, 454));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 970, 553));
         verticalLayout_19 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_19->setObjectName(QString::fromUtf8("verticalLayout_19"));
         gridFrame_3 = new QFrame(scrollAreaWidgetContents_3);
@@ -546,7 +546,7 @@ public:
         scrollArea_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 836, 454));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 970, 553));
         verticalLayout_23 = new QVBoxLayout(scrollAreaWidgetContents_4);
         verticalLayout_23->setObjectName(QString::fromUtf8("verticalLayout_23"));
         gridFrame_4 = new QFrame(scrollAreaWidgetContents_4);
@@ -618,7 +618,7 @@ public:
         checkKVDiagram->setFont(font1);
         checkKVDiagram->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 150px;\n"
 "	height: 30px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -740,7 +740,7 @@ public:
         scrollArea_8->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents_8 = new QWidget();
         scrollAreaWidgetContents_8->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_8"));
-        scrollAreaWidgetContents_8->setGeometry(QRect(0, 0, 836, 454));
+        scrollAreaWidgetContents_8->setGeometry(QRect(0, 0, 970, 553));
         verticalLayout_33 = new QVBoxLayout(scrollAreaWidgetContents_8);
         verticalLayout_33->setObjectName(QString::fromUtf8("verticalLayout_33"));
         gridFrame_8 = new QFrame(scrollAreaWidgetContents_8);
@@ -822,7 +822,7 @@ public:
         solutionButtonTask1_4->setFont(font1);
         solutionButtonTask1_4->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 150px;\n"
 "	height: 30px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -942,7 +942,7 @@ public:
         scrollArea_5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         scrollAreaWidgetContents_5 = new QWidget();
         scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 836, 454));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 970, 553));
         verticalLayout_25 = new QVBoxLayout(scrollAreaWidgetContents_5);
         verticalLayout_25->setObjectName(QString::fromUtf8("verticalLayout_25"));
         gridFrame_5 = new QFrame(scrollAreaWidgetContents_5);
@@ -1089,7 +1089,7 @@ public:
 
         retranslateUi(Task1Page);
 
-        task1StackedWidget->setCurrentIndex(4);
+        task1StackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(Task1Page);
@@ -1110,21 +1110,21 @@ public:
         textBrowser_4->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Die auf der vorherigen Seite erstellte Funktionsgleichung w\303\274rde die folgende Schaltung liefern ((\302\254A \342\226\252 \302\254B \342\226\252 \302\254C) + (\302\254A \342\226\252 B \342\226\252 \302\254C) + (A \342\226\252 \302\254B \342\226\252 C) + (A \342\226\252 B \342\226\252 C)):</span></p></body></html>", nullptr));
         label_7->setText(QString());
         textBrowser->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Diese Schaltung ist ziemlich gro\303\237 f\303\274r ihren Funktionsumfang. W\303\274rde man solche Schaltungen nicht noch weiter vereinfachen, w\303\274rde man niemals in der Lage </span><a name=\"decorator-corrected-entity-id-4\"></a><span style=\" font-size:11pt;\">s</span><span style=\" font-size:11pt;\">ein, elektrische Ger\303\244te so </span><a name=\"decorator-corrected-entity-id-7\"></a><span style=\" font-size:11pt;\">k</span><span style=\" font-size:11pt;\">lein, wie wir sie heute </span><a name=\""
-                        "decorator-corrected-entity-id-9\"></a><span style=\" font-size:11pt;\">k</span><span style=\" font-size:11pt;\">ennen, produzieren zu k\303\266nnen.</span></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Diese Schaltung ist ziemlich gro\303\237 f\303\274r ihren Funktionsumfang. W\303\274rde man solche Schaltungen nicht noch weiter vereinfachen, w\303\274rde man niemals in der Lage </span><a name=\"decorator-corrected-entity-id-4\"></a><span style=\" font-size:11pt;\">s</span><span style=\" font-size:11pt;\">ein, elektrische Ger\303\244te so </span><a name=\"decorator-corrected-entity-id-7\"></a><span style=\" font-size:11pt;\">k</span><span style=\" font-size:11pt;\">lein, wie wir sie heute </span><a name"
+                        "=\"decorator-corrected-entity-id-9\"></a><span style=\" font-size:11pt;\">k</span><span style=\" font-size:11pt;\">ennen, produzieren zu k\303\266nnen.</span></p></body></html>", nullptr));
         backButtonTask1Page2->setText(QString());
         continueButtonTask1Page2->setText(QString());
         textBrowser_5->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Um diese Schaltung nun zu vereinfachen, bietet sich hier, dass KV-Diagramm an. Tragen Sie zun\303\244chst die Werte aus der Wahrheitstabelle richtig in das nebenstehende KV-Diagramm ein.</span></p></body></html>", nullptr));
         label_8->setText(QString());
         checkKVDiagram->setText(QCoreApplication::translate("Task1Page", "L\303\266sung \303\274berpr\303\274fen", nullptr));
@@ -1148,11 +1148,11 @@ public:
         textBrowser_2->setHtml(QCoreApplication::translate("Task1Page", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Arial'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;\">\303\234bung 1 abgeschlossen!</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; fon"
-                        "t-size:11pt;\">Zum Abschluss hier noch einmal beide Schaltungen (rechts: ohne Optimierung, links: mit Optimierung). </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; f"
+                        "ont-size:11pt;\">Zum Abschluss hier noch einmal beide Schaltungen (rechts: ohne Optimierung, links: mit Optimierung). </span></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Wie man deutlich sieht, ist die rechte Schaltung deutlich kompakter als die linke Schaltung, obwohl beide Schaltung exakt die gleiche Funktionalit\303\244t bietet.</span></p></body></html>", nullptr));
         backButtonTask1Page5->setText(QString());
     } // retranslateUi

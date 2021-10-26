@@ -41,7 +41,7 @@ void Task1Page::on_solutionButtonTask1_1_clicked()
     static bool show = false;
     if(!show) {
         ui->solutionLabelTask1_1->setText("(¬A ▪ ¬B ▪ ¬C) + (¬A ▪ B ▪ ¬C) + (A ▪ ¬B ▪ C) + (A ▪ B ▪ C)");
-        ui->solutionLabelTask1_1->setStyleSheet("color: black; border: 2px solid #A40018");
+        ui->solutionLabelTask1_1->setStyleSheet("color: black; border: 2px solid #ffcc80");
         show = true;
         ui->solutionButtonTask1_1->setText("Lösung ausblenden");
     }
@@ -115,7 +115,7 @@ void Task1Page::on_solutionButtonTask1_4_clicked()
     static bool show = false;
     if(!show) {
         ui->solutionLabelTask1_4->setText("(A ▪ C) + (¬A ▪ ¬C)");
-        ui->solutionLabelTask1_4->setStyleSheet("color: black; border: 2px solid #A40018");
+        ui->solutionLabelTask1_4->setStyleSheet("color: black; border: 2px solid #ffcc80");
         show = true;
         show = true;
         ui->solutionButtonTask1_4->setText("Lösung ausblenden");

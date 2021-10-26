@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>426</width>
-    <height>300</height>
+    <width>439</width>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -93,16 +93,16 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QHeaderView::section {
- 	background-color: #A40018 ;
-	color: white;
+ 	background-color: #ffcc80 ;
+	color: black;
 }
 
 QTableCornerButton::section { 
-	background-color: #A40018;
+	background-color: #ffcc80;
 }
 
 QTableView {
-	selection-background-color: #A40018;
+	selection-background-color: #ffcc80;
 	selection-color: white;
 	background-color: white;
 }</string>
@@ -422,8 +422,8 @@ QPushButton::hover
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">color: white;
-background-color: #a40018 ;
+          <string notr="true">color: black;
+background-color: #ffcc80 ;
 margin-right: 30px;</string>
          </property>
          <property name="text">

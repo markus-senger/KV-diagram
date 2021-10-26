@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>874</width>
-    <height>492</height>
+    <width>1016</width>
+    <height>599</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="page">
       <layout class="QVBoxLayout" name="verticalLayout_18">
@@ -55,8 +55,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
-            <height>454</height>
+            <width>970</width>
+            <height>553</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -256,7 +256,7 @@ p, li { white-space: pre-wrap; }
                         <property name="styleSheet">
                          <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 150px;
 	height: 30px;
    	border-image: url(:/images/buttons/button.png)
@@ -455,8 +455,8 @@ QPushButton::hover
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
-            <height>454</height>
+            <width>970</width>
+            <height>553</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -535,7 +535,7 @@ QPushButton::hover
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Die auf der vorherigen Seite erstellte Funktionsgleichung würde die folgende Schaltung liefern ((¬A ▪ ¬B ▪ ¬C) + (¬A ▪ B ▪ ¬C) + (A ▪ ¬B ▪ C) + (A ▪ B ▪ C)):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -629,7 +629,7 @@ p, li { white-space: pre-wrap; }
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Diese Schaltung ist ziemlich groß für ihren Funktionsumfang. Würde man solche Schaltungen nicht noch weiter vereinfachen, würde man niemals in der Lage &lt;/span&gt;&lt;a name=&quot;decorator-corrected-entity-id-4&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;s&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;ein, elektrische Geräte so &lt;/span&gt;&lt;a name=&quot;decorator-corrected-entity-id-7&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;k&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;lein, wie wir sie heute &lt;/span&gt;&lt;a name=&quot;decorator-corrected-entity-id-9&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;k&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;ennen, produzieren zu können.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -766,8 +766,8 @@ QPushButton::hover
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
-            <height>454</height>
+            <width>970</width>
+            <height>553</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_23">
@@ -846,7 +846,7 @@ QPushButton::hover
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Um diese Schaltung nun zu vereinfachen, bietet sich hier, dass KV-Diagramm an. Tragen Sie zunächst die Werte aus der Wahrheitstabelle richtig in das nebenstehende KV-Diagramm ein.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
@@ -951,7 +951,7 @@ p, li { white-space: pre-wrap; }
                       <property name="styleSheet">
                        <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 150px;
 	height: 30px;
    	border-image: url(:/images/buttons/button.png)
@@ -1166,8 +1166,8 @@ QPushButton::hover
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
-            <height>454</height>
+            <width>970</width>
+            <height>553</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_33">
@@ -1367,7 +1367,7 @@ p, li { white-space: pre-wrap; }
                         <property name="styleSheet">
                          <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 150px;
 	height: 30px;
    	border-image: url(:/images/buttons/button.png)
@@ -1590,8 +1590,8 @@ QPushButton::hover
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>836</width>
-            <height>454</height>
+            <width>970</width>
+            <height>553</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -1785,7 +1785,7 @@ QPushButton::hover
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;&quot;&gt;Übung 1 abgeschlossen!&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:11pt;&quot;&gt;Zum Abschluss hier noch einmal beide Schaltungen (rechts: ohne Optimierung, links: mit Optimierung). &lt;/span&gt;&lt;/p&gt;

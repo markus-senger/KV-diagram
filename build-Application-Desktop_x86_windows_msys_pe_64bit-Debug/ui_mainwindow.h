@@ -154,7 +154,7 @@ public:
         header->setSizePolicy(sizePolicy1);
         header->setMinimumSize(QSize(0, 100));
         header->setBaseSize(QSize(0, 20));
-        header->setStyleSheet(QString::fromUtf8("background-color: #A40018;"));
+        header->setStyleSheet(QString::fromUtf8("background-color: #ffcc80;"));
         header->setFrameShape(QFrame::StyledPanel);
         header->setFrameShadow(QFrame::Raised);
         horizontalLayout = new QHBoxLayout(header);
@@ -177,10 +177,11 @@ public:
         applicationNameShort->setSizePolicy(sizePolicy1);
         applicationNameShort->setMaximumSize(QSize(16777215, 16777215));
         QFont font;
-        font.setPointSize(16);
+        font.setFamilies({QString::fromUtf8("Arial")});
+        font.setPointSize(18);
         font.setBold(true);
         applicationNameShort->setFont(font);
-        applicationNameShort->setStyleSheet(QString::fromUtf8("color: white;"));
+        applicationNameShort->setStyleSheet(QString::fromUtf8("color: black;"));
 
         applicationNameLayout->addWidget(applicationNameShort);
 
@@ -189,9 +190,10 @@ public:
         sizePolicy1.setHeightForWidth(applicationName->sizePolicy().hasHeightForWidth());
         applicationName->setSizePolicy(sizePolicy1);
         QFont font1;
-        font1.setPointSize(11);
+        font1.setFamilies({QString::fromUtf8("Arial")});
+        font1.setPointSize(14);
         applicationName->setFont(font1);
-        applicationName->setStyleSheet(QString::fromUtf8("color: white;"));
+        applicationName->setStyleSheet(QString::fromUtf8("color: black;"));
 
         applicationNameLayout->addWidget(applicationName);
 
@@ -277,7 +279,7 @@ public:
         learningButton->setFont(font2);
         learningButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -361,7 +363,7 @@ public:
         backToSolverButton->setFont(font2);
         backToSolverButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -401,7 +403,7 @@ public:
         openTask1Button->setFont(font2);
         openTask1Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -419,7 +421,7 @@ public:
         openTutorialButton->setFont(font2);
         openTutorialButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -437,7 +439,7 @@ public:
         openTask2Button->setFont(font2);
         openTask2Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button_hover.png)\n"
@@ -455,7 +457,7 @@ public:
         openTask4Button->setFont(font2);
         openTask4Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button_hover.png)\n"
@@ -473,7 +475,7 @@ public:
         openTask3Button->setFont(font2);
         openTask3Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button_hover.png)\n"
@@ -491,7 +493,7 @@ public:
         openTask5Button->setFont(font2);
         openTask5Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button_hover.png)\n"
@@ -509,7 +511,7 @@ public:
         openTask6Button->setFont(font2);
         openTask6Button->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 205px;\n"
 "	height: 50px;\n"
 "   	border-image: url(:/images/buttons/button_hover.png)\n"
@@ -579,7 +581,7 @@ public:
         font3.setFamilies({QString::fromUtf8("Arial")});
         font3.setPointSize(16);
         label_3->setFont(font3);
-        label_3->setStyleSheet(QString::fromUtf8("color: #a40018;\n"
+        label_3->setStyleSheet(QString::fromUtf8("color: black;\n"
 "background-color: white ;\n"
 "border-bottom: 3px solid black;\n"
 "padding-bottom: 10px;\n"
@@ -603,7 +605,7 @@ public:
         backToSolverButton_2->setFont(font4);
         backToSolverButton_2->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 155px;\n"
 "	height: 40px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -627,7 +629,7 @@ public:
         backToLearningOverviewButton->setFont(font4);
         backToLearningOverviewButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 155px;\n"
 "	height: 40px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -703,7 +705,7 @@ public:
         label_8 = new QLabel(horizontalFrame_6);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setFont(font3);
-        label_8->setStyleSheet(QString::fromUtf8("color: #a40018;\n"
+        label_8->setStyleSheet(QString::fromUtf8("color: black;\n"
 "background-color: white ;\n"
 "border-bottom: 3px solid black;\n"
 "padding-bottom: 10px;\n"
@@ -723,7 +725,7 @@ public:
         backToSolverButton_3->setFont(font4);
         backToSolverButton_3->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 155px;\n"
 "	height: 40px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"
@@ -747,7 +749,7 @@ public:
         backToLearningOverviewButton_2->setFont(font4);
         backToLearningOverviewButton_2->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
-"	color: white;\n"
+"	color: black;\n"
 "	width: 155px;\n"
 "	height: 40px;\n"
 "   	border-image: url(:/images/buttons/button.png)\n"

@@ -10,7 +10,7 @@ static const int                    PAGE_INDEX_LEARNING_OVERVIEW            = 1;
 static const int                    PAGE_INDEX_LEARNING_TUTORIAL            = 2;
 static const int                    PAGE_INDEX_LEARNING_TASK1               = 3;
 
-static const QString                COLOR_RED                               = "#A40018";
+static const QString                MAIN_COLOR                              = "#ffcc80";
 static const QString                SHADOW_COLOR                            = "#bab8b8";
 static const int                    MAX_VARIABLES                           = 4;
 static const int                    MIN_VARIABLES                           = 2;

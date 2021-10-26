@@ -53,7 +53,7 @@ public:
     {
         if (BooleanFunctionSimplifier->objectName().isEmpty())
             BooleanFunctionSimplifier->setObjectName(QString::fromUtf8("BooleanFunctionSimplifier"));
-        BooleanFunctionSimplifier->resize(426, 300);
+        BooleanFunctionSimplifier->resize(439, 301);
         verticalLayout = new QVBoxLayout(BooleanFunctionSimplifier);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout_6 = new QHBoxLayout();
@@ -86,16 +86,16 @@ public:
         font.setBold(false);
         truthTable->setFont(font);
         truthTable->setStyleSheet(QString::fromUtf8("QHeaderView::section {\n"
-" 	background-color: #A40018 ;\n"
-"	color: white;\n"
+" 	background-color: #ffcc80 ;\n"
+"	color: black;\n"
 "}\n"
 "\n"
 "QTableCornerButton::section { \n"
-"	background-color: #A40018;\n"
+"	background-color: #ffcc80;\n"
 "}\n"
 "\n"
 "QTableView {\n"
-"	selection-background-color: #A40018;\n"
+"	selection-background-color: #ffcc80;\n"
 "	selection-color: white;\n"
 "	background-color: white;\n"
 "}"));
@@ -251,8 +251,8 @@ public:
         font3.setPointSize(9);
         font3.setBold(true);
         label->setFont(font3);
-        label->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #a40018 ;\n"
+        label->setStyleSheet(QString::fromUtf8("color: black;\n"
+"background-color: #ffcc80 ;\n"
 "margin-right: 30px;"));
         label->setAlignment(Qt::AlignCenter);
         label->setMargin(6);

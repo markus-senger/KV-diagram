@@ -124,7 +124,7 @@ border: 2px solid black;</string>
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -159,7 +159,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -194,7 +194,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -223,7 +223,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -258,7 +258,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -293,7 +293,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -328,7 +328,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -363,7 +363,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -408,7 +408,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -443,7 +443,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -478,7 +478,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)
@@ -513,7 +513,7 @@ QPushButton::hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
-	color: white;
+	color: black;
 	width: 40px;
 	height: 35px;
    	border-image: url(:/images/buttons/input_help_button.png)

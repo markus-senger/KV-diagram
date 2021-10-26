@@ -70,8 +70,8 @@ void KVDiagramSimplifier::setBorder()
             item(i,j)->setFont(font);
             item(i,j)->setTextAlignment(Qt::AlignCenter);
             if(i == 0 || (columnCount() >= KV_DIAGRAM_3VAR_COL_NUM && i == rowCount()-1) || j == 0 || (rowCount() >= KV_DIAGRAM_4VAR_ROW_NUM && j == columnCount()-1)) {
-                item(i,j)->setBackground(QColor(COLOR_RED));
-                item(i,j)->setForeground(Qt::white);
+                item(i,j)->setBackground(QColor(MAIN_COLOR));
+                item(i,j)->setForeground(Qt::black);
             }
         }
     }
